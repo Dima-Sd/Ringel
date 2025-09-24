@@ -5,6 +5,9 @@ const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
 const browserSync = require('browser-sync').create();
 const fileinclude = require('gulp-file-include');
+const avif = require('gulp-avif');
+const webp = require('gulp-webp'); // конвертирует картинки в webp
+const imagemin = require('gulp-imagemin'); // минимизирует картинки
 
 function styles() {
     return src('app/scss/style.scss')
@@ -19,6 +22,33 @@ function styles() {
         .pipe(dest('app/css'))
         .pipe(browserSync.stream());
 }
+
+// конвертация картинок
+function images() {
+    return src(['app/images/src/**/*.*', '!app/images/src/*.svg'])
+    .pipe(newer('app/images'))
+    .pipe(avif({quality : 50}))
+
+    .pipe(src('app/images/src/**/*.*')) // путь к орегиналам, чтобы не пытался перевести с avif в webp
+    .pipe(newer('app/images'))
+    .pipe(webp())
+
+    .pipe(src('app/images/src/**/*.*')) // тут тоже нужны оригиналы
+    .pipe(newer('app/images')) 
+    .pipe(imagemin([
+    imagemin.gifsicle({interlaced: true}),
+    imagemin.mozjpeg({quality: 75, progressive: true}),
+    imagemin.optipng({optimizationLevel: 5}),
+        imagemin.svgo({
+        plugins: [
+            {removeViewBox: true},
+            {cleanupIDs: false}
+        ]
+    })
+  ])) 
+
+    .pipe(dest('app/images'))
+} 
 
 function scripts() {
     return src([
