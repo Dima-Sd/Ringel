@@ -7,7 +7,10 @@ body {
   display: flex;
   flex-direction: column;
   font-size: 16px;
-  color: $grey;
+  color: $dark-400;
+  @include Inter(400, 16px, 1.48);
+  letter-spacing: normal;
+  font-style: normal;
 }
 
 .main {
@@ -15,24 +18,11 @@ body {
 }
 
 .container {
-  max-width: 1920px;
-  padding: 0 210px;
+  max-width: 1530px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
-
-// атрибуты для аккардеона
-[data-accordion-content] {
-  display: none;
-}
-
-.is-open [data-accordion-content] {
-  display: block;
-}
-
-.is-open [data-accordion-togge]::after {
-  transform: rotate(180deg);
-}
 
 .go-top {
   width: 50px;
@@ -44,3 +34,17 @@ body {
   transform: rotate(90deg);
   transition: all .3s;
 }
+
+// атрибуты для аккардеона
+.is-open [data-accordion-content] {
+  max-height: fit-content;
+  opacity: 1;
+}
+
+.is-hide [data-accordion-content] {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.is-active::after {} // вращение стрелки в аккардеоне footer

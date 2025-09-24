@@ -1,14 +1,27 @@
 .footer {
   padding: 60px 0 25px;
-  background-color: $dark;
+  background-color: $dark-700;
+  position: relative;
+  .go-top {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    z-index: 100;
+    bottom: 95px;
+    right: 60px;
+    transform: rotate(90deg);
+    transition: all .3s;
+  }
   &__inner {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 40px;
+    gap: 30px;
   }
   &__link-logo {
     max-width: 217px;
+    display: block;
   }
   &__logo-img {
     width: 100%;
@@ -17,36 +30,65 @@
   }
   &__item {
     max-width: 212px;
-    margin-left: 20px;
+    transition: all 0.3s;
   }
   &__title {
     @include DINPcond(900, 18px, 1.38);
-    color: $white;
+    color: $light;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    position: relative;
+    &::after {
+      display: none;
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 50%;
+      transform: translateY(-50%) rotate(-180deg);
+      right: 0;
+      background-image: url('../images/icon/arrow-right.svg');
+      transition: all 0.3s;
+    }
+    &.is-active::after {
+      transition: all 0.3s;
+      transform: translateY(-50%) rotate(0deg);
+    }
+  }
+  &__contact-title {
+    @include DINPcond(900, 18px, 1.38);
+    color: $light;
+    text-transform: uppercase;
   }
   &__list {
+    transition: max-height 0.35s ease, opacity 0.25s ease;
+    &.is-hide[data-accordion-content] {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+    }
     &.is-open[data-accordion-content] {
-      display: block;
+      max-height: fit-content;
+      opacity: 1;
     }
   }
   &__list-item {
-    margin-bottom: 20px;
+    margin: 20px 0;
     &:last-child {
       margin-bottom: 0;
     }
   }
   &__item-link {
     @include Inter(400, 16px, 1.56);
-    &:hover {
-      color: $yellow;
+    &:hover,
+    &:active {
+      color: $accent;
     }
   }
   &__contact {
     max-width: 240px;
   }
   &__contact-list {
-    margin-bottom: 20px;
+    margin: 20px 0;
   }
   &__contact-item {
     margin-bottom: 15px;
@@ -59,7 +101,7 @@
   &__contact-link {
     display: block;
     @include Inter(400, 16px, 1.56);
-    color: $white;
+    color: $light;
     margin-bottom: 15px;
     padding-left: 26px;
     &:last-child {
@@ -92,8 +134,9 @@
         transform: translateY(0);
       }
     }
-    &:hover {
-      color: $yellow;
+    &:hover,
+    &:active {
+      color: $accent;
     }
   }
   &__social-list {
@@ -103,16 +146,17 @@
   }
   &__social-link {
    svg {
-    fill: $dark;
+    fill: $dark-700;
     path {
-      fill: $yellow;
+      fill: $accent;
       }
    }
-    &:hover {
+    &:hover,
+    &:active {
       svg {
-        fill: $yellow;
+        fill: $accent;
         path {
-          fill: $dark;
+          fill: $dark-700;
         }
       }
     }
@@ -122,6 +166,7 @@
     display: flex;
     align-items: center;
     gap: 40px;
+    flex-wrap: wrap;
   }
   &__rigths {
     order: 1;
@@ -139,19 +184,22 @@
   background-color: $cookie-baner;
   display: flex;
   align-items: center;
+  border-radius: 6px;
   &__text {
     max-width: 1184px;
     @include Inter(400, 16px, 1.56);
     text-wrap: balance;
     margin-right: 25px;
+    flex: 1 1 auto;
   }
   &__btn-accept {
+    flex-shrink: 0;
     display: inline-flex;
     align-items: center;
     padding: 10px 55px 10px 20px;
     position: relative;
-    background-color: $yellow;
-    color: $dark;
+    background-color: $accent;
+    color: $dark-700;
     @include Inter(700, 14px, 1.4);
     margin-right: 15px;
     border-radius: 6px;
@@ -166,18 +214,144 @@
       right: 20px;
       transition: all 0.3s;
     }
-    &:hover {
+    &:hover,
+    &:active {
       &::after {
         right: 10px;
       }
     }
   }
+  &__btn-settings {
+    &:hover,
+    &:active {
+    .cookie-banner__btn-settings-text {
+        color: $accent;
+        border-bottom: 1px solid $accent;
+      }
+    }
+  }
   &__btn-settings-text {
     display: inline;
-    border-bottom: 1px solid $grey;
+    border-bottom: 1px solid $dark-400;
   }
 }
 .privacy-policy,
 .rules-use {
-  border-bottom: 1px solid $grey;
+  border-bottom: 1px solid $dark-400;
+  &:hover,
+  &:active {
+    color: $accent;
+    border-bottom: 1px solid $accent;
+  }
+}
+
+@media (max-width: 1150px) {
+  .footer {
+    &__inner{
+      gap: 25px 30px;
+    }
+
+    .cookie-banner {
+      position: relative;
+      flex-wrap: wrap;
+      &__text {
+        text-wrap: auto;
+        margin-bottom: 10px;
+        margin-right: 0;
+      }
+      &__btn-close {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+      }
+    }
+  }
+}
+@media (max-width: 880px) {
+  .footer {
+    &__inner{
+      justify-content: initial;
+    }
+    &__item {
+      margin-left: 20px;
+    }
+    &__bottom {
+      gap: 10px;
+    }
+  }
+}
+@media (max-width: 680px) {
+  .footer {
+    &__inner {
+      display: block;
+    }
+    &__item {
+      max-width: 100%;
+      padding: 10px 0;
+      border-bottom: 1px solid  $dark-400;
+      margin: 0;
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+    &__title {
+      &::after {
+        display: block;
+      }
+    }
+    &__item-link {
+      @include Inter(400, 16px, 1.87);
+    }
+    &__bottom {
+      justify-content: space-between;
+      gap: 15px;
+      .rules-use {
+        order: 2;
+      }
+      .privacy-policy {
+        order: 1;
+      }
+    }
+
+    &__rigths {
+      order: 3;
+    }
+  }
+}
+@media (max-width: 578px) {
+  .footer {
+    padding: 20px 0 15px;
+    .go-top {
+      bottom: 0;
+      top: 20px;
+      right: 15px;
+    }
+    &__link-logo {
+      max-width: 100px;
+    }
+    &__contact-link {
+      &--location {
+        @include Inter(400, 16px, 1.37);
+      }
+    }
+    .cookie-banner {
+      &__text {
+        @include Inter(400, 12px, 1.5);
+        text-wrap: balance;
+      }
+      &__btn-accept {
+        @include Inter(700, 12px, 1.5);
+      }
+    }
+    &__bottom {
+      .rules-use,
+      .privacy-policy {
+        @include Inter(400, 14px, 1.37);
+      }
+    }
+
+    &__rigths {
+    @include Inter(400, 14px, 1.37);
+    }
+  }
 }

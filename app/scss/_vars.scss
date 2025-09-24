@@ -1,12 +1,16 @@
-$dark: #282934;
-$black: #1D1D1B;
 $yellow: #FFDE14;
-$red: #A81815;
-$white:#FFFFFF;
-$semi-white:#F4F4F4;
-$grey:#848484;
-$green: #00AD42;
 $cookie-baner: #393A46;
+
+$dark: #1D1D1B;
+$dark-700: #282934;
+$dark-450: #7D7D7D;
+$dark-400: #848484;
+
+$light: #fff;
+$light-900: #F4F4F4;
+$light-700: #00AD42;
+$light-600: #A81815;
+$accent: #FFDE14;
 
 @mixin Inter($weight: 400, $size: 16px, $line: 1.56) {
   font-family: 'Inter', sans-serif;
@@ -20,4 +24,3 @@ $cookie-baner: #393A46;
   font-size: $size;
   line-height: $line;
 }
-
