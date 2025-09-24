@@ -6,3 +6,18 @@ $white:#FFFFFF;
 $semi-white:#F4F4F4;
 $grey:#848484;
 $green: #00AD42;
+$cookie-baner: #393A46;
+
+@mixin Inter($weight: 400, $size: 16px, $line: 1.56) {
+  font-family: 'Inter', sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line;
+}
+@mixin DINPcond($weight: 900, $size: 18px, $line: 1.38) {
+  font-family: 'DINPro-CondensedBlack', sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line;
+}
+

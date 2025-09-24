@@ -7,6 +7,7 @@ body {
   display: flex;
   flex-direction: column;
   font-size: 16px;
+  color: $grey;
 }
 
 .main {
@@ -19,3 +20,27 @@ body {
   margin: 0 auto;
 }
 
+
+// атрибуты для аккардеона
+[data-accordion-content] {
+  display: none;
+}
+
+.is-open [data-accordion-content] {
+  display: block;
+}
+
+.is-open [data-accordion-togge]::after {
+  transform: rotate(180deg);
+}
+
+.go-top {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  z-index: 10;
+  bottom: 95px;
+  right: 60px;
+  transform: rotate(90deg);
+  transition: all .3s;
+}
