@@ -23,7 +23,26 @@
           <button class="more-details-btn">Детальніше</button>
         </div>
       </div>
-      <div class="hero__botom"></div>
+      <div class="hero__botom">
+        <div class="slider slider--hero">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide card card--hero">
+                <picture class="card--hero__picture">
+                  <source srcset="./images/hero/images.jpg 1x, ./images/hero/images@x2.jpg 2x" type="image/jpeg">
+                  <img class="card--hero__img" src="./images/hero/images.jpg" alt="hero slide" decoding="async">
+                </picture>
+              </div>
+              
+            </div>
+            <div class="swiper-button-next hero-slider__next"></div>
+            <div class="swiper-button-prev hero-slider__prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <a class="hero__botom-promo-link" href="#">Всі акції</a>
+      </div>
     </div>
   </section>
     <script src="js/main.min.js"></script>
