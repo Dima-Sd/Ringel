@@ -16,7 +16,7 @@
     width: 100%;
   }
   &__inner {
-    padding-top: 50px;
+    padding-top: 60px;
     max-width: 672px;
     height: 100%;
     position: absolute;
@@ -95,6 +95,13 @@
     height: 571px;
     &::before {
       background-image: url('../../images/hero/hero-bg-blur-s.png');
+    }
+    &__inner {
+      padding-top: 97px;
+    }
+    &__title,
+    &__subtitle {
+      margin-bottom: 15px;
     }
   }
 }
