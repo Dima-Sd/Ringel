@@ -23,14 +23,33 @@
   }
 
   .go-top {
-    width: 40px;
-    height: 40px;
+    width: 51px;
+    height: 51px;
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
     z-index: 100;
     bottom: 95px;
     right: 60px;
-    transform: rotate(90deg);
-    transition: all .3s;
+    color: $dark-700;
+    transform: rotate(-90deg);
+    background-color: $light;
+    outline-offset: 3px;
+    transition: background-color 0.3s, outline 0.3s, opacity 0.3s;
+
+    &:hover {
+      background-color: $accent;
+    }
+
+    &:focus {
+      outline: 1px solid $accent;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
   }
 
   &__inner {
@@ -287,7 +306,7 @@
 
 .cookie-banner {
   padding: 20px;
-  background-color: $cookie-baner;
+  background-color: $dark-750;
   display: flex;
   align-items: center;
   border-radius: 6px;
@@ -385,6 +404,10 @@
   .footer {
     &__inner {
       gap: 25px 30px;
+    }
+
+    &__item {
+      margin: 0 auto;
     }
 
     .cookie-banner {
