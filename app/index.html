@@ -1,12 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>
+        Ringel — магазин посуду для твоєї кухні
+    </title>
+    <link rel="icon" type="image/png" href="./images/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="./images/favicon/favicon.svg" />
+<link rel="shortcut icon" href="./images/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="Ringel" />
+<link rel="manifest" href="./images/favicon/site.webmanifest" />
     <link rel="stylesheet" href="css/style.min.css">
 </head>
+<header class="header">
+    <div class="container">
+        <nav class="menu">
+            <a class="logo header__logo" href="">
+                <img class="logo__img" src="./images/logo.svg" alt="Логотип інтернет магазину Ringel" width="217"
+                    height="100">
+            </a>
+            <button class="mobile-button" type="button">
+                <svg class="icon" width="18" height="18">
+                    <use href="./images/sprite.svg#mobileButton"></use>
+                </svg>
+                <span class="visually-hidden">
+                    Відкрити/закрити мобільне меню
+                </span>
+            </button>
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        Для приготування
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        Для зберігання
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        сервірування
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        аксесуари
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        Інше
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        Серії
+                    </a>
+                </li>
+            </ul>
+            <ul class="user-menu">
+                <li class="user-menu__item">
+                    <a class="user-menu__link" href="">
+                        <svg class="icon" width="23" height="23">
+                            <use href="./images/sprite.svg#search"></use>
+                        </svg>
+                        <svg class="visually-hidden">
+                            Перехід до пошуку товарів на сайті
+                        </svg>
+                    </a>
+                </li>
+                <li class="user-menu__item">
+                    <a class="user-menu__link" href="">
+                        <svg class="icon" width="23" height="23">
+                            <use href="./images/sprite.svg#basket"></use>
+                        </svg>
+                        <span class="user-menu__number">
+                            1
+                        </span>
+                        <svg class="visually-hidden">
+                            Перехід до корзини з обраними товарами
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <div class="search-panel">
+    <form class="search">
+        <div class="search__bar">
+            <button class="search__button" type="button">
+                <svg class="icon" width="23" height="23">
+                    <use href="./images/sprite.svg#search"></use>
+                </svg>
+                <span class="visually-hidden">
+                    Пошук товарів на сайті
+                </span>
+            </button>
+            <input class="search__input" type="text" placeholder="Пошук по сайту" name="text">
+            <button class="search__button" type="button">
+                <svg class="icon" width="16" height="17">
+                    <use href="./images/sprite.svg#close"></use>
+                </svg>
+                <span class="visually-hidden">
+                    Очистити пошук на сайті
+                </span>
+            </button>
+        </div>
+        <div class="search__popular">
+            <span class="search__popular-title">
+                Популярні запити
+            </span>
+            <ul class="search__popular-list">
+                <li class="search__popular-item">
+                    <a class="search__popular-link" href="">
+                        Сковорідка Zira
+                    </a>
+                </li>
+                <li class="search__popular-item">
+                    <a class="search__popular-link" href="">
+                        Каструля Prada
+                    </a>
+                </li>
+                <li class="search__popular-item">
+                    <a class="search__popular-link" href="">
+                        Ножі Ringel
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </form>
+</div>
+        </nav>
+    </div>
+</header>
 
 <body>
     <script src="js/main.min.js"></script>

@@ -1,6 +1,3 @@
-$yellow: #FFDE14;
-$cookie-baner: #393A46;
-
 $dark: #1D1D1B;
 $dark-700: #282934;
 $dark-450: #7D7D7D;
@@ -10,18 +7,19 @@ $light: #fff;
 $light-900: #F4F4F4;
 $light-700: #00AD42;
 $light-600: #A81815;
+
 $accent: #FFDE14;
 
 @mixin Inter($weight: 400, $size: 16px, $line: 1.56) {
-  font-family: 'Inter', sans-serif;
-  font-weight: $weight;
-  font-size: $size;
-  line-height: $line;
+    font-family: 'Inter', sans-serif;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $line;
 }
 
-@mixin DINPcond($weight: 900, $size: 18px, $line: 1.38) {
-  font-family: 'DINPro-CondensedBlack', sans-serif;
-  font-weight: $weight;
-  font-size: $size;
-  line-height: $line;
+@mixin DINPcond($weight: 900, $size: 18px, $line: 1.48) {
+    font-family: 'DINPro-CondensedBlack', sans-serif;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $line;
 }
