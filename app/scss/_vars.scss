@@ -8,18 +8,33 @@ $light-900: #F4F4F4;
 $light-700: #00AD42;
 $light-600: #A81815;
 
+
 $accent: #FFDE14;
 
 @mixin Inter($weight: 400, $size: 16px, $line: 1.56) {
-    font-family: 'Inter', sans-serif;
-    font-weight: $weight;
-    font-size: $size;
-    line-height: $line;
+  font-family: 'Inter', sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line;
 }
 
 @mixin DINPcond($weight: 900, $size: 18px, $line: 1.48) {
-    font-family: 'DINPro-CondensedBlack', sans-serif;
-    font-weight: $weight;
-    font-size: $size;
-    line-height: $line;
+  font-family: 'DINPro-CondensedBlack', sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line;
+}
+
+@mixin Inter($weight: 400, $size: 16px, $line: 1.56) {
+  font-family: 'Inter', sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line;
+}
+
+@mixin DINPcond($weight: 900, $size: 18px, $line: 1.38) {
+  font-family: 'DINPro-CondensedBlack', sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line;
 }
