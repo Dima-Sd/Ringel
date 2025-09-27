@@ -39,3 +39,10 @@ $accent: #FFDE14;
   font-size: $size;
   line-height: $line;
 }
+
+@mixin DINPcond($weight: 900, $size: 22px, $line: 1.13) {
+  font-family: 'DINPro-CondensedBlack', sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line;
+}

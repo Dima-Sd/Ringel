@@ -283,72 +283,7 @@
   }
 }
 
-.cookie-banner {
-  padding: 20px;
-  background-color: $dark-750;
-  display: flex;
-  align-items: center;
-  border-radius: 6px;
 
-  &__text {
-    max-width: 1184px;
-    @include Inter(400, 16px, 1.56);
-    text-wrap: balance;
-    flex: 1 1 auto;
-  }
-
-  &__btn-close {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    transition: color 0.3s, outline 0.3s, box-shadow 0.3s;
-
-    &:hover {
-      color: $accent;
-    }
-
-    &:focus {
-      outline: 1px solid $accent;
-    }
-
-    &:active {
-      box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
-    }
-  }
-
-  &__btn-settings-text {
-    display: inline;
-    border-bottom: 1px solid $dark-400;
-  }
-
-  &__button {
-    padding: 10px 20px;
-    margin-right: 10px;
-  }
-}
-
-.cookie-banner__link {
-  border-radius: 3px;
-  outline-offset: 2px;
-  border-bottom: 1px solid $dark-400;
-  transition: color 0.3s, outline 0.3s, opacity 0.3s, border-color 0.3s;
-
-  &:hover {
-    color: $accent;
-    border-color: $accent;
-  }
-
-  &:focus {
-    outline: 1px solid $accent;
-  }
-
-  &:active {
-    opacity: 0.7;
-  }
-}
 
 @media (max-width: 1150px) {
   .footer {
@@ -358,23 +293,6 @@
 
     &__item {
       margin: 0 auto;
-    }
-
-    .cookie-banner {
-      position: relative;
-      flex-wrap: wrap;
-
-      &__text {
-        text-wrap: auto;
-        margin-bottom: 10px;
-        margin-right: 0;
-      }
-
-      &__btn-close {
-        position: absolute;
-        top: 5px;
-        right: 5px;
-      }
     }
   }
 }
@@ -458,13 +376,6 @@
     &__contact-link {
       &--location {
         @include Inter(400, 16px, 1.37);
-      }
-    }
-
-    .cookie-banner {
-      &__text {
-        @include Inter(400, 12px, 1.5);
-        text-wrap: balance;
       }
     }
 
