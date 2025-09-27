@@ -19,7 +19,7 @@ body {
 
 .container {
   max-width: 1530px;
-  padding: 0 15px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 
@@ -32,12 +32,9 @@ body {
   position: relative;
   background-color: $accent;
   border-radius: 6px;
-  &::after {
-    background-image: url('../images/icon/simlpe-right.svg');
+  width: fit-content;
+  &__icon {
     position: absolute;
-    content: '';
-    width: 24px;
-    height: 24px;
     top: 50%;
     transform: translateY(-50%);
     right: 20px;
@@ -45,8 +42,7 @@ body {
   }
   &:hover,
   &:active {
-    
-    &::after {
+    .more-details-btn__icon {
       right: 10px;
     }
   }

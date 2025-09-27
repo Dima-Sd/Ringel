@@ -25,3 +25,21 @@ $accent: #FFDE14;
   font-size: $size;
   line-height: $line;
 }
+@mixin DINPcondBold($weight: 700, $size: 18px, $line: 1.38) {
+  font-family: 'DINPro-CondensedBold', sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line;
+}
+@mixin DINPcondReg($weight: 400, $size: 18px, $line: 1.38) {
+  font-family: 'DINPro-CondensedRegular', sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line;
+}
+@mixin Manrope($weight: 900, $size: 18px, $line: 1.38) {
+  font-family: 'Manrope-VariableFont_wght', sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line;
+}

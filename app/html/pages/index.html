@@ -6,45 +6,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    
+    
 </head>
 
 <body>
-  <section class="hero">
-    <div class="container">
-      <div class="hero__inner">
-        <div class="hero__content">
-          <h2 class="hero__title">
-            <p class="hero__title-text">досконалість</p>
-            <p class="hero__title-text hero__title-text--bg">у кожній деталі</p>
-          </h2>
-          <p class="hero__subtitle">
-            Готуй із задоволенням! Високоякісний посуд Ringel - це поєднання стилю, надійності та інновацій для твоєї кухні.
-          </p>
-          <button class="more-details-btn">Детальніше</button>
-        </div>
-      </div>
-      <div class="hero__botom">
-        <div class="slider slider--hero">
-          <div class="swiper">
-            <div class="swiper-wrapper">
-
-              <div class="swiper-slide card card--hero">
-                <picture class="card--hero__picture">
-                  <source srcset="./images/hero/images.jpg 1x, ./images/hero/images@x2.jpg 2x" type="image/jpeg">
-                  <img class="card--hero__img" src="./images/hero/images.jpg" alt="hero slide" decoding="async">
-                </picture>
-              </div>
-              
-            </div>
-            <div class="swiper-button-next hero-slider__next"></div>
-            <div class="swiper-button-prev hero-slider__prev"></div>
-            <div class="swiper-pagination"></div>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero__inner">
+          <div class="hero__content">
+            <h2 class="hero__title">
+              <p class="hero__title-text">досконалість</p>
+              <p class="hero__title-text hero__title-text--bg">у кожній деталі</p>
+            </h2>
+            <p class="hero__subtitle">
+              Готуй із задоволенням! Високоякісний посуд Ringel - це поєднання стилю, надійності та інновацій для твоєї кухні.
+            </p>
+            <button class="more-details-btn">
+              <p class="more-details-btn__text">Детальніше</p>
+              <img class="more-details-btn__icon" src="../../images/icon/simlpe-right.svg" alt="">
+            </button>
           </div>
         </div>
-        <a class="hero__botom-promo-link" href="#">Всі акції</a>
       </div>
-    </div>
-  </section>
+    </section>
+    <section class="promo">
+      <div class="container">
+        <div class="slider slider--promo">
+          <div class="swiper promo-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide promo-slide">
+                <div class="promo-slide__inner">
+                  <picture class="promo-slide__picture">
+                    <!-- <source srcset="../../images/hero/hero-slide-1.jpg 1x, /../..images/hero/hero-slide-1@x2.jpg 2x" type="image/jpeg"> -->
+                    <img class="promo-slide__img" src="../../images/hero/hero-slide-1.jpg" alt="hero slide" decoding="async">
+                  </picture>
+                  <div class="promo-slide__content">
+                    <img class="promo-slide__logo" src="./images/logo.svg" alt="Ringel logo">
+                    <div class="promo-slide__title-box">
+                      <h3 class="promo-slide__title">ОВОЧІ</h3>
+                      <p class="promo-slide__subtitle">ТУШКОВАНІ НА</p>
+                      <p class="promo-slide__subtitle">СКОВОРОДІ</p>
+                    </div>
+                    <button class="more-details-btn">
+                      <p class="more-details-btn__text">Детальніше</p>
+                      <img class="more-details-btn__icon" src="../../images/icon/simlpe-right.svg" alt="">
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide promo-slide">
+                <div class="promo-slide__inner">
+                  <picture class="promo-slide__picture">
+                    <!-- <source srcset="../../images/hero/hero-slide-1.jpg 1x, /../..images/hero/hero-slide-1@x2.jpg 2x" type="image/jpeg"> -->
+                    <img class="promo-slide__img" src="../../images/hero/hero-slide-2.jpg" alt="hero slide" decoding="async">
+                  </picture>
+                  <div class="promo-slide__content">
+                    <img class="promo-slide__logo" src="./images/logo.svg" alt="Ringel logo">
+                    <div class="promo-slide__title-box promo-slide__title-box--sld-2">
+                      <h3 class="promo-slide__title promo-slide__title--sld-2">достойна</h3>
+                      <p class="promo-slide__subtitle promo-slide__subtitle--sld-2">сковорідка за</p>
+                      <p class="promo-slide__subtitle promo-slide__subtitle--sld-2">адекватні гроші</p>
+                    </div>
+                    <button class="more-details-btn">
+                      <p class="more-details-btn__text">Детальніше</p>
+                      <img class="more-details-btn__icon" src="../../images/icon/simlpe-right.svg" alt="">
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide promo-slide">
+                <div class="promo-slide__inner">
+                  <picture class="promo-slide__picture">
+                    <!-- <source srcset="../../images/hero/hero-slide-1.jpg 1x, /../..images/hero/hero-slide-1@x2.jpg 2x" type="image/jpeg"> -->
+                    <img class="promo-slide__img" src="../../images/hero/hero-slide-3.jpg" alt="hero slide" decoding="async">
+                  </picture>
+                  <img class="promo-slide__sub-icon" src="../../images/hero/promo-ractangle-slide-3.svg" alt="">
+                  <div class="promo-slide__content">
+                    <img class="promo-slide__logo" src="./images/logo.svg" alt="Ringel logo">
+                    <div class="promo-slide__title-box">
+                      <h3 class="promo-slide__title promo-slide__title--sld-3">Сковорода</h3>
+                
+                    </div>
+                    <button class="more-details-btn">
+                      <p class="more-details-btn__text">Детальніше</p>
+                      <img class="more-details-btn__icon" src="../../images/icon/simlpe-right.svg" alt="">
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider--promo__control">
+            <div class="promo-slider__btn promo-slider__btn-next">
+              <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.410362" y="0.410362" width="50.1793" height="50.1793" rx="5.58964" fill="#FFDE14" />
+                <rect x="0.410362" y="0.410362" width="50.1793" height="50.1793" rx="5.58964" stroke="#F4F4F4"
+                  stroke-width="0.820724" />
+                <path
+                  d="M30.028 19.9673C29.7338 19.6757 29.2589 19.6778 28.9673 19.972C28.6757 20.2662 28.6778 20.7411 28.972 21.0327L30.735 22.78C31.4505 23.4891 31.9413 23.9772 32.2734 24.3907C32.3813 24.5251 32.4655 24.6434 32.5309 24.75L17.5 24.75C17.0858 24.75 16.75 25.0858 16.75 25.5C16.75 25.9142 17.0858 26.25 17.5 26.25L32.5309 26.25C32.4655 26.3566 32.3813 26.4749 32.2734 26.6093C31.9413 27.0228 31.4505 27.5109 30.735 28.22L28.972 29.9673C28.6778 30.2589 28.6757 30.7338 28.9673 31.028C29.2589 31.3222 29.7338 31.3243 30.028 31.0327L31.8227 29.2539C32.4987 28.584 33.0511 28.0364 33.4429 27.5485C33.8504 27.0412 34.1453 26.5263 34.2241 25.9082C34.2414 25.7726 34.25 25.6363 34.25 25.5C34.25 25.3637 34.2414 25.2274 34.2241 25.0918C34.1453 24.4737 33.8504 23.9588 33.4429 23.4515C33.0511 22.9636 32.4987 22.416 31.8227 21.7461L30.028 19.9673Z"
+                  fill="#282934" />
+              </svg>
+              </svg>
+            </div>
+            <div class="promo-slider__btn promo-slider__btn-prev">
+              <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.410362" y="0.410362" width="50.1793" height="50.1793" rx="5.58964" fill="#FFDE14" />
+                <rect x="0.410362" y="0.410362" width="50.1793" height="50.1793" rx="5.58964" stroke="#F4F4F4"
+                  stroke-width="0.820724" />
+                <path
+                  d="M30.028 19.9673C29.7338 19.6757 29.2589 19.6778 28.9673 19.972C28.6757 20.2662 28.6778 20.7411 28.972 21.0327L30.735 22.78C31.4505 23.4891 31.9413 23.9772 32.2734 24.3907C32.3813 24.5251 32.4655 24.6434 32.5309 24.75L17.5 24.75C17.0858 24.75 16.75 25.0858 16.75 25.5C16.75 25.9142 17.0858 26.25 17.5 26.25L32.5309 26.25C32.4655 26.3566 32.3813 26.4749 32.2734 26.6093C31.9413 27.0228 31.4505 27.5109 30.735 28.22L28.972 29.9673C28.6778 30.2589 28.6757 30.7338 28.9673 31.028C29.2589 31.3222 29.7338 31.3243 30.028 31.0327L31.8227 29.2539C32.4987 28.584 33.0511 28.0364 33.4429 27.5485C33.8504 27.0412 34.1453 26.5263 34.2241 25.9082C34.2414 25.7726 34.25 25.6363 34.25 25.5C34.25 25.3637 34.2414 25.2274 34.2241 25.0918C34.1453 24.4737 33.8504 23.9588 33.4429 23.4515C33.0511 22.9636 32.4987 22.416 31.8227 21.7461L30.028 19.9673Z"
+                  fill="#282934" />
+              </svg>
+  
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="promo__bottom-block">
+          <a class="promo__link" href="#">Всі акції</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="js/main.min.js"></script>
 </body>
 

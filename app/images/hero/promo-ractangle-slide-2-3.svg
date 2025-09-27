@@ -1,0 +1,20 @@
+<svg viewBox="0 0 215.149 47.7654" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="215.149414" height="47.765442" fill="none" customFrame="#000000">
+	<defs>
+		<g id="pixso_custom_effect_4">
+			<effect x="0.000000" y="1.300000" visibility="visible" fill="rgb(0,0,0)" fill-opacity="0.25" effectType="dropShadow" stdDeviation="1.30000007" radius="0" />
+		</g>
+		<filter id="filter_4" width="215.149414" height="47.765442" x="0.000000" y="0.000000" filterUnits="userSpaceOnUse" customEffect="url(#pixso_custom_effect_4)" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix" />
+			<feColorMatrix result="hardAlpha" in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.42857 0 " />
+			<feOffset dx="0.000000" dy="1.300000" in="hardAlpha" />
+			<feGaussianBlur stdDeviation="0.433333367" />
+			<feComposite k2="-1" k3="1" in2="hardAlpha" operator="out" />
+			<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0 " />
+			<feBlend result="effect_dropShadow_1" in2="BackgroundImageFix" mode="normal" />
+			<feBlend result="shape" in="SourceGraphic" in2="effect_dropShadow_1" mode="normal" />
+		</filter>
+	</defs>
+	<g filter="url(#filter_4)">
+		<rect id="Rectangle 240648964" width="211.357025" height="35.680973" x="0.000000" y="0.000000" fill="rgb(103,112,63)" fill-opacity="0.699999988" transform="matrix(0.998987,-0.0450056,0.0394368,0.999222,1.2998,9.51221)" />
+	</g>
+</svg>
