@@ -3,23 +3,8 @@
   background-color: $dark-700;
   position: relative;
 
-  &__link-logo {
+  &__logo {
     align-self: flex-start;
-    outline-offset: 3px;
-    border-radius: 6px;
-    transition: opacity 0.3s, outline 0.3s, transform 0.3s;
-
-    &:hover {
-      opacity: 0.7;
-    }
-
-    &:focus {
-      outline: 1px solid $accent;
-    }
-
-    &:active {
-      transform: translate(0.9);
-    }
   }
 
   .go-top {
@@ -63,12 +48,6 @@
   &__link-logo {
     max-width: 217px;
     display: block;
-  }
-
-  &__logo-img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
   }
 
   &__item {
@@ -318,40 +297,6 @@
     flex: 1 1 auto;
   }
 
-  &__btn-accept {
-    flex-shrink: 0;
-    display: inline-flex;
-    align-items: center;
-    padding: 14px 20px;
-    gap: 12px;
-    position: relative;
-    background-color: $accent;
-    color: $dark-700;
-    @include Inter(700, 14px, 1.4);
-    border-radius: 6px;
-    border: 1px solid transparent;
-    outline-offset: 3px;
-    border-radius: 3px;
-    margin-right: 17px;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s, outline 0.3s, box-shadow 0.3s;
-
-    &:hover {
-      background-color: transparent;
-      color: $accent;
-      border-color: $accent;
-    }
-
-    &:focus {
-      outline: 1px solid $accent;
-    }
-
-    &:active {
-      color: $dark-700;
-      background-color: $accent;
-      box-shadow: inset 4px 4px 4px rgba(0, 0, 0, .25);
-    }
-  }
-
   &__btn-close {
     display: flex;
     align-items: center;
@@ -377,6 +322,11 @@
   &__btn-settings-text {
     display: inline;
     border-bottom: 1px solid $dark-400;
+  }
+
+  &__button {
+    padding: 10px 20px;
+    margin-right: 10px;
   }
 }
 

@@ -4,7 +4,6 @@ const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync').create();
 const fileinclude = require('gulp-file-include');
-const avif = require('gulp-avif');
 const webp = require('gulp-webp');
 const imagemin = require('gulp-imagemin');
 const newer = require('gulp-newer');
@@ -34,22 +33,16 @@ function htmlInclude() {
 }
 
 // ===== КАРТИНКИ =====
-function imagesAvif() {
-    return src(['app/images/src/**/*.*', '!app/images/src/*.svg'])
-        .pipe(newer('app/images/avif'))
-        .pipe(avif({ quality: 50 }))
-        .pipe(dest('app/images/avif'));
-}
 
 function imagesWebp() {
-    return src(['app/images/src/**/*.*', '!app/images/src/*.svg'])
+    return src(['app/images/**/*.*', '!app/images/*.svg'])
         .pipe(newer('app/images/webp'))
         .pipe(webp())
-        .pipe(dest('app/images/webp'));
+        .pipe(dest('app/images/'));
 }
 
 function imagesMin() {
-    return src(['app/images/src/**/*.*', '!app/images/src/*.svg'])
+    return src(['app/images/**/*.*', '!app/images/*.svg'])
         .pipe(newer('app/images'))
         .pipe(imagemin([
             imagemin.gifsicle({ interlaced: true }),
@@ -65,7 +58,7 @@ function imagesMin() {
         .pipe(dest('app/images'));
 }
 
-const images = parallel(imagesAvif, imagesWebp, imagesMin);
+const images = parallel(imagesWebp, imagesMin);
 
 // ===== BROWSERSYNC =====
 function browsersync() {

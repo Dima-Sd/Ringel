@@ -40,6 +40,54 @@ body {
   fill: currentColor;
 }
 
+.logo {
+  border-radius: 10px;
+  z-index: 10;
+  transition: transform 0.3s, opacity 0.3s, outline 0.3s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    outline: 1px solid $accent;
+  }
+
+  &:active {
+    transform: scale(0.9) translateY(8px);
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  background-color: $accent;
+  padding: 15px 20px;
+  font-size: 14px;
+  color: $dark-700;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  gap: 9px;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s, outline 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    background-color: transparent;
+    color: $accent;
+    border-color: $accent;
+  }
+
+  &:focus {
+    outline: 1px solid $accent;
+  }
+
+  &:active {
+    color: $dark-700;
+    background-color: $accent;
+    box-shadow: inset 4px 4px 4px rgba(0, 0, 0, .25);
+  }
+}
+
 .go-top {
   width: 50px;
   height: 50px;
@@ -63,6 +111,5 @@ body {
   opacity: 0;
 }
 
-.is-active::after {}
-
 // вращение стрелки в аккардеоне footer
+.is-active::after {}
