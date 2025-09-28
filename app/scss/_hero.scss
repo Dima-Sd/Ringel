@@ -280,12 +280,15 @@
 }
 .product {
   background-color: $light-900;
+  padding: 60px 0;
   &__title {
     @include DINPcond(900, 45px, 1);
     text-transform: uppercase;
+    color: $dark-700;
   }
   .slider.slider-product {
-    padding: 20px 25px;
+    padding: 20px 0 30px 0;
+    position: relative;
   }
   .slider {
     .slider-product {
@@ -299,17 +302,92 @@
         width: 100%;
       }
     }
+    &__btn {
+      &--product {
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-50%);
+        cursor: pointer;
+        svg {
+            path {
+              fill: $dark-700;
+            }
+        
+            &>rect {
+              fill: $light;
+            }
+          }
+        &:hover,
+        &:active {
+          svg {
+            path {
+              fill: $dark-700;
+            }
+
+            &>rect {
+              fill: $accent;
+            }
+          }
+        }
+      }
+    }
+
+    &__btn-next {
+      &--product {
+        right: -25px;
+      }
+    }
+
+    &__btn-prev {
+      &--product {
+        left: -25px;
+      }
+    }
+    .slider-pagination {
+      display: flex;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 6px;
+      height: 4px;
+      background-color: $light;
+
+      &__bullet {
+        width: 10%;
+        height: 4px;
+        border-radius: 6px;
+        background-color: $light;
+        opacity: 1;
+        margin: 0;
+      }
+
+      &__bullet-active {
+        &--product {
+          background: $dark-700;
+        }
+      }
+    }
   }
 }
 .product-card {
-  aspect-ratio: 351 / 473;
+  display: flex;
+  flex-direction: column;
+  max-width: 351px;
   width: 100%;
   padding: 20px;
   overflow: hidden;
   background-color: $light;
+  border-radius: 6px;
   &__badges {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
     margin-bottom: 20px;
   }
   &__badge {
@@ -344,44 +422,106 @@
     color: $dark-700;
     margin-bottom: 10px;
   }
-  &__rating-icon {}
   &__rating-value {
     font-size: inherit;
     color: inherit;
   }
   &__title {
+    @include DINPcond(900, 22px, 1.13);
+    color: $dark-700;
+    margin-bottom: 15px;
+  }
+  &__options {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+    &--hedden {
+      display: none;
+      gap: 8px;
+    }
+  }
+  &__option {
+    @include Manrope(800, 18px, 1);
+    color: $dark-400;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid $dark-700;
+    &--more {
+      border: none;
+      background-color: $light-900;
+    }
+    &--active{
+      color: $dark-700;
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__price {
+    @include Manrope(800, 18px, 1);
+    color: $dark-400;
+  }
+  &__price-old {
+    position: relative;
+    display: block;
+    width: fit-content;
+    &::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 1px;
+      background-color: $dark-400;
+      left: 0;
+      top: 50%;
+      transform: rotate(-12deg);
+    }
+  }
+  &__price-current {
+    color: $light-600;
+    font-size: 22px;
+  }
+  &__cart-btn {
+    svg {
+      rect {
+        fill: $accent;
+      }
+      &rect:nth-child(1){
+        fill: #282934;
+      }
+      g {
+        path {
+          fill: $dark-700;
+        }
+      }
+    }
+    &:active,
+    &:focus {
+      svg {
+        rect {
+          fill: $light-700;
+        }
     
+        &rect:nth-child(1) {
+          fill: $light;
+        }
+    
+        g {
+          path {
+            fill: $light;
+          }
+        }
+      }
+    }
   }
 }
 
 
-.product-card
-
-.product-card
-
-.product-card__price
-
-.product-card__title {}
-
-.product-card__options {}
-
-.product-cardoption {}
-
-.product-cardoption--active {}
-
-.product-card__option {}
-
-.product-card__option--more {}
-
-.product-card__options-hedden {}
-
-.product-card__price {}
-
-.product-card__price-old {}
-
-.product-card__price-current {}
-
-.product-card__cart-btn {}
 
 @media (max-width: 1480px) {
   .hero {
