@@ -1,0 +1,141 @@
+.reviews {
+  background-color: $light;
+  &__inner {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  &__content {
+    flex: 0 0 520px;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+  &__pretitle-text {
+    @include DINPcond(900, 45px, 1);
+    text-transform: uppercase;
+    color: $light;
+    width: fit-content;
+    padding: 20px 20px 15px 20px;
+    background-image: url('../images/index/reviews/pretitle-bg.svg');
+    background-size: cover;
+    margin-bottom: 10px;
+  }
+  &__pretitle-text-accent {
+    color: $accent;
+  }
+  &__title {
+    @include DINPcond(900, 45px, 1);
+      text-transform: uppercase;
+      color: $dark-700;
+      margin-bottom: 20px;
+  }
+  &__promo-text {
+    max-width: 390px;
+    width: 100%;
+    text-wrap: balance;
+    @include Inter(400, 18px, 1.38);
+    margin-bottom: auto;
+  }
+  &__control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  &__slider-box {
+    max-width: 860px;
+    width: 100%;
+  }
+  .slider {
+    .slider-reviews {
+      &__slide {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+      }
+      &__slide-img-box {
+        max-width: 477px;
+        width: 100%;
+        position: relative;
+      }
+      &__slide-picture-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 6px;
+        overflow: hidden;
+      }
+      &__slide-rating {
+        background-color: $accent;
+        border-radius: 6px;
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        width: fit-content;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+      }
+      &__rating-value {
+        @include Inter(700, 16px, 1.2);
+        color: $dark-700;
+      }
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+  .reviews {
+    &__content {
+      flex: 1 1 auto;
+    }
+    &__pretitle-text {
+      font-size: 34px;
+    }
+    &__title {
+      font-size: 34px;
+    }
+  }
+}
+@media (max-width: 990px) {
+  .reviews {
+    &__inner {
+      display: block;
+    }
+    &__content {
+      flex: 1 1 auto;
+      max-width: 100%;
+    }
+    &__promo-text {
+      max-width: 100%;
+    }
+    &__control {
+      display: none;
+    }
+  }
+}
+@media (max-width: 528px) {
+  .reviews {
+    &__pretitle-text,
+    &__title {
+      font-size: 25px;
+    }
+    &__promo-text {
+      font-size: 14px;
+    }
+    .slider {
+    .slider-reviews {
+      &__rating-value {
+        font-size: 12px;
+      }
+      &__slide-rating {
+        padding: 10px 15px;
+        bottom: 10px;
+        right: 10px;
+      }
+     }
+    }  
+  }
+}

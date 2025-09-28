@@ -35,6 +35,11 @@
      &--topsale {
        background-color: $light-700;
      }
+     &--type,
+     &--taste {
+      background-color: $dark-700;
+      display: none;
+     }
    }
 
    &__image-box {
@@ -171,6 +176,32 @@
        }
      }
    }
+   &--reviews {
+    .product-card__badge--type,
+    .product-card__badge--taste{
+      background-color: $dark-700;
+      display: inline-block;
+    }
+    .product-card__picture {
+      margin-bottom: 40px;
+      width: 100%;
+    }
+    .product-card__reviews-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .product-card__decr {
+      margin: 10px 0;
+      @include Inter(400, 16px, 1.56);
+      color: $dark-400;
+    }
+    .product-card__recomend {
+      @include DINPcond(900, 16px, 1.56);
+      text-transform: uppercase;
+      color: $dark-700;
+    }
+   }
  }
 
  @media (max-width: 680px) {
@@ -233,6 +264,16 @@
         svg {
           width: 28px;
           height: 28px;
+        }
+      }
+      &--reviews {
+        .product-card__title {
+          font-size: 16px;
+          margin: 0;
+        }
+        .product-card__decr,
+        .product-card__recomend {
+          display: none;
         }
       }
     }
