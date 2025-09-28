@@ -19,29 +19,29 @@ $accent: #FFDE14;
   line-height: $line;
 }
 
-@mixin DINPcond($weight: 900, $size: 18px, $line: 1.48) {
-  font-family: 'DINPro-CondensedBlack', sans-serif;
-  font-weight: $weight;
-  font-size: $size;
-  line-height: $line;
-}
-
-@mixin Inter($weight: 400, $size: 16px, $line: 1.56) {
-  font-family: 'Inter', sans-serif;
-  font-weight: $weight;
-  font-size: $size;
-  line-height: $line;
-}
-
 @mixin DINPcond($weight: 900, $size: 18px, $line: 1.38) {
   font-family: 'DINPro-CondensedBlack', sans-serif;
   font-weight: $weight;
   font-size: $size;
   line-height: $line;
 }
+/* @include DINPcond(900, 45px, 1); */
+@mixin DINPcondBold($weight: 700, $size: 18px, $line: 1.38) {
+  font-family: 'DINPro-CondensedBold', sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line;
+}
 
-@mixin DINPcond($weight: 900, $size: 22px, $line: 1.13) {
-  font-family: 'DINPro-CondensedBlack', sans-serif;
+@mixin DINPcondReg($weight: 400, $size: 18px, $line: 1.38) {
+  font-family: 'DINPro-CondensedRegular', sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line;
+}
+
+@mixin Manrope($weight: 900, $size: 18px, $line: 1.38) {
+  font-family: 'Manrope-VariableFont_wght', sans-serif;
   font-weight: $weight;
   font-size: $size;
   line-height: $line;
