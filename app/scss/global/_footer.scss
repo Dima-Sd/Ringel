@@ -1,0 +1,398 @@
+.footer {
+  padding: 60px 0 25px;
+  background-color: $dark-700;
+  position: relative;
+
+  &__logo {
+    align-self: flex-start;
+  }
+
+  .go-top {
+    width: 51px;
+    height: 51px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    z-index: 100;
+    bottom: 95px;
+    right: 60px;
+    color: $dark-700;
+    transform: rotate(-90deg);
+    background-color: $light;
+    outline-offset: 3px;
+    transition: background-color 0.3s, outline 0.3s, opacity 0.3s;
+
+    &:hover {
+      background-color: $accent;
+    }
+
+    &:focus {
+      outline: 1px solid $accent;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    gap: 30px;
+  }
+
+  &__link-logo {
+    max-width: 217px;
+    display: block;
+  }
+
+  &__item {
+    max-width: 212px;
+    transition: all 0.3s;
+  }
+
+  &__title {
+    @include DINPcond(900, 18px, 1.38);
+    color: $light;
+    text-transform: uppercase;
+    position: relative;
+
+    &::after {
+      display: none;
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 50%;
+      transform: translateY(-50%) rotate(-180deg);
+      right: 0;
+      background-image: url('../images/icon/arrow-right.svg');
+      transition: all 0.3s;
+    }
+
+    &.is-active::after {
+      transition: all 0.3s;
+      transform: translateY(-50%) rotate(0deg);
+    }
+  }
+
+  &__contact-title {
+    @include DINPcond(900, 18px, 1.38);
+    color: $light;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    transition: max-height 0.35s ease, opacity 0.25s ease;
+
+    &.is-hide[data-accordion-content] {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+    }
+
+    &.is-open[data-accordion-content] {
+      max-height: fit-content;
+      opacity: 1;
+    }
+  }
+
+  &__list-item {
+    margin: 20px 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-link {
+    display: inline-block;
+    @include Inter(400, 16px, 1.56);
+    border-radius: 3px;
+    outline-offset: 3px;
+    transition: color 0.3s, outline 0.3s, opacity 0.3s;
+
+    &:hover {
+      color: $accent;
+    }
+
+    &:focus {
+      outline: 1px solid $accent;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  &__contact {
+    max-width: 240px;
+  }
+
+  &__contact-list {
+    margin: 20px 0;
+  }
+
+  &__contact-item {
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+  }
+
+  &__contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    @include Inter(400, 16px, 1.56);
+    color: $light;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    outline-offset: 3px;
+    transition: color 0.3s, outline 0.3s, opacity 0.3s;
+
+    &:hover {
+      color: $accent;
+    }
+
+    &:focus {
+      outline: 1px solid $accent;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--sms,
+    &--location {
+      position: relative;
+    }
+
+    &--sms {
+      &::after {
+        background-image: url('../images/icon/message-small.svg');
+      }
+    }
+
+    &--location {
+      &::after {
+        background-image: url('../images/icon/location-small.svg');
+        top: 6px;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &__social-list {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__social-link {
+    display: block;
+    color: $accent;
+    border-radius: 6px;
+    outline-offset: 4px;
+    transition: outline 0.3s;
+
+    svg {
+      transition: color 0.3s;
+    }
+
+    rect {
+      fill: transparent;
+      transition: fill 0.3s, opacity 0.3s;
+    }
+
+    &:hover {
+      rect {
+        fill: $accent;
+      }
+
+      svg {
+        color: $dark-700;
+      }
+    }
+
+    &:focus {
+      outline: 1px solid $accent;
+    }
+
+    &:active {
+      rect {
+        fill: $accent;
+        opacity: 0.7;
+      }
+
+      svg {
+        color: $dark-700;
+      }
+    }
+  }
+
+
+  &__bottom {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  &__rigths {
+    order: 1;
+    margin-right: auto;
+  }
+
+  .privacy-policy,
+  .rules-use {
+    display: inline-block;
+    order: 2;
+    border-bottom: 1px solid $dark-400;
+    border-radius: 3px;
+    outline-offset: 2px;
+    transition: color 0.3s, border-color 0.3s, outline 0.3s, opacity 0.3s;
+
+    &:hover {
+      color: $accent;
+      border-color: $accent;
+    }
+
+    &:focus {
+      outline: 1px solid $accent;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  .rules-use {
+    order: 3;
+  }
+}
+
+
+
+@media (max-width: 1150px) {
+  .footer {
+    &__inner {
+      gap: 25px 30px;
+    }
+
+    &__item {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 880px) {
+  .footer {
+    &__inner {
+      justify-content: initial;
+    }
+
+    &__item {
+      margin-left: 20px;
+    }
+
+    &__bottom {
+      gap: 10px;
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .footer {
+    &__inner {
+      display: block;
+    }
+
+    &__item {
+      max-width: 100%;
+      padding: 10px 0;
+      border-bottom: 1px solid $dark-400;
+      margin: 0;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    &__title {
+      &::after {
+        display: block;
+      }
+    }
+
+    &__item-link {
+      @include Inter(400, 16px, 1.87);
+    }
+
+    &__bottom {
+      justify-content: space-between;
+      gap: 15px;
+
+      .rules-use {
+        order: 2;
+      }
+
+      .privacy-policy {
+        order: 1;
+      }
+    }
+
+    &__rigths {
+      order: 3;
+    }
+  }
+}
+
+@media (max-width: 578px) {
+  .footer {
+    padding: 20px 0 15px;
+
+    .go-top {
+      bottom: 0;
+      top: 20px;
+      right: 15px;
+    }
+
+    &__link-logo {
+      max-width: 100px;
+    }
+
+    &__contact-link {
+      &--location {
+        @include Inter(400, 16px, 1.37);
+      }
+    }
+
+    &__btn-accept {
+      @include Inter(700, 12px, 1.5);
+    }
+
+    &__bottom {
+
+      .rules-use,
+      .privacy-policy {
+        @include Inter(400, 14px, 1.37);
+      }
+    }
+
+    &__rigths {
+      @include Inter(400, 14px, 1.37);
+    }
+  }
+}

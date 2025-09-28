@@ -1,6 +1,15 @@
 @import "reset";
 @import "vars";
 @import "global";
+
 @import "fonts";
 @import "hero";
+
+
+@import "./global/header";
+@import "./global/search";
+@import "./pages/index/benefits";
+@import "./global/cookie-banner";
+@import "./global/footer";
+
 
