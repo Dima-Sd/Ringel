@@ -3,7 +3,7 @@
     width: 100%;
   }
 
- /*  .swiper-button-prev,
+  /*  .swiper-button-prev,
   .swiper-button-next {
     @media (max-width: 768px) {
       display: none;
@@ -33,5 +33,9 @@
     .card--product {
       // стили карточек товаров
     }
+  }
+
+  &__btn-prev--promo {
+    transform: rotate(90deg) translate(-50%);
   }
 }

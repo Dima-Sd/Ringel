@@ -93,7 +93,7 @@ body {
   color: $dark-700;
   border: 1px solid transparent;
   border-radius: 6px;
-  gap: 9px;
+  gap: 22px;
   font-weight: 700;
   line-height: 1.1;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s, outline 0.3s, box-shadow 0.3s;
@@ -118,7 +118,6 @@ body {
 .sections {
   padding: 60px 0;
 }
-
 
 .go-top {
   width: 50px;
