@@ -1,14 +1,11 @@
 @import "reset";
 @import "vars";
-@import "global";
-
 @import "fonts";
-@import "hero";
-
-
+@import "global";
 @import "./global/header";
 @import "./global/search";
-@import "./global/cards/card-products";
+@import './global/slider';
+@import "./pages/index/hero";
 @import "./pages/index/benefits";
 @import "./global/cookie-banner";
 @import "./global/footer";
