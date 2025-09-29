@@ -1,6 +1,7 @@
 .about {
   background-color: $light;
   padding: 60px 0;
+  overflow-x: hidden;
 
   &__slider-box {
     padding: 0 20px;
@@ -17,19 +18,26 @@
   .slider.slider-about {
     position: relative;
     padding: 20px 0 30px;
+    overflow: visible;
   }
 
   .slider {
     .slider-about {
       &__wrapper {
         display: flex;
+        justify-content: center;
+        gap: 30px;
       }
 
       &__slide {
-        flex: 1 1 20%;
+        flex: 0 0 calc((100% - 60px) / 5);
         max-width: 273px;
         width: 100%;
-        margin: 0 15px;
+        opacity: .5;
+        
+          &--visible {
+            opacity: 1;
+          }
       }
 
       &__card {
@@ -141,19 +149,57 @@
     }
   }
 }
+@media (max-width: 1560px) {
+  .about {
+    .slider {
+      &__btn-next {
+        &--product {
+          right: 0px;
+        }
+      }
+
+      &__btn-prev {
+        &--product {
+          left: 0px;
+        }
+      }
+    }
+  }
+}
+
+/* у slider__slide slider-product__slide slider-about__slide--visible удалить display: none; */
+
+@media (max-width: 1080px) {
+  .about {
+    .slider {
+      .slider-about {
+        &__slide {
+          flex: 0 0 calc((100% - 60px) / 4);
+          max-width: 351px;
+          width: 100%;
+          opacity: .5;
+          display: none;
+
+          &--visible {
+            opacity: 1;
+            display: block;
+          }
+        }
+      }
+
+      &__control {
+        display: none;
+      }
+    }
+  }
+}
 
 @media (max-width: 880px) {
   .about {
     .slider {
       .slider-about {
-        &__slide {
-          &:nth-child(5) {
-            display: none;
-          }
-        }
-
         &__card-title {
-          font-size: 18px;
+          font-size: 14px;
         }
       }
     }
@@ -172,13 +218,7 @@
 
       .slider-about {
         &__slide {
-          &:nth-child(4) {
-            display: none;
-          }
-
-          &:nth-child(5) {
-            display: none;
-          }
+          flex: 0 0 calc((100% - 60px) / 3);
         }
       }
     }
@@ -193,13 +233,7 @@
     .slider {
       .slider-about {
         &__slide {
-          &:nth-child(4) {
-            display: none;
-          }
-
-          &:nth-child(5) {
-            display: none;
-          }
+          flex: 0 0 calc((100% - 60px) / 1.8);
         }
       }
       .slider-pagination {

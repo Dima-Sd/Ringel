@@ -62,7 +62,8 @@
         border: 1px solid $light;
         outline-offset: 4px;
         transition: background-color 0.3s, color 0.3s, outline 0.3s, opacity 0.3s;
-
+        cursor: pointer;
+        transform: translateY(-50%);
         &:hover {
           background-color: $accent;
           color: $dark;
@@ -81,17 +82,21 @@
     &__btn-next {
       &--promo {
         right: -25px;
+        
       }
     }
 
     &__btn-prev {
       &--promo {
         left: -25px;
-        transform: translateY(-50%) rotate(180deg);
+        transform: rotate(180deg);
       }
     }
 
     .slider-pagination {
+      &--promo {
+        display: none;
+      }
       display: flex;
       position: absolute;
       left: 0;
@@ -118,7 +123,39 @@
     }
   }
 }
-
+@media (max-width: 1560px) {
+  .promo {
+    .slider {
+      &__btn-next {
+        &--promo {
+          right: 0px;
+        }
+      }
+    
+      &__btn-prev {
+        &--promo {
+          left: 0px;
+        }
+      }
+    .slider-pagination {
+      &--promo {
+        display: flex;
+       }
+      }
+    }
+  }
+}
+@media (max-width: 1080px) {
+  .promo {
+    .slider {
+      .slider-promo {
+        &__control {
+          display: none;
+        }
+      }
+    }
+  }
+}
 @media (max-width: 880px){
   .promo {
     .slider {
