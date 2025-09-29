@@ -1,7 +1,7 @@
 .product {
   background-color: $light-900;
-  padding: 60px 0;
   overflow-x: hidden;
+
   &__title {
     @include DINPcond(900, 45px, 1);
     text-transform: uppercase;
@@ -26,6 +26,7 @@
         flex: 0 0 calc((100% - 60px) / 4);
         width: 351px;
         opacity: .5;
+
         &--visible {
           opacity: 1;
         }
@@ -127,6 +128,7 @@
     }
   }
 }
+
 @media (max-width: 1080px) {
   .product {
     .slider {
@@ -137,18 +139,21 @@
           width: 100%;
           opacity: .5;
           display: none;
+
           &--visible {
             opacity: 1;
             display: block;
           }
         }
       }
+
       &__control {
         display: none;
       }
     }
   }
 }
+
 @media (max-width: 880px) {
   .product {
     .slider {
@@ -156,7 +161,9 @@
         &__wrapper {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
         }
+
         &__slide {
           margin: 15px;
         }
@@ -164,6 +171,7 @@
     }
   }
 }
+
 @media (max-width: 680px) {
   .product {
     .slider {
@@ -177,6 +185,7 @@
     }
   }
 }
+
 @media (max-width: 528px) {
   .product {
     padding: 30px 0;

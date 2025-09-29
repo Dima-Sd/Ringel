@@ -1,12 +1,13 @@
 .reviews {
   background-color: $light-900;
-  padding: 60px 0;
   overflow-x: hidden;
+
   &__inner {
     display: flex;
     gap: 10px;
     justify-content: space-between;
   }
+
   &__content {
     flex: 0 0 520px;
     max-width: 520px;
@@ -14,6 +15,7 @@
     flex-direction: column;
     padding-bottom: 20px;
   }
+
   &__pretitle-text {
     @include DINPcond(900, 45px, 1);
     text-transform: uppercase;
@@ -24,15 +26,18 @@
     background-size: cover;
     margin-bottom: 10px;
   }
+
   &__pretitle-text-accent {
     color: $accent;
   }
+
   &__title {
     @include DINPcond(900, 45px, 1);
-      text-transform: uppercase;
-      color: $dark-700;
-      margin-bottom: 20px;
+    text-transform: uppercase;
+    color: $dark-700;
+    margin-bottom: 20px;
   }
+
   &__promo-text {
     max-width: 390px;
     width: 100%;
@@ -40,10 +45,12 @@
     @include Inter(400, 18px, 1.38);
     margin-bottom: auto;
   }
+
   &__control {
     display: flex;
     align-items: center;
     gap: 10px;
+
     .slider__btn {
       background-color: $light;
       width: 51px;
@@ -55,19 +62,24 @@
       border-radius: 6px;
       transition: background-color .3s, outline .3s, opacity .3s;
       outline-offset: 3px;
+
       svg.icon {
         fill: $dark-700;
       }
+
       &:hover {
         background-color: $accent;
       }
+
       &:focus {
         outline: 1px solid $accent;
       }
+
       &:active {
         box-shadow: inset 4px 4px 4px rgba(0, 0, 0, .25);
       }
     }
+
     .slider__btn-prev {
       &--reviews {
         svg {
@@ -76,38 +88,46 @@
       }
     }
   }
+
   &__slider-box {
     max-width: 860px;
     width: 100%;
   }
+
   .slider.slider-reviews {
     overflow: visible;
   }
+
   .slider {
     .slider-reviews {
       &__wrapper {
         display: flex;
         gap: 30px;
       }
+
       &__slide {
         flex: 0 0 calc((100% - 60px) / 1);
         max-width: 860px;
         width: 100%;
-          opacity: .5;
+        opacity: .5;
+
         &--visible {
           opacity: 1;
         }
       }
+
       &__slide-inner {
         display: flex;
         justify-content: space-between;
         gap: 30px;
       }
+
       &__slide-img-box {
         max-width: 477px;
         width: 100%;
         position: relative;
       }
+
       &__slide-picture-img {
         width: 100%;
         height: 100%;
@@ -115,6 +135,7 @@
         border-radius: 6px;
         overflow: hidden;
       }
+
       &__slide-rating {
         background-color: $accent;
         border-radius: 6px;
@@ -127,14 +148,17 @@
         bottom: 20px;
         right: 20px;
       }
+
       &__slide-rating-icon {
         display: flex;
         align-items: center;
         justify-content: center;
+
         svg.icon {
           fill: $dark-700;
         }
       }
+
       &__rating-value {
         @include Inter(700, 16px, 1.2);
         color: $dark-700;
@@ -148,30 +172,37 @@
     &__content {
       flex: 1 1 auto;
     }
+
     &__pretitle-text {
       font-size: 34px;
     }
+
     &__title {
       font-size: 34px;
     }
   }
 }
+
 @media (max-width: 990px) {
   .reviews {
     &__inner {
       display: block;
     }
+
     &__content {
       flex: 1 1 auto;
       max-width: 100%;
       margin-bottom: 30px;
     }
+
     &__promo-text {
       max-width: 100%;
     }
+
     &__control {
       display: none;
     }
+
     .slider {
       .slider-reviews {
         &__slide {
@@ -181,27 +212,32 @@
     }
   }
 }
+
 @media (max-width: 528px) {
   .reviews {
     padding: 30px 0;
+
     &__pretitle-text,
     &__title {
       font-size: 25px;
     }
+
     &__promo-text {
       font-size: 14px;
     }
+
     .slider {
-    .slider-reviews {
-      &__rating-value {
-        font-size: 12px;
+      .slider-reviews {
+        &__rating-value {
+          font-size: 12px;
+        }
+
+        &__slide-rating {
+          padding: 10px 15px;
+          bottom: 10px;
+          right: 10px;
+        }
       }
-      &__slide-rating {
-        padding: 10px 15px;
-        bottom: 10px;
-        right: 10px;
-      }
-     }
-    }  
+    }
   }
 }

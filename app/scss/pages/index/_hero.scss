@@ -65,10 +65,6 @@
   }
 }
 
-
-
-
-
 @media (max-width: 1480px) {
   .hero {
     &__title {
@@ -88,6 +84,7 @@
     }
   }
 }
+
 @media (max-width: 680px) {
   .hero {
     &__inner {
@@ -124,4 +121,10 @@
     }
   }
 
+}
+
+@media(max-width:364px) {
+  .hero__title p.hero__title-text--bg::after {
+    width: 60%;
+  }
 }

@@ -1,7 +1,10 @@
 .benefits {
+    background-color: $dark-850;
+
     &__list {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         gap: 36px;
     }
 
@@ -37,35 +40,11 @@
     }
 }
 
-@media(max-width:1550px) {
-    .benefits {
-        &__item {
-            width: 48%;
-        }
-    }
-}
-
-
-@media(max-width:576px) {
+@media(max-width: 1540px) {
     .benefits {
         &__list {
-            display: flex;
-            justify-content: space-between;
-            gap: 19px;
-        }
-
-        &__title {
-            font-size: 16px;
-            line-height: 1.4;
-            margin-bottom: 4px;
-        }
-
-        &__desc {
-            margin-bottom: 10px;
-        }
-
-        &__info {
-            padding: 10px;
+            justify-content: center;
         }
     }
 }
+

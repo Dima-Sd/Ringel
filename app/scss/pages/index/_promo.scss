@@ -33,7 +33,6 @@
     position: relative;
     margin-bottom: 20px;
     padding-bottom: 25px;
-
   }
 
   .slider {
@@ -64,6 +63,7 @@
         transition: background-color 0.3s, color 0.3s, outline 0.3s, opacity 0.3s;
         cursor: pointer;
         transform: translateY(-50%);
+
         &:hover {
           background-color: $accent;
           color: $dark;
@@ -82,7 +82,6 @@
     &__btn-next {
       &--promo {
         right: -25px;
-        
       }
     }
 
@@ -97,6 +96,7 @@
       &--promo {
         display: none;
       }
+
       display: flex;
       position: absolute;
       left: 0;
@@ -123,6 +123,7 @@
     }
   }
 }
+
 @media (max-width: 1560px) {
   .promo {
     .slider {
@@ -131,20 +132,22 @@
           right: 0px;
         }
       }
-    
+
       &__btn-prev {
         &--promo {
           left: 0px;
         }
       }
-    .slider-pagination {
-      &--promo {
-        display: flex;
-       }
+
+      .slider-pagination {
+        &--promo {
+          display: flex;
+        }
       }
     }
   }
 }
+
 @media (max-width: 1080px) {
   .promo {
     .slider {
@@ -156,15 +159,29 @@
     }
   }
 }
-@media (max-width: 880px){
+
+@media (max-width: 880px) {
   .promo {
     .slider {
       .slider-promo {
         &__slide {
+
           /* Это удалить при покдлючении к слайдеру */
           &:last-child {
             display: none;
           }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 576px) {
+  .promo {
+    .slider {
+      .slider-promo {
+        &__wrapper {
+          gap: 15px;
         }
       }
     }
