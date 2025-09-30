@@ -260,12 +260,54 @@
           </div>
           <div class="catalog-content">
             <div class="catalog-content__banner">
-              <picture>
-                <source srcset="./images/" type="image/webp">
-                <img class="" src="./" alt="Овочі тушковані на сковороді Ringel">
+              <picture class="catalog-content__banner-picture">
+                <source srcset="" type="image/webp">
+                <img class="catalog-content__banner-img" src="../images/catalog/catalog-bg.jpg" alt="Овочі тушковані на сковороді Ringel">
               </picture>
+              <div class="catalog-content__banner-content">
+                <img class="catalog-content__banner-logo" src="../../images/logo.svg" alt="Ringel logo">
+                <div class="catalog-content__banner-title-box">
+                  <h3 class="catalog-content__banner-title">ОВОЧІ</h3>
+                  <p class="catalog-content__banner-subtitle">ТУШКОВАНІ НА</p>
+                  <p class="catalog-content__banner-subtitle">СКОВОРОДІ</p>
+                </div>
+              </div>
             </div>
-            <div class="catalog-content__filter"></div>
+            <div class="catalog-content__filter">
+              <div class="catalog-content__filter-tags">
+                <button type="button" class="catalog-content__filter-tag-btn">Кастрюля
+                  <svg class="icon" width="16px" height="16px">
+                    <use href="./images/sprite.svg#close"></use>
+                  </svg>
+                </button>
+                <button type="button"  class="catalog-content__filter-tag-btn">Казан
+                  <svg class="icon" width="16px" height="16px">
+                    <use href="./images/sprite.svg#close"></use>
+                  </svg>
+                </button>
+              </div>
+                <!-- панель кнопок / сортировки -->
+                <div class="catalog-controls">
+                  <!-- кнопка фильтра (видна только на мобилке) -->
+                  <button class="catalog-controls__btn-filter">Фільтр
+                    <svg class="icon" width="20px" height="21px">
+                      <use href="./images/sprite.svg#filterBtn"></use>
+                    </svg>
+                  </button>
+                
+                  <!-- сортировка -->
+                  <div class="catalog-sort">
+                    <label for="sort" class="catalog-sort__label">Сортувати по:</label>
+                    <select class="catalog-sort__select-list" id="sort">
+                      <option class="catalog-sort__select-item" value="cheap">Спочатку дешевші</option>
+                      <option class="catalog-sort__select-item" value="expensive">Спочатку дорожчі</option>
+                      <option class="catalog-sort__select-item" value="new">Новинки</option>
+                      <option class="catalog-sort__select-item" value="discount">За знижками</option>
+                    </select>
+                  </div>
+                </div>
+
+            </div>
             <div class="catalog-content__inner">
               <article class="product-card">
     <div class="product-card__badges">

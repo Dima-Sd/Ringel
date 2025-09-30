@@ -84,4 +84,142 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
   }
+  &__banner {
+    position: relative;
+    margin-bottom: 30px;
+    width: 100%;
+    max-height: 233px;
+    height: 100vh;
+  }
+  &__banner-picture {
+    height: 100%;
+    width: 100%;
+  }
+  &__banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__banner-content {
+    padding: 10px 15px 30px;
+    max-width: 260px;
+    width: fit-content;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  &__banner-logo {
+    width: 97.5px;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+  }
+  &__banner-title-box {
+    max-width: 260px;
+    width: 100%;
+    color: $light;
+    text-transform: uppercase;
+    @include Manrope(700, 62px, 1);
+  }
+  &__banner-title {
+    margin-bottom: 10px;
+  }
+  &__banner-subtitle {
+    font-size: 24px;
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__filter-tags {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  &__filter-tag-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    @include Inter(700, 16px, 1.25);
+    color: $dark-700;
+    gap: 14px;
+    background-color: $light;
+    border: 1px solid $dark-400;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, outline 0.3s, box-shadow 0.3s;
+    svg.icon {
+      transition: fill 0.3s;
+      fill: $dark-700;
+    }
+    &:hover {
+      background-color: transparent;
+      color: $accent;
+      border-color: $accent;
+      svg.icon {
+        fill: $accent;
+      }
+    }
+  
+    &:focus {
+      outline: 1px solid $accent;
+    }
+  
+    &:active {
+      color: $dark-700;
+      background-color: $accent;
+      box-shadow: inset 4px 4px 4px rgba(0, 0, 0, .25);
+       svg.icon {
+        fill: $dark-700;
+      }
+    }
+  }
+}
+.catalog-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__btn-filter {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      @include Inter(700, 16px, 1.25);
+      color: $dark-700;
+      gap: 14px;
+      background-color: $light;
+      border: 1px solid $dark-400;
+      border-radius: 6px;
+      transition: background-color 0.3s, color 0.3s, border-color 0.3s, outline 0.3s, box-shadow 0.3s;
+  
+      svg.icon {
+        transition: fill 0.3s;
+        stroke: $dark-700;
+      }
+  
+      &:hover {
+        background-color: transparent;
+        color: $accent;
+        border-color: $accent;
+  
+        svg.icon {
+          stroke: $accent;
+        }
+      }
+  
+      &:focus {
+        outline: 1px solid $accent;
+      }
+  
+      &:active {
+        color: $dark-700;
+        background-color: $accent;
+        box-shadow: inset 4px 4px 4px rgba(0, 0, 0, .25);
+  
+        svg.icon {
+          stroke: $dark-700;
+        }
+      }
+  }
 }
