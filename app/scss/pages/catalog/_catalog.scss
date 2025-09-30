@@ -1,0 +1,87 @@
+
+.catalog {
+  background-color: $light-900;
+  &__inner {
+    display: flex;
+    gap: 30px;
+  }
+  &__filters {
+    width: 351px;
+    padding: 20px;
+  }
+}
+.filter {
+  &__item {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba($dark-400, 0.2);
+  }
+  &__item-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+  }
+  &__title-icon {
+    fill: $dark-700;
+    transform: rotate(-90deg);
+  }
+  &__title {
+    @include DINPcond(900, 22px, 1);
+    color: $dark-700;
+  }
+}
+.filter-checkboxes {
+  &__form {
+    padding-top: 20px;
+  }
+  &__label {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    margin-bottom: 8px;
+    position: relative;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__checkbox-title {
+    @include Inter(400, 18px, 1.58);
+    color: $dark-400;
+    padding-left: 32px;
+  }
+  &__checkbox {
+    @include visually-hidden;
+    &:checked+.filter-checkboxes__checkbox-style {
+      position: absolute;
+      border: 1px solid $dark-400;
+      border-radius: 6px;
+      background-color: $dark-700;
+      &::before {
+        position: absolute;
+        content: '';
+        width: 10px;
+        height: 6.75px;
+        background-image: url('../images/icon/checked.svg');
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+      }
+    }
+  }
+    &__checkbox-style {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $dark-400;
+      border-radius: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+}
+
+.catalog-content {
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
