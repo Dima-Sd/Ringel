@@ -8,6 +8,8 @@
    overflow: hidden;
    background-color: $light;
    border-radius: 6px;
+   box-shadow: 0px 4px 8px 0px #0000000F,
+    0px 0px 4px 0px #0000000A;
    &__badges {
      display: flex;
      align-items: center;
