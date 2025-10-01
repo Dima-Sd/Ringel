@@ -35,10 +35,14 @@ function htmlInclude() {
 // ===== КАРТИНКИ =====
 
 function imagesWebp() {
-    return src(['app/images/**/*.*', '!app/images/*.svg'])
+    return src(['app/images/**/*.{png,jpg,jpeg}', '!app/images/*.svg'])
         .pipe(newer('app/images/webp'))
-        .pipe(webp())
-        .pipe(dest('app/images/'));
+        .pipe(webp({
+            quality: 80,
+            alphaQuality: 100,
+            lossless: true
+        }))
+        .pipe(dest('app/images'));
 }
 
 function imagesMin() {

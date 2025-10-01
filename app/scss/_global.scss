@@ -13,6 +13,10 @@ body {
   flex-direction: column;
 }
 
+.category {
+  background-color: $light-900;
+}
+
 .main {
   flex-grow: 1;
 }
@@ -22,7 +26,6 @@ body {
   padding: 0 20px;
   margin: 0 auto;
 }
-
 
 .more-details-btn {
   @include Inter(700, 18px, 1.11);
@@ -49,6 +52,13 @@ body {
       right: 10px;
     }
   }
+}
+
+.title {
+  @include DINPcond(900, 45px, 1);
+  text-transform: uppercase;
+  color: $dark-700;
+  margin-bottom: 20px;
 }
 
 .visually-hidden {
@@ -161,3 +171,11 @@ body {
 
 // вращение стрелки в аккардеоне footer
 .is-active::after {}
+
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+}
