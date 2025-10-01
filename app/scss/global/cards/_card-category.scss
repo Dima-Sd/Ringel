@@ -1,0 +1,37 @@
+.cookware-card {
+    display: flex;
+    flex-direction: column;
+    background-color: $light;
+    text-align: center;
+    padding: 18px 26px 45px;
+    width: 100%;
+    height: 100%;
+
+    &__img {
+        margin: 0 auto 8px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    &__title {
+        font-size: 22px;
+        line-height: 1.13;
+        color: $dark-700;
+        text-transform: uppercase;
+        font-family: 'DINPro-CondensedBlack', sans-serif;
+    }
+}
+
+@media(max-width: 576px) {
+    .cookware-card {
+        padding: 8px 12px 43px 12px;
+
+        &__title {
+            font-size: 16px;
+        }
+    }
+}

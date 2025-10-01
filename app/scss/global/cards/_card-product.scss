@@ -1,219 +1,226 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 351px;
+  width: 100%;
+  padding: 20px;
+  overflow: hidden;
+  background-color: $light;
+  border-radius: 6px;
 
- .product-card {
-   display: flex;
-   flex-direction: column;
-   max-width: 351px;
-   width: 100%;
-   padding: 20px;
-   overflow: hidden;
-   background-color: $light;
-   border-radius: 6px;
-   box-shadow: 0px 4px 8px 0px #0000000F,
-    0px 0px 4px 0px #0000000A;
-   &__badges {
-     display: flex;
-     align-items: center;
-     flex-wrap: wrap;
-     gap: 10px;
-     margin-bottom: 20px;
-   }
+  &__badges {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
 
-   &__badge {
-     @include DINPcond(900, 18px, 1);
-     text-transform: uppercase;
-     width: fit-content;
-     border-radius: 20px;
-     padding: 2px 6px;
-     color: $light;
+  &__badge {
+    @include DINPcond(900, 18px, 1);
+    text-transform: uppercase;
+    width: fit-content;
+    border-radius: 20px;
+    padding: 2px 6px;
+    color: $light;
 
-     &--discount {
-       background-color: $light-600;
-     }
+    &--discount {
+      background-color: $light-600;
+    }
 
-     &--bestseller {
-       background-color: $dark-700;
-     }
+    &--bestseller {
+      background-color: $dark-700;
+    }
 
-     &--topsale {
-       background-color: $light-700;
-     }
-     &--type,
-     &--taste {
+    &--topsale {
+      background-color: $light-700;
+    }
+
+    &--type,
+    &--taste {
       background-color: $dark-700;
       display: none;
-     }
-   }
+    }
+  }
 
-   &__image-box {
-     max-width: 258px;
-     width: 100%;
-     max-height: 181px;
-     height: 100%;
-     margin: 0 auto;
-   }
+  &__image-box {
+    max-width: 258px;
+    width: 100%;
+    max-height: 181px;
+    height: 100%;
+    margin: 0 auto;
+  }
 
-   &__img {
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
-   }
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-   &__rating {
-     @include Inter(700, 16px, 1.25);
-     color: $dark-700;
-     margin-bottom: 10px;
-     display: flex;
-     align-items: center;
-   }
+  &__rating {
+    @include Inter(700, 16px, 1.25);
+    color: $dark-700;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
 
-   &__rating-value {
-     font-size: inherit;
-     color: inherit;
-   }
+  &__rating-value {
+    font-size: inherit;
+    color: inherit;
+  }
 
-   &__title {
-     @include DINPcond(900, 22px, 1.13);
-     color: $dark-700;
-     margin-bottom: 15px;
-   }
+  &__title {
+    @include DINPcond(900, 22px, 1.13);
+    color: $dark-700;
+    margin-bottom: 15px;
+  }
 
-   &__options {
-     display: flex;
-     align-items: center;
-     flex-wrap: wrap;
-     gap: 8px;
-     margin-bottom: 20px;
+  &__options {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
 
-     &--hedden {
-       display: none;
-       gap: 8px;
-     }
-   }
+    &--hedden {
+      display: none;
+      gap: 8px;
+    }
+  }
 
-   &__option {
-     @include Manrope(800, 18px, 1);
-     color: $dark-400;
-     display: flex;
-     align-items: center;
-     padding: 8px;
-     border-radius: 6px;
-     border: 1px solid $dark-700;
+  &__option {
+    @include Manrope(800, 18px, 1);
+    color: $dark-400;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid $dark-700;
 
-     &--more {
-       border: none;
-       background-color: $light-900;
-     }
+    &--more {
+      border: none;
+      background-color: $light-900;
+    }
 
-     &--active {
-       color: $dark-700;
-     }
-   }
+    &--active {
+      color: $dark-700;
+    }
+  }
 
-   &__footer {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-   }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-   &__price {
-     @include Manrope(800, 18px, 1);
-     color: $dark-400;
-   }
+  &__price {
+    @include Manrope(800, 18px, 1);
+    color: $dark-400;
+  }
 
-   &__price-old {
-     position: relative;
-     display: block;
-     width: fit-content;
+  &__price-old {
+    position: relative;
+    display: block;
+    width: fit-content;
 
-     &::before {
-       position: absolute;
-       content: '';
-       width: 100%;
-       height: 1px;
-       background-color: $dark-400;
-       left: 0;
-       top: 50%;
-       transform: rotate(-12deg);
-     }
-   }
+    &::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 1px;
+      background-color: $dark-400;
+      left: 0;
+      top: 50%;
+      transform: rotate(-12deg);
+    }
+  }
 
-   &__price-current {
-     color: $light-600;
-     font-size: 22px;
-   }
+  &__price-current {
+    color: $light-600;
+    font-size: 22px;
+  }
 
-   &__cart-btn {
-     svg {
-       rect {
-         fill: $accent;
-       }
+  &__cart-btn {
+    svg {
+      rect {
+        fill: $accent;
+      }
 
-       &rect:nth-child(1) {
-         fill: #282934;
-       }
+      &rect:nth-child(1) {
+        fill: #282934;
+      }
 
-       g {
-         path {
-           fill: $dark-700;
-         }
-       }
-     }
+      g {
+        path {
+          fill: $dark-700;
+        }
+      }
+    }
 
-     &:active,
-     &:focus {
-       svg {
-         rect {
-           fill: $light-700;
-         }
+    &:active,
+    &:focus {
+      svg {
+        rect {
+          fill: $light-700;
+        }
 
-         &rect:nth-child(1) {
-           fill: $light;
-         }
+        &rect:nth-child(1) {
+          fill: $light;
+        }
 
-         g {
-           path {
-             fill: $light;
-           }
-         }
-       }
-     }
-   }
-   &--reviews {
+        g {
+          path {
+            fill: $light;
+          }
+        }
+      }
+    }
+  }
+
+  &--reviews {
+
     .product-card__badge--type,
-    .product-card__badge--taste{
+    .product-card__badge--taste {
       background-color: $dark-700;
       display: inline-block;
     }
+
     .product-card__picture {
       margin-bottom: 40px;
       width: 100%;
     }
+
     .product-card__reviews-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+
     .product-card__decr {
       margin: 10px 0;
       @include Inter(400, 16px, 1.56);
       color: $dark-400;
     }
+
     .product-card__recomend {
       @include DINPcond(900, 16px, 1.56);
       text-transform: uppercase;
       color: $dark-700;
     }
-   }
- }
+  }
+}
 
- @media (max-width: 680px) {
+@media (max-width: 680px) {
   .product-card {
     &__title {
       font-size: 16px;
     }
+
     &__option {
       font-size: 14px;
     }
+
     &__price-old {
       font-size: 14px;
     }
@@ -221,6 +228,7 @@
     &__price-current {
       font-size: 16px;
     }
+
     &__cart-btn {
       svg {
         width: 40px;
@@ -228,55 +236,59 @@
       }
     }
   }
- }
- @media (max-width: 528px) {
+}
+
+@media (max-width: 528px) {
   .product-card {
     padding: 10px;
-      &__badge {
-        font-size: 10px;
-      }
-  
-      &__rating {
-        font-size: 8px;
-        margin-bottom: 12px;
-      }
-  
-      &__title {
-        font-size: 12px;
-        margin-bottom: 5px;
-      }
-  
-      &__options {
-        margin-bottom: 5px;
-      }
-  
-      &__option {
-        font-size: 8px;
-      }
-  
-      &__price-old {
-        font-size: 10px;
-      }
-  
-      &__price-current {
-        font-size: 12px;
-      }
-  
-      &__cart-btn {
-        svg {
-          width: 28px;
-          height: 28px;
-        }
-      }
-      &--reviews {
-        .product-card__title {
-          font-size: 16px;
-          margin: 0;
-        }
-        .product-card__decr,
-        .product-card__recomend {
-          display: none;
-        }
+
+    &__badge {
+      font-size: 10px;
+    }
+
+    &__rating {
+      font-size: 8px;
+      margin-bottom: 12px;
+    }
+
+    &__title {
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+
+    &__options {
+      margin-bottom: 5px;
+    }
+
+    &__option {
+      font-size: 8px;
+    }
+
+    &__price-old {
+      font-size: 10px;
+    }
+
+    &__price-current {
+      font-size: 12px;
+    }
+
+    &__cart-btn {
+      svg {
+        width: 28px;
+        height: 28px;
       }
     }
- }
+
+    &--reviews {
+      .product-card__title {
+        font-size: 16px;
+        margin: 0;
+      }
+
+      .product-card__decr,
+      .product-card__recomend {
+        display: none;
+      }
+    }
+  }
+}
