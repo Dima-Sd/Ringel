@@ -1,0 +1,7 @@
+.detail-one {
+  background-color: $light;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+}

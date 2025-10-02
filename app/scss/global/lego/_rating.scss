@@ -1,0 +1,29 @@
+.product-rating {
+  @include Inter(700, 16px, 1.25);
+  color: $dark-700;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  &__star-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+
+  &__icon {
+    fill: $accent;
+  }
+
+  &__value {
+    font-size: inherit;
+    color: inherit;
+  }
+
+  &__reviews {
+    @include Inter(700, 16px, 1.25);
+    color: $dark-700;
+    border-bottom: 1px solid $dark-700;
+  }
+}

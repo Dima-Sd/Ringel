@@ -1,0 +1,31 @@
+.product-option {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+
+  &--hedden {
+    display: none;
+    gap: 8px;
+  }
+
+  &__item {
+    @include Manrope(800, 18px, 1);
+    color: $dark-400;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid $dark-700;
+
+    &--more {
+      border: none;
+      background-color: $light-900;
+    }
+
+    &--active {
+      color: $dark-700;
+    }
+  }
+}

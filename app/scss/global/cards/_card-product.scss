@@ -7,42 +7,6 @@
   overflow: hidden;
   background-color: $light;
   border-radius: 6px;
-
-  &__badges {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-
-  &__badge {
-    @include DINPcond(900, 18px, 1);
-    text-transform: uppercase;
-    width: fit-content;
-    border-radius: 20px;
-    padding: 2px 6px;
-    color: $light;
-
-    &--discount {
-      background-color: $light-600;
-    }
-
-    &--bestseller {
-      background-color: $dark-700;
-    }
-
-    &--topsale {
-      background-color: $light-700;
-    }
-
-    &--type,
-    &--taste {
-      background-color: $dark-700;
-      display: none;
-    }
-  }
-
   &__image-box {
     max-width: 258px;
     width: 100%;
@@ -57,57 +21,11 @@
     object-fit: cover;
   }
 
-  &__rating {
-    @include Inter(700, 16px, 1.25);
-    color: $dark-700;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 7px;
-  }
-
-  &__rating-value {
-    font-size: inherit;
-    color: inherit;
-  }
-
   &__title {
     @include DINPcond(900, 22px, 1.13);
     color: $dark-700;
     margin-bottom: 15px;
   }
-
- /*  &__options {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 20px;
-
-    &--hedden {
-      display: none;
-      gap: 8px;
-    }
-  }
- */
- /*  &__option {
-    @include Manrope(800, 18px, 1);
-    color: $dark-400;
-    display: flex;
-    align-items: center;
-    padding: 8px;
-    border-radius: 6px;
-    border: 1px solid $dark-700;
-
-    &--more {
-      border: none;
-      background-color: $light-900;
-    }
-
-    &--active {
-      color: $dark-700;
-    }
-  } */
 
   &__footer {
     display: flex;
@@ -184,61 +102,13 @@
     }
   }
 }
-  .product-option {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 20px;
-  &--hedden {
-    display: none;
-    gap: 8px;
-  }
-  &__item {
-    @include Manrope(800, 18px, 1);
-    color: $dark-400;
-    display: flex;
-    align-items: center;
-    padding: 8px;
-    border-radius: 6px;
-    border: 1px solid $dark-700;
 
-    &--more {
-      border: none;
-      background-color: $light-900;
-    }
 
-    &--active {
-      color: $dark-700;
-    }
-  }
-}
 
-.product-price {
-  @include Manrope(800, 18px, 1);
-  color: $dark-400;
-  &__old {
-    position: relative;
-    display: block;
-    width: fit-content;
-  
-    &::before {
-      position: absolute;
-      content: '';
-      width: 100%;
-      height: 1px;
-      background-color: $dark-400;
-      left: 0;
-      top: 50%;
-      transform: rotate(-12deg);
-    }
-  }
-  
-  &__current {
-    color: $light-600;
-    font-size: 22px;
-  }
-}
+
+
+
+
   
 
 @media (max-width: 680px) {
@@ -272,13 +142,19 @@
   .product-card {
     padding: 10px;
 
-    &__badge {
-      font-size: 10px;
+    .product-badge {
+      &__item {
+        font-size: 10px;
+      }
     }
 
-    &__rating {
+    .product-rating {
       font-size: 8px;
       margin-bottom: 12px;
+      &__icon {
+        width: 10px;
+        height: 10px;
+      }
     }
 
     &__title {
