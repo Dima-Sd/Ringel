@@ -24,6 +24,13 @@
   &__reviews {
     @include Inter(700, 16px, 1.25);
     color: $dark-700;
-    border-bottom: 1px solid $dark-700;
+    position: relative; 
+    &::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      border-bottom: 1px solid $dark-700;
+      bottom: -1px;
+    }
   }
 }
