@@ -1,0 +1,42 @@
+.tiker {
+  background-color: $dark-700;
+  padding: 30px 0;
+  overflow-x: hidden;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 27px;
+    overflow: visible;
+  }
+
+  &__item {
+    flex: 0 0 auto;
+    @include DINPcond(900, 25px, 1);
+    text-transform: uppercase;
+    color: $light;
+    width: auto;
+    text-wrap: nowrap;
+  }
+
+  &__img {
+    width: 73px;
+    height: auto;
+    object-fit: cover;
+  }
+}
+@media (max-width: 576px) {
+  .tiker {
+    &__list {
+      gap: 15px;
+    }
+    &__item {
+      font-size: 14px;
+    }
+    &__img {
+      width: 42px;
+    }
+  }
+}
