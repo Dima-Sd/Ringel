@@ -1,0 +1,16 @@
+.deal-detail {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+
+    &__inner {
+        max-width: 857px;
+        width: 100%;
+    }
+
+    &__info>p:not(:last-child) {
+        margin-bottom: 28px;
+    }
+}
+
