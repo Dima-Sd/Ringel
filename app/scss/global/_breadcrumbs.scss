@@ -1,0 +1,44 @@
+.top {
+  background-color: $light-900;
+  padding: 55px 0 30px;
+  &__title {
+    @include DINPcond(900, 45px, 1);
+    margin-top: 20px;
+    color: $dark-700;
+  }
+}
+.breadcrumbs {
+  display: inline-flex;
+  justify-content: center;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    color: $dark-400;
+    @include Inter(400, 18px, 1.38);
+    padding-right: 20px;
+    position: relative;
+    &::after {
+      content: '/';
+      position: absolute;
+      right: 6px;
+      color: $dark-400;
+      @include Inter(400, 18px, 1.38);
+    }
+
+    &:last-child {
+      color: $dark-400;
+      padding-right: 0;
+      border-bottom: 1px solid $dark-400;
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    color: inherit;
+  }
+}
