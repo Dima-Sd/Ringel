@@ -2,6 +2,9 @@
 @import "vars";
 @import "fonts";
 @import "global";
+
+@import "./global/lego/date-info";
+
 @import "./global/header";
 @import "./global/search";
 @import "./pages/index/hero";
@@ -10,7 +13,7 @@
 @import "./global/cards/promo-card";
 @import "./global/cards/card-product";
 @import "./pages/index/benefits";
-@import "./global/about";
+@import "./global/section-about";
 @import "./pages/index/reviews";
 @import "./global/cookie-banner";
 @import "./global/footer";
@@ -18,3 +21,9 @@
 @import "./pages/category";
 @import "./global/cards/card-category";
 
+
+@import "./pages/deals";
+@import "./global/cards/card-deal";
+@import "./pages/product-deal";
+@import "./global/cards/card-deal-detail";
+@import "./global/section-similar-deal"

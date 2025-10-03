@@ -13,7 +13,7 @@ body {
   flex-direction: column;
 }
 
-.category {
+.body {
   background-color: $light-900;
 }
 
@@ -177,5 +177,111 @@ body {
   .title {
     font-size: 22px;
     margin-bottom: 15px;
+  }
+}
+
+.top {
+  padding: 32px 0 30px;
+
+  &__title {
+    @include DINPcond(900, 45px, 1);
+    color: $dark-700;
+    text-transform: uppercase;
+  }
+
+  &__info {
+    padding: 88px 0 35px;
+    background-image: url('../images/categories/bg.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 97px;
+      top: 78px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse at center, rgba(0, 0, 0, .55) 0%, rgba(0, 0, 0, .45) 35%, rgba(0, 0, 0, 0) 75%);
+      filter: blur(30px);
+      width: 688px;
+      height: 507px;
+      transform: translate(-50%, -50%) rotate(-19.4deg);
+      pointer-events: none;
+    }
+
+    &::after {
+      content: "";
+      background-image: url('../images/logo.svg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: absolute;
+      width: 97px;
+      height: 44px;
+      left: 16px;
+      top: 16px;
+    }
+  }
+
+  &__info-title {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    font-family: 'Manrope-VariableFont_wght', sans-serif;
+    text-transform: uppercase;
+    color: $light;
+    font-size: 62px;
+    max-width: 480px;
+    width: 100%;
+    line-height: 1;
+    position: relative;
+    z-index: 15;
+    margin-left: 16px;
+  }
+
+  &__subtitle {
+    font-size: 24px;
+  }
+}
+
+.breadcrumbs {
+  display: inline-flex;
+  justify-content: center;
+  margin-bottom: 17px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    color: $dark-400;
+    @include Inter(400, 18px, 1.38);
+    padding-right: 20px;
+    position: relative;
+
+    &::after {
+      content: '/';
+      position: absolute;
+      right: 6px;
+      color: $dark-400;
+      @include Inter(400, 18px, 1.38);
+    }
+
+    &:last-child {
+      color: $dark-400;
+      padding-right: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    color: inherit;
   }
 }
