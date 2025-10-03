@@ -1,0 +1,47 @@
+.deals {
+    padding-top: 0;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    &__item {
+        max-width: 351px;
+        width: 100%;
+
+    }
+
+    &__link {
+        display: inline-block;
+        transition: box-shadow 0.3s, outline 0.3s, opacity 0.3s;
+
+        &:hover {
+            box-shadow: 2px 4px 3px rgba(0, 0, 0, .3);
+        }
+
+        &:focus {
+            outline: 1px solid $accent;
+        }
+
+        &:active {
+            opacity: 0.7;
+        }
+    }
+}
+
+@media(max-width: 772px) {
+    .deals {
+        &__list {
+            gap: 20px;
+        }
+
+        &__item {
+            width: 46%;
+        }
+    }
+}
+
+@media(max-width:576px) {}
