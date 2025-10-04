@@ -4,6 +4,7 @@
 @import "global";
 
 @import "./global/lego/date-info";
+@import "./global/lego/promo-ticker";
 
 @import "./global/header";
 @import "./global/breadcrumbs";
@@ -28,4 +29,6 @@
 @import "./global/cards/card-deal";
 @import "./pages/product-deal";
 @import "./global/cards/card-deal-detail";
-@import "./global/section-similar-deal"
+@import "./global/section-similar-deal";
+
+@import "./pages/contacts";
