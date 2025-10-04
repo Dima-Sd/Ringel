@@ -551,6 +551,269 @@
   }
 }
 
+/* Враження клієнтів */
+
+.feelings {
+  background-color: $dark-700;
+  &__inner {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: stretch;
+    overflow-x: hidden;
+  }
+  &__slider-box {
+    max-width: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  &__title {
+    color: $light;
+    margin-bottom: 0;
+  }
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  &__all-link {
+    color: $accent;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: '';
+      border-bottom: 1px solid $accent;
+      width: 100%;
+      bottom: 1px;
+      left: 0;
+      transition: all .3s;
+    }
+    &:hover {
+      color: $light;
+      &::after {
+        border-bottom: 1px solid $light;
+      }
+    }
+  }
+}
+.feelings-card {
+  background-color: $light;
+  border-radius: 6px;
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  &__body {
+    max-width: 378px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .product-rating {
+        background-color: $accent;
+        border-radius: 6px;
+        padding: 8px;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        width: fit-content;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    
+        svg.icon {
+          fill: $dark-700;
+        }
+    
+        &__value {
+          @include Inter(700, 16px, 1.2);
+          color: $dark-700;
+        }
+    }
+  }
+  &__title,
+  &__author {
+    @include Inter(700, 16px, 1.25);
+    color: $dark-700;
+  }
+  &__text,
+  &__author-date {
+    @include Inter(400, 14px, 1.42);
+    color: $dark-400;
+  }
+  &__title,
+  &__text {
+    margin-bottom: 7px;
+  }
+
+  &__img {
+    max-width: 110px;
+    object-fit: cover;
+  }
+    
+}
+/* .slider.slider-feelings {
+  overflow: visible;
+} */
+.slider {
+  .slider-feelings {
+    &__wrapper {
+      display: flex;
+      gap: 30px;
+    }
+
+    &__slide {
+      flex: 0 0 100%;
+      max-width: 100%;
+      width: 100%;
+      padding: 0 5px;
+    }
+    &__slide-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+  &__btn {
+    background-color: $dark-700;
+    width: 51px;
+    height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $light;
+    border-radius: 6px;
+    transition: background-color .3s, outline .3s, opacity .3s;
+    outline-offset: 3px;
+    svg.icon {
+      fill: $accent;
+    }
+
+    &:hover {
+      background-color: $accent;
+      svg.icon {
+        fill: $dark-700;
+      }
+    }
+
+    &:focus {
+      outline: 1px solid $accent;
+    }
+
+    &:active {
+      box-shadow: inset 4px 4px 4px rgba(0, 0, 0, .25);
+    }
+  }
+  &__btn-prev {
+      &--feelings {
+      svg.icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+/* Блок з рейтингом */
+
+.rating-summary {
+  flex: 1;
+  max-width: 50%;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+  height: auto;
+  &__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  &__img-bg {
+    height: 100%;
+    width: 100%;
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  &__score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__value {
+    color: $accent;
+    @include DINPcond(900, 155px, 1);
+    margin-bottom: 20px;
+  }
+  .product-rating {
+    margin-bottom: 20px;
+    .icon {
+      fill: $accent;
+      width: 19px;
+      height: 19px;
+    }
+    &__value {
+     color: $light;
+      @include Inter(700, 16px, 1.25);
+    }
+  }
+  &__reviews {
+    color: $light;
+    @include Inter(700, 16px, 1.25);
+  }
+  &__bars {
+    max-width: 50%;
+    width: 100%;
+  }
+  .rating-bar {
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    @include Inter(700, 16px, 1.25);
+    color: $light;
+
+    &__progress {
+      flex: 1;
+      height: 10px;
+      background-color: rgba($light-900, .4);
+      border-radius: 100px;
+      overflow: hidden;
+    }
+    &__progress-fill {
+      height: 100%;
+      background-color: $accent;
+      border-radius: 100px;
+    }
+  }
+}
 
 @media (max-width: 1560px) {
   .youlike {
@@ -616,6 +879,11 @@
   }
 }
 @media (max-width: 1240px) {
+  .feelings {
+    &__title {
+      font-size: 36px;
+    }
+  }
   .feedback {
     &__content {
       width: 600px;
@@ -623,6 +891,11 @@
   }
 }
 @media (max-width: 1110px) {
+.feelings {
+  &__title {
+    font-size: 32px;
+  }
+}
 .feedback {
     &__title {
       font-size: 32px;
@@ -647,6 +920,19 @@
   }
 }
 @media (max-width: 990px) {
+  .feelings {
+    &__inner {
+      display: block;
+    }
+    &__slider-box {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+    .rating-summary {
+      max-width: 100%;
+      padding: 20px;
+    }
+  }
   .feedback {
     &__content {
       width: 480px;
@@ -756,6 +1042,73 @@
   }
 }
 @media (max-width: 576px) {
+  .feelings {
+    &__controls {
+      display: none;
+    }
+    .slider-feelings {
+      padding-bottom: 20px;
+      &__slide {
+        .feelings-card {
+          display: none;
+          &:first-child {
+            display: block;
+          }
+        }
+      }
+    }
+    .slider-feelings-pagination {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      border-radius: 6px;
+      height: 4px;
+      background-color: $light;
+      margin-bottom: 20px;
+
+      &__bullet {
+        width: 50%;
+        height: 4px;
+        border-radius: 6px;
+        background-color: $light;
+        opacity: 1;
+        margin: 0;
+
+        &--active {
+          background: $accent;
+        }
+      }
+    }
+    .feelings-card {
+      &__inner {
+        display: block;
+      }
+      &__author {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .product-rating {
+          position: static;
+          &__value {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  .rating-summary {
+    &__inner {
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+    }
+    &__value {
+      font-size: 100px;
+    }
+    &__bars {
+      max-width: 100%;
+    }
+  }
   .detail-slider {
     &__pagination {
       display: flex;
