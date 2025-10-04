@@ -3,8 +3,8 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  height: 900px;
   position: relative;
+  z-index: 1;
 
   &::before {
     position: absolute;
@@ -15,15 +15,14 @@
     background-size: cover;
     height: 100%;
     width: 100%;
+    z-index: -1;
   }
 
   &__inner {
-    padding-top: 60px;
+    padding: 191px 0 234px;
     max-width: 672px;
-    height: 100%;
-    position: absolute;
     display: flex;
-    align-items: center
+    align-items: center;
   }
 
   &__title {
