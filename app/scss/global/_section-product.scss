@@ -1,103 +1,89 @@
 .product {
   background-color: $light-900;
   overflow-x: hidden;
-
-  .slider.slider-product {
-    padding: 20px 0 30px 0;
+  .slider-product {
+    padding: 20px 0 40px 0;
     position: relative;
     overflow: visible;
-  }
+    &__wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
 
-  .slider {
-    .slider-product {
-      &__wrapper {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-      }
+    &__slide {
+      flex: 0 0 calc((100% - 60px) / 4);
+      width: 351px;
+      opacity: .5;
 
-      &__slide {
-        flex: 0 0 calc((100% - 60px) / 4);
-        width: 351px;
-        opacity: .5;
-
-        &--visible {
-          opacity: 1;
-        }
+      &--visible {
+        opacity: 1;
       }
     }
 
     &__btn {
-      &--product {
-        position: absolute;
-        z-index: 10;
-        top: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transform: translateY(-50%);
-        cursor: pointer;
+      position: absolute;
+      z-index: 10;
+      top: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(-50%);
+      cursor: pointer;
+      &--next {
+        right: -25px;
+      }
+      
+      &--prev {
+        left: -25px;
+      }
+      svg {
+        path {
+          fill: $dark-700;
+        }
 
+        &>rect {
+          fill: $light;
+        }
+      }
+
+      &:hover,
+      &:active {
         svg {
           path {
             fill: $dark-700;
           }
 
           &>rect {
-            fill: $light;
-          }
-        }
-
-        &:hover,
-        &:active {
-          svg {
-            path {
-              fill: $dark-700;
-            }
-
-            &>rect {
-              fill: $accent;
-            }
+            fill: $accent;
           }
         }
       }
+     
     }
+  }
+  .slider-product-pagination {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 6px;
+    height: 10px;
+    background-color: $light;
 
-    &__btn-next {
-      &--product {
-        right: -25px;
-      }
-    }
-
-    &__btn-prev {
-      &--product {
-        left: -25px;
-      }
-    }
-
-    .slider-pagination {
-      display: flex;
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
+    &__bullet {
+      width: 10%;
+      height: 10px;
       border-radius: 6px;
-      height: 4px;
       background-color: $light;
+      opacity: 1;
+      margin: 0;
+    }
 
-      &__bullet {
-        width: 10%;
-        height: 4px;
-        border-radius: 6px;
-        background-color: $light;
-        opacity: 1;
-        margin: 0;
-      }
-
-      &__bullet-active {
-        &--product {
-          background: $dark-700;
-        }
+    &__bullet {
+      &--active {
+        background: $dark-700;
       }
     }
   }
@@ -107,17 +93,12 @@
 /* у slider__slide slider-product__slide slider-product__slide--visible удалить display: none; */
 @media (max-width: 1560px) {
   .product {
-    .slider {
-      &__btn-next {
-        &--product {
-          right: 0px;
-        }
+    .slider-product {
+      &--next {
+        right: 0px;
       }
-
-      &__btn-prev {
-        &--product {
-          left: 0px;
-        }
+      &--prev {
+        left: 0px;
       }
     }
   }
@@ -125,22 +106,19 @@
 
 @media (max-width: 1080px) {
   .product {
-    .slider {
-      .slider-product {
-        &__slide {
-          flex: 0 0 calc((100% - 60px) / 3);
-          max-width: 351px;
-          width: 100%;
-          opacity: .5;
-          display: none;
+    .slider-product {
+      &__slide {
+        flex: 0 0 calc((100% - 60px) / 3);
+        max-width: 351px;
+        width: 100%;
+        opacity: .5;
+        display: none;
 
-          &--visible {
-            opacity: 1;
-            display: block;
-          }
+        &--visible {
+          opacity: 1;
+          display: block;
         }
       }
-
       &__control {
         display: none;
       }
@@ -150,17 +128,15 @@
 
 @media (max-width: 880px) {
   .product {
-    .slider {
-      .slider-product {
-        &__wrapper {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 20px;
-        }
+    .slider-product {
+      &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
 
-        &__slide {
-          margin: 15px;
-        }
+      &__slide {
+        margin: 15px;
       }
     }
   }
@@ -168,7 +144,7 @@
 
 @media (max-width: 680px) {
   .product {
-    .slider {
+    .slider-product {
       &__control {
         display: none;
       }
@@ -183,12 +159,8 @@
 @media (max-width: 528px) {
   .product {
     padding: 30px 0;
-
-    .slider.slider-product {
+    .slider-product {
       padding-bottom: 20px;
-    }
-
-    .slider {
       .slider-pagination {
         &__bullet {
           width: 25%;

@@ -310,9 +310,9 @@
                   </div>
                 </div>
               </div>
-              <div class="slider-pagination slider-youlike__pagination">
-                <span class="slider-pagination__bullet slider-pagination__bullet--active"></span>
-                <span class="slider-pagination__bullet"></span>
+              <div class="slider-youlike-pagination">
+                <span class="slider-youlike-pagination__bullet slider-youlike-pagination__bullet--active"></span>
+                <span class="slider-youlike-pagination__bullet"></span>
               </div>
             </div>
           </div>
@@ -362,94 +362,93 @@
       </div>
     </section>
     @@include('../components/global/tiker.html')
-    <section class="section product" >
-      <div class="container">
-        <h2 class="title">рекомендовані товари</h2>
-        <div class="slider slider-product">
-          <div class="slider-product-connection">
-            <div class="slider-product__wrapper">
-              <div class="slider__slide slider-product__slide">
-                @@include('../components/global/cards/card-product.html',
-                {"folder":"goods",
-                "img":"zitroneOlive",
-                "alt":"Сковорода з антипригарним покриттям і скляною кришкою",
-                "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)"
-                })
-              </div>
-              <div class="slider__slide slider-product__slide slider-product__slide--visible">
-                @@include('../components/global/cards/card-product.html',
-                {"folder":"goods",
-                "img":"zitroneOlive",
-                "alt":"Сковорода з антипригарним покриттям і скляною кришкою",
-                "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)"
-                })
-              </div>
-              <div class="slider__slide slider-product__slide slider-product__slide--visible">
-                @@include('../components/global/cards/card-product.html',
-                {"folder":"goods",
-                "img":"zitroneOlive",
-                "alt":"Сковорода з антипригарним покриттям і скляною кришкою",
-                "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)"
-                })
-              </div>
-              <div class="slider__slide slider-product__slide slider-product__slide--visible">
-                @@include('../components/global/cards/card-product.html',
-                {"folder":"goods",
-                "img":"zitroneOlive",
-                "alt":"Сковорода з антипригарним покриттям і скляною кришкою",
-                "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)"
-                })
-              </div>
-              <div class="slider__slide slider-product__slide slider-product__slide--visible">
-                @@include('../components/global/cards/card-product.html',
-                {"folder":"goods",
-                "img":"zitroneOlive",
-                "alt":"Сковорода з антипригарним покриттям і скляною кришкою",
-                "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)"
-                })
-              </div>
-              <div class="slider__slide slider-product__slide">
-                @@include('../components/global/cards/card-product.html',
-                {"folder":"goods",
-                "img":"zitroneOlive",
-                "alt":"Сковорода з антипригарним покриттям і скляною кришкою",
-                "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)"
-                })
-              </div>
     
+  <section class="product section">
+    <div class="container">
+      <h2 class="title">рекомендовані товари</h2>
+      <div class="slider-product">
+        <div class="slider-product-connection">
+          <div class="slider-product__wrapper">
+            <div class="slider-product__slide">
+              @@include('../components/global/cards/card-product.html',
+              {"folder":"goods",
+              "img":"zitroneOlive",
+              "alt":"Сковорода з антипригарним покриттям і скляною кришкою",
+              "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)"
+              })
             </div>
-          </div>
-          <div class="slider__control slider-product__control">
-            <div class="slider__btn--product slider__btn-next--product">
-              <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="0.410362" y="0.410362" width="50.1793" height="50.1793" rx="5.58964" fill="#282934" />
-                <rect x="0.410362" y="0.410362" width="50.1793" height="50.1793" rx="5.58964" stroke="#F4F4F4"
-                  stroke-width="0.820724" />
-                <path
-                  d="M30.028 19.9673C29.7338 19.6757 29.2589 19.6778 28.9673 19.972C28.6757 20.2662 28.6778 20.7411 28.972 21.0327L30.735 22.78C31.4505 23.4891 31.9413 23.9772 32.2734 24.3907C32.3813 24.5251 32.4655 24.6434 32.5309 24.75L17.5 24.75C17.0858 24.75 16.75 25.0858 16.75 25.5C16.75 25.9142 17.0858 26.25 17.5 26.25L32.5309 26.25C32.4655 26.3566 32.3813 26.4749 32.2734 26.6093C31.9413 27.0228 31.4505 27.5109 30.735 28.22L28.972 29.9673C28.6778 30.2589 28.6757 30.7338 28.9673 31.028C29.2589 31.3222 29.7338 31.3243 30.028 31.0327L31.8227 29.2539C32.4987 28.584 33.0511 28.0364 33.4429 27.5485C33.8504 27.0412 34.1453 26.5263 34.2241 25.9082C34.2414 25.7726 34.25 25.6363 34.25 25.5C34.25 25.3637 34.2414 25.2274 34.2241 25.0918C34.1453 24.4737 33.8504 23.9588 33.4429 23.4515C33.0511 22.9636 32.4987 22.416 31.8227 21.7461L30.028 19.9673Z"
-                  fill="#FFDE14" />
-              </svg>
+            <div class="slider-product__slide slider-product__slide--visible">
+              @@include('../components/global/cards/card-product.html',
+              {"folder":"goods",
+              "img":"zitroneOlive",
+              "alt":"Сковорода з антипригарним покриттям і скляною кришкою",
+              "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)"
+              })
             </div>
-            <div class="slider__btn--product slider__btn-prev--product">
-              <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="-0.410362" y="0.410362" width="50.1793" height="50.1793" rx="5.58964"
-                  transform="matrix(-1 0 0 1 50.1793 0)" fill="#282934" />
-                <rect x="-0.410362" y="0.410362" width="50.1793" height="50.1793" rx="5.58964"
-                  transform="matrix(-1 0 0 1 50.1793 0)" stroke="#F4F4F4" stroke-width="0.820724" />
-                <path
-                  d="M20.972 19.9673C21.2662 19.6757 21.7411 19.6778 22.0327 19.972C22.3243 20.2662 22.3222 20.7411 22.028 21.0327L20.265 22.78C19.5495 23.4891 19.0587 23.9772 18.7266 24.3907C18.6187 24.5251 18.5345 24.6434 18.4691 24.75L33.5 24.75C33.9142 24.75 34.25 25.0858 34.25 25.5C34.25 25.9142 33.9142 26.25 33.5 26.25L18.4691 26.25C18.5345 26.3566 18.6187 26.4749 18.7266 26.6093C19.0587 27.0228 19.5495 27.5109 20.265 28.22L22.028 29.9673C22.3222 30.2589 22.3243 30.7338 22.0327 31.028C21.7411 31.3222 21.2662 31.3243 20.972 31.0327L19.1773 29.2539C18.5013 28.584 17.9489 28.0364 17.5571 27.5485C17.1496 27.0412 16.8547 26.5263 16.7759 25.9082C16.7586 25.7726 16.75 25.6363 16.75 25.5C16.75 25.3637 16.7586 25.2274 16.7759 25.0918C16.8547 24.4737 17.1496 23.9588 17.5571 23.4515C17.9489 22.9636 18.5013 22.416 19.1773 21.7461L20.972 19.9673Z"
-                  fill="#FFDE14" />
-              </svg>
+            <div class="slider-product__slide slider-product__slide--visible">
+              @@include('../components/global/cards/card-product.html',
+              {"folder":"goods",
+              "img":"zitroneOlive",
+              "alt":"Сковорода з антипригарним покриттям і скляною кришкою",
+              "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)"
+              })
             </div>
-          </div>
-          <div class="slider-pagination slider-pagination--product">
-            <span
-              class="slider-pagination__bullet slider-pagination__bullet-active slider-pagination__bullet-active--product"></span>
-            <span class="slider-pagination__bullet slider-pagination__bullet--product"></span>
+            <div class="slider-product__slide slider-product__slide--visible">
+              @@include('../components/global/cards/card-product.html',
+              {"folder":"goods",
+              "img":"zitroneOlive",
+              "alt":"Сковорода з антипригарним покриттям і скляною кришкою",
+              "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)"
+              })
+            </div>
+            <div class="slider-product__slide slider-product__slide--visible">
+              @@include('../components/global/cards/card-product.html',
+              {"folder":"goods",
+              "img":"zitroneOlive",
+              "alt":"Сковорода з антипригарним покриттям і скляною кришкою",
+              "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)"
+              })
+            </div>
+            <div class="slider-product__slide">
+              @@include('../components/global/cards/card-product.html',
+              {"folder":"goods",
+              "img":"zitroneOlive",
+              "alt":"Сковорода з антипригарним покриттям і скляною кришкою",
+              "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)"
+              })
+            </div>
           </div>
         </div>
+        <div class="slider-product__control">
+          <div class="slider-product__btn slider-product__btn--next">
+            <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0.410362" y="0.410362" width="50.1793" height="50.1793" rx="5.58964" fill="#282934" />
+              <rect x="0.410362" y="0.410362" width="50.1793" height="50.1793" rx="5.58964" stroke="#F4F4F4"
+                stroke-width="0.820724" />
+              <path
+                d="M30.028 19.9673C29.7338 19.6757 29.2589 19.6778 28.9673 19.972C28.6757 20.2662 28.6778 20.7411 28.972 21.0327L30.735 22.78C31.4505 23.4891 31.9413 23.9772 32.2734 24.3907C32.3813 24.5251 32.4655 24.6434 32.5309 24.75L17.5 24.75C17.0858 24.75 16.75 25.0858 16.75 25.5C16.75 25.9142 17.0858 26.25 17.5 26.25L32.5309 26.25C32.4655 26.3566 32.3813 26.4749 32.2734 26.6093C31.9413 27.0228 31.4505 27.5109 30.735 28.22L28.972 29.9673C28.6778 30.2589 28.6757 30.7338 28.9673 31.028C29.2589 31.3222 29.7338 31.3243 30.028 31.0327L31.8227 29.2539C32.4987 28.584 33.0511 28.0364 33.4429 27.5485C33.8504 27.0412 34.1453 26.5263 34.2241 25.9082C34.2414 25.7726 34.25 25.6363 34.25 25.5C34.25 25.3637 34.2414 25.2274 34.2241 25.0918C34.1453 24.4737 33.8504 23.9588 33.4429 23.4515C33.0511 22.9636 32.4987 22.416 31.8227 21.7461L30.028 19.9673Z"
+                fill="#FFDE14" />
+            </svg>
+          </div>
+          <div class="slider-product__btn slider-product__btn--prev">
+            <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="-0.410362" y="0.410362" width="50.1793" height="50.1793" rx="5.58964"
+                transform="matrix(-1 0 0 1 50.1793 0)" fill="#282934" />
+              <rect x="-0.410362" y="0.410362" width="50.1793" height="50.1793" rx="5.58964"
+                transform="matrix(-1 0 0 1 50.1793 0)" stroke="#F4F4F4" stroke-width="0.820724" />
+              <path
+                d="M20.972 19.9673C21.2662 19.6757 21.7411 19.6778 22.0327 19.972C22.3243 20.2662 22.3222 20.7411 22.028 21.0327L20.265 22.78C19.5495 23.4891 19.0587 23.9772 18.7266 24.3907C18.6187 24.5251 18.5345 24.6434 18.4691 24.75L33.5 24.75C33.9142 24.75 34.25 25.0858 34.25 25.5C34.25 25.9142 33.9142 26.25 33.5 26.25L18.4691 26.25C18.5345 26.3566 18.6187 26.4749 18.7266 26.6093C19.0587 27.0228 19.5495 27.5109 20.265 28.22L22.028 29.9673C22.3222 30.2589 22.3243 30.7338 22.0327 31.028C21.7411 31.3222 21.2662 31.3243 20.972 31.0327L19.1773 29.2539C18.5013 28.584 17.9489 28.0364 17.5571 27.5485C17.1496 27.0412 16.8547 26.5263 16.7759 25.9082C16.7586 25.7726 16.75 25.6363 16.75 25.5C16.75 25.3637 16.7586 25.2274 16.7759 25.0918C16.8547 24.4737 17.1496 23.9588 17.5571 23.4515C17.9489 22.9636 18.5013 22.416 19.1773 21.7461L20.972 19.9673Z"
+                fill="#FFDE14" />
+            </svg>
+          </div>
+        </div>
+        <div class="slider-product-pagination">
+          <span class="slider-product-pagination__bullet slider-product-pagination__bullet--active"></span>
+          <span class="slider-product-pagination__bullet slider-product-pagination__bullet"></span>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
     <section class="feelings section">
       <div class="container">
@@ -462,12 +461,12 @@
               <div class="feelings__controls">
                 <a class="feelings__all-link" href="#">Всі відгуки</a>
                 <div class="feelings__nav">
-                  <button class="slider__btn slider__btn-prev--feelings">
+                  <button class="feelings__nav-btn feelings__nav-btn-prev--feelings">
                     <svg class="icon" width="18px" height="13px">
                       <use href="./images/sprite.svg#arrowRight"></use>
                     </svg>
                   </button>
-                  <button class="slider__btn slider__btn-next--feelings">
+                  <button class="feelings__nav-btn feelings__nav-btn-next--feelings">
                     <svg class="icon" width="18px" height="13px">
                       <use href="./images/sprite.svg#arrowRight"></use>
                     </svg>
@@ -475,10 +474,10 @@
                 </div>
               </div>
             </div>
-            <div class="slider slider-feelings">
+            <div class="slider-feelings">
               <div class="slider-feelings-connection">
                 <div class="slider-feelings__wrapper">
-                  <div class="slider__slide slider-feelings__slide">
+                  <div class="slider-feelings__slide">
                     <div class="slider-feelings__slide-inner">
                       <div class="feelings-card">
                         <div class="feelings-card__inner">
@@ -557,7 +556,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="slider__slide slider-feelings__slide">
+                  <div class="slider-feelings__slide">
                     <div class="slider-feelings__slide-inner">
                       <div class="feelings-card">
                         <div class="feelings-card__inner">
@@ -636,7 +635,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="slider__slide slider-feelings__slide">
+                  <div class="slider-feelings__slide">
                     <div class="slider-feelings__slide-inner">
                       <div class="feelings-card">
                         <div class="feelings-card__inner">
@@ -718,11 +717,11 @@
 
                 </div>
               </div>
-            </div>
-            <div class="slider-feelings-pagination">
-              <span
-                class="slider-feelings-pagination__bullet slider-feelings-pagination__bullet--active"></span>
-              <span class="slider-feelings-pagination__bullet"></span>
+              <div class="slider-feelings-pagination">
+                <span
+                  class="slider-feelings-pagination__bullet slider-feelings-pagination__bullet--active"></span>
+                <span class="slider-feelings-pagination__bullet"></span>
+              </div>
             </div>
           </div>
           <div class="rating-summary">

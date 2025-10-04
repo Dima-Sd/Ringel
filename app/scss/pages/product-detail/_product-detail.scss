@@ -307,6 +307,9 @@
       width: 100%;
       height: 100%;
     }
+    .slider-youlike-pagination {
+      display: none;
+    }
   }
   .youlike-card {
     &__content{
@@ -590,6 +593,46 @@
     align-items: center;
     gap: 8px;
   }
+  &__nav-btn {
+    background-color: $dark-700;
+    width: 51px;
+    height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $light;
+    border-radius: 6px;
+    transition: background-color .3s, outline .3s, opacity .3s;
+    outline-offset: 3px;
+
+    svg.icon {
+      fill: $accent;
+    }
+
+    &:hover {
+      background-color: $accent;
+
+      svg.icon {
+        fill: $dark-700;
+      }
+    }
+
+    &:focus {
+      outline: 1px solid $accent;
+    }
+
+    &:active {
+      box-shadow: inset 4px 4px 4px rgba(0, 0, 0, .25);
+    }
+  }
+
+  &__nav-btn-prev {
+    &--feelings {
+      svg.icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
   &__all-link {
     color: $accent;
     position: relative;
@@ -674,7 +717,7 @@
 /* .slider.slider-feelings {
   overflow: visible;
 } */
-.slider {
+
   .slider-feelings {
     &__wrapper {
       display: flex;
@@ -692,45 +735,9 @@
       flex-direction: column;
       gap: 30px;
     }
-  }
-  &__btn {
-    background-color: $dark-700;
-    width: 51px;
-    height: 51px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid $light;
-    border-radius: 6px;
-    transition: background-color .3s, outline .3s, opacity .3s;
-    outline-offset: 3px;
-    svg.icon {
-      fill: $accent;
-    }
 
-    &:hover {
-      background-color: $accent;
-      svg.icon {
-        fill: $dark-700;
-      }
-    }
-
-    &:focus {
-      outline: 1px solid $accent;
-    }
-
-    &:active {
-      box-shadow: inset 4px 4px 4px rgba(0, 0, 0, .25);
-    }
   }
-  &__btn-prev {
-      &--feelings {
-      svg.icon {
-        transform: rotate(180deg);
-      }
-    }
-  }
-}
+
 /* Блок з рейтингом */
 
 .rating-summary {
@@ -1063,7 +1070,6 @@
         justify-content: flex-end;
         overflow: visible;
         gap: 20px;
-        margin-bottom: 20px;
         align-items: stretch;
       }
       &__slide {
@@ -1135,7 +1141,8 @@
       display: none;
     }
     .slider-feelings {
-      padding-bottom: 20px;
+      position: relative;
+      padding-bottom: 24px;
       &__slide {
         .feelings-card {
           display: none;
@@ -1146,13 +1153,15 @@
       }
     }
     .slider-feelings-pagination {
+      position: absolute;
+      bottom: 0;
+      left: 0;
       display: flex;
       align-items: center;
       width: 100%;
       border-radius: 6px;
       height: 4px;
       background-color: $light;
-      margin-bottom: 20px;
 
       &__bullet {
         width: 50%;
@@ -1299,22 +1308,47 @@
     }
   }
   .youlike {
-  .slider-youlike {
-    &__wrapper {
-      width: 100%;
-      display: flex;
-      justify-content: flex-end;
-      overflow: visible;
-      gap: 20px;
-    }
+    .slider-youlike {
+      position: relative;
+      padding-bottom: 25px;
+      &__wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        overflow: visible;
+        gap: 20px;
+      }
 
-    &__slide {
-      flex: 0 0 calc((100% - 20px) / 1);
-      max-width: 464px;
-      width: 100%;
-      margin: 0 auto;
-    }
-
+      &__slide {
+        flex: 0 0 calc((100% - 20px) / 1);
+        max-width: 464px;
+        width: 100%;
+        margin: 0 auto;
+      }
+      .slider-youlike-pagination {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        border-radius: 6px;
+        height: 4px;
+        background-color: $light;
+  
+        &__bullet {
+          width: 50%;
+          height: 4px;
+          border-radius: 6px;
+          background-color: $light;
+          opacity: 1;
+          margin: 0;
+  
+          &--active {
+            background: $accent;
+          }
+        }
+      }
     }
   }
   .feedback {

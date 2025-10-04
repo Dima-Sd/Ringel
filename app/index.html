@@ -268,10 +268,10 @@
     <section class="product section">
       <div class="container">
         <h2 class="title">Популярні товари</h2>
-        <div class="slider slider-product">
+        <div class="slider-product">
           <div class="slider-product-connection">
             <div class="slider-product__wrapper">
-              <div class="slider__slide slider-product__slide">
+              <div class="slider-product__slide">
                 <article class="product-card">
     <div class="product-badge">
         <span class="product-badge__item product-badge__item--discount">-10%</span>
@@ -333,7 +333,7 @@
 
 </article>
               </div>
-              <div class="slider__slide slider-product__slide slider-product__slide--visible">
+              <div class="slider-product__slide slider-product__slide--visible">
                 <article class="product-card">
     <div class="product-badge">
         <span class="product-badge__item product-badge__item--discount">-10%</span>
@@ -395,7 +395,7 @@
 
 </article>
               </div>
-              <div class="slider__slide slider-product__slide slider-product__slide--visible">
+              <div class="slider-product__slide slider-product__slide--visible">
                 <article class="product-card">
     <div class="product-badge">
         <span class="product-badge__item product-badge__item--discount">-10%</span>
@@ -457,7 +457,7 @@
 
 </article>
               </div>
-              <div class="slider__slide slider-product__slide slider-product__slide--visible">
+              <div class="slider-product__slide slider-product__slide--visible">
                 <article class="product-card">
     <div class="product-badge">
         <span class="product-badge__item product-badge__item--discount">-10%</span>
@@ -519,7 +519,7 @@
 
 </article>
               </div>
-              <div class="slider__slide slider-product__slide slider-product__slide--visible">
+              <div class="slider-product__slide slider-product__slide--visible">
                 <article class="product-card">
     <div class="product-badge">
         <span class="product-badge__item product-badge__item--discount">-10%</span>
@@ -581,7 +581,7 @@
 
 </article>
               </div>
-              <div class="slider__slide slider-product__slide">
+              <div class="slider-product__slide">
                 <article class="product-card">
     <div class="product-badge">
         <span class="product-badge__item product-badge__item--discount">-10%</span>
@@ -643,11 +643,10 @@
 
 </article>
               </div>
-
             </div>
           </div>
-          <div class="slider__control slider-product__control">
-            <div class="slider__btn--product slider__btn-next--product">
+          <div class="slider-product__control">
+            <div class="slider-product__btn slider-product__btn--next">
               <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="0.410362" y="0.410362" width="50.1793" height="50.1793" rx="5.58964" fill="#282934" />
                 <rect x="0.410362" y="0.410362" width="50.1793" height="50.1793" rx="5.58964" stroke="#F4F4F4"
@@ -657,7 +656,7 @@
                   fill="#FFDE14" />
               </svg>
             </div>
-            <div class="slider__btn--product slider__btn-prev--product">
+            <div class="slider-product__btn slider-product__btn--prev">
               <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="-0.410362" y="0.410362" width="50.1793" height="50.1793" rx="5.58964"
                   transform="matrix(-1 0 0 1 50.1793 0)" fill="#282934" />
@@ -669,14 +668,52 @@
               </svg>
             </div>
           </div>
-          <div class="slider-pagination slider-pagination--product">
-            <span
-              class="slider-pagination__bullet slider-pagination__bullet-active slider-pagination__bullet-active--product"></span>
-            <span class="slider-pagination__bullet slider-pagination__bullet--product"></span>
+          <div class="slider-product-pagination">
+            <span class="slider-product-pagination__bullet slider-product-pagination__bullet--active"></span>
+            <span class="slider-product-pagination__bullet slider-product-pagination__bullet"></span>
           </div>
         </div>
       </div>
     </section>
+    <div class="tiker">
+  <div class="container">
+    <ul class="tiker__list">
+      <li class="tiker__item">
+        Подарункова упаковка
+      </li>
+      <li class="tiker__item">
+        <img class="tiker__img" src="./images/logo.svg" alt="Ringel">
+      </li>
+      <li class="tiker__item">
+        Безкоштовна доставка
+      </li>
+      <li class="tiker__item">
+        <img class="tiker__img" src="./images/logo.svg" alt="Ringel">
+      </li>
+      <li class="tiker__item">
+        100 днів на повернення
+      </li>
+      <li class="tiker__item">
+        <img class="tiker__img" src="./images/logo.svg" alt="Ringel">
+      </li>
+      <li class="tiker__item">
+        Безкоштовне повернення
+      </li>
+      <li class="tiker__item">
+        <img class="tiker__img" src="./images/logo.svg" alt="Ringel">
+      </li>
+      <li class="tiker__item">
+        відмінна якість
+      </li>
+      <li class="tiker__item">
+        <img class="tiker__img" src="./images/logo.svg" alt="Ringel">
+      </li>
+      <li class="tiker__item">
+        Офіційна гарантія
+      </li>
+    </ul>
+  </div>
+</div>
     <section class="reviews section">
       <div class="container">
         <div class="reviews__inner">
@@ -707,10 +744,10 @@
             </div>
           </div>
           <div class="reviews__slider-box">
-            <div class="slider slider-reviews">
+            <div class="slider-reviews">
               <div class="slider-reviews-connection">
                 <div class="slider-reviews__wrapper">
-                  <div class="slider__slide slider-reviews__slide slider-reviews__slide--visible">
+                  <div class="slider-reviews__slide slider-reviews__slide--visible">
                     <div class="slider-reviews__slide-inner">
                       <article class="product-card product-card--reviews">
                         <div class="product-badge">
@@ -754,7 +791,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="slider__slide slider-reviews__slide ">
+                  <div class="slider-reviews__slide ">
                     <div class="slider-reviews__slide-inner">
                       <article class="product-card product-card--reviews">
                         <div class="product-card__badges">
@@ -801,10 +838,9 @@
 
                 </div>
               </div>
-              <div class="slider-pagination slider-pagination--reviews">
-                <span
-                  class="slider-pagination__bullet slider-pagination__bullet-active slider-pagination__bullet-active--reviews"></span>
-                <span class="slider-pagination__bullet slider-pagination__bullet--reviews"></span>
+              <div class="slider-reviews-pagination">
+                <span class="slider-reviews-pagination__bullet slider-reviews-pagination__bullet--active"></span>
+                <span class="slider-reviews-pagination__bullet"></span>
               </div>
             </div>
           </div>
@@ -869,10 +905,10 @@
     </h2>
   </div>
   <div class="about__slider-box">
-    <div class="slider slider-about">
+    <div class="slider-about">
       <div class="slider-about-connection">
         <div class="slider-about__wrapper">
-          <div class="slider__slide slider-about__slide">
+          <div class="slider-about__slide">
             <div class="slider-about__card">
               <a href="#" class="slider-about__card-link">
                 <img class="slider-about__card-img" src="../../images/index/about/pot.jpg" alt="">
@@ -880,7 +916,7 @@
               <h4 class="slider-about__card-title">Подарунки для компаній</h4>
             </div>
           </div>
-          <div class="slider__slide slider-about__slide slider-about__slide--visible">
+          <div class="slider-about__slide slider-about__slide--visible">
             <div class="slider-about__card">
               <a href="#" class="slider-about__card-link">
                 <img class="slider-about__card-img" src="../../images/index/about/pot.jpg" alt="">
@@ -888,7 +924,7 @@
               <h4 class="slider-about__card-title">Подарунки для компаній</h4>
             </div>
           </div>
-          <div class="slider__slide slider-about__slide slider-about__slide--visible">
+          <div class="slider-about__slide slider-about__slide--visible">
             <div class="slider-about__card">
               <a href="#" class="slider-about__card-link">
                 <img class="slider-about__card-img" src="../../images/index/about/pouring.jpg" alt="">
@@ -896,7 +932,7 @@
               <h4 class="slider-about__card-title">Наша місія</h4>
             </div>
           </div>
-          <div class="slider__slide slider-about__slide slider-about__slide--visible">
+          <div class="slider-about__slide slider-about__slide--visible">
             <div class="slider-about__card">
               <a href="#" class="slider-about__card-link">
                 <img class="slider-about__card-img" src="../../images/index/about/cooking.jpg" alt="">
@@ -904,7 +940,7 @@
               <h4 class="slider-about__card-title">Бонуси за брудний посуд</h4>
             </div>
           </div>
-          <div class="slider__slide slider-about__slide slider-about__slide--visible">
+          <div class="slider-about__slide slider-about__slide--visible">
             <div class="slider-about__card">
               <a href="#" class="slider-about__card-link">
                 <img class="slider-about__card-img" src="../../images/index/about/vegetables.jpg" alt="">
@@ -912,7 +948,7 @@
               <h4 class="slider-about__card-title">Рецепти для твого дому</h4>
             </div>
           </div>
-          <div class="slider__slide slider-about__slide slider-about__slide--visible">
+          <div class="slider-about__slide slider-about__slide--visible">
             <div class="slider-about__card">
               <a href="#" class="slider-about__card-link">
                 <img class="slider-about__card-img" src="../../images/index/about/tasting.jpg" alt="">
@@ -920,7 +956,7 @@
               <h4 class="slider-about__card-title">Шукайте нас у магазинах</h4>
             </div>
           </div>
-          <div class="slider__slide slider-about__slide">
+          <div class="slider-about__slide">
             <div class="slider-about__card">
               <a href="#" class="slider-about__card-link">
                 <img class="slider-about__card-img" src="../../images/index/about/tasting.jpg" alt="">
@@ -930,8 +966,8 @@
           </div>
         </div>
       </div>
-      <div class="slider__control slider-about__control">
-        <div class="slider__btn--about slider__btn-next--about">
+      <div class="slider-about__control">
+        <div class="slider-about__btn slider-about__btn--next">
           <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="0.410362" y="0.410362" width="50.1793" height="50.1793" rx="5.58964" fill="#282934" />
             <rect x="0.410362" y="0.410362" width="50.1793" height="50.1793" rx="5.58964" stroke="#F4F4F4"
@@ -942,7 +978,7 @@
           </svg>
           </svg>
         </div>
-        <div class="slider__btn--about slider__btn-prev--about">
+        <div class="slider-about__btn slider-about__btn--prev">
           <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="-0.410362" y="0.410362" width="50.1793" height="50.1793" rx="5.58964"
               transform="matrix(-1 0 0 1 50.1793 0)" fill="#282934" />

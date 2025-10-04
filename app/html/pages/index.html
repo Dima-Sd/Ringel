@@ -144,10 +144,10 @@
     <section class="product section">
       <div class="container">
         <h2 class="title">Популярні товари</h2>
-        <div class="slider slider-product">
+        <div class="slider-product">
           <div class="slider-product-connection">
             <div class="slider-product__wrapper">
-              <div class="slider__slide slider-product__slide">
+              <div class="slider-product__slide">
                 @@include('../components/global/cards/card-product.html',
                 {"folder":"goods",
                 "img":"zitroneOlive",
@@ -155,7 +155,7 @@
                 "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)"
                 })
               </div>
-              <div class="slider__slide slider-product__slide slider-product__slide--visible">
+              <div class="slider-product__slide slider-product__slide--visible">
                 @@include('../components/global/cards/card-product.html',
                 {"folder":"goods",
                 "img":"zitroneOlive",
@@ -163,7 +163,7 @@
                 "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)"
                 })
               </div>
-              <div class="slider__slide slider-product__slide slider-product__slide--visible">
+              <div class="slider-product__slide slider-product__slide--visible">
                 @@include('../components/global/cards/card-product.html',
                 {"folder":"goods",
                 "img":"zitroneOlive",
@@ -171,7 +171,7 @@
                 "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)"
                 })
               </div>
-              <div class="slider__slide slider-product__slide slider-product__slide--visible">
+              <div class="slider-product__slide slider-product__slide--visible">
                 @@include('../components/global/cards/card-product.html',
                 {"folder":"goods",
                 "img":"zitroneOlive",
@@ -179,7 +179,7 @@
                 "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)"
                 })
               </div>
-              <div class="slider__slide slider-product__slide slider-product__slide--visible">
+              <div class="slider-product__slide slider-product__slide--visible">
                 @@include('../components/global/cards/card-product.html',
                 {"folder":"goods",
                 "img":"zitroneOlive",
@@ -187,7 +187,7 @@
                 "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)"
                 })
               </div>
-              <div class="slider__slide slider-product__slide">
+              <div class="slider-product__slide">
                 @@include('../components/global/cards/card-product.html',
                 {"folder":"goods",
                 "img":"zitroneOlive",
@@ -195,11 +195,10 @@
                 "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)"
                 })
               </div>
-
             </div>
           </div>
-          <div class="slider__control slider-product__control">
-            <div class="slider__btn--product slider__btn-next--product">
+          <div class="slider-product__control">
+            <div class="slider-product__btn slider-product__btn--next">
               <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="0.410362" y="0.410362" width="50.1793" height="50.1793" rx="5.58964" fill="#282934" />
                 <rect x="0.410362" y="0.410362" width="50.1793" height="50.1793" rx="5.58964" stroke="#F4F4F4"
@@ -209,7 +208,7 @@
                   fill="#FFDE14" />
               </svg>
             </div>
-            <div class="slider__btn--product slider__btn-prev--product">
+            <div class="slider-product__btn slider-product__btn--prev">
               <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="-0.410362" y="0.410362" width="50.1793" height="50.1793" rx="5.58964"
                   transform="matrix(-1 0 0 1 50.1793 0)" fill="#282934" />
@@ -221,14 +220,14 @@
               </svg>
             </div>
           </div>
-          <div class="slider-pagination slider-pagination--product">
-            <span
-              class="slider-pagination__bullet slider-pagination__bullet-active slider-pagination__bullet-active--product"></span>
-            <span class="slider-pagination__bullet slider-pagination__bullet--product"></span>
+          <div class="slider-product-pagination">
+            <span class="slider-product-pagination__bullet slider-product-pagination__bullet--active"></span>
+            <span class="slider-product-pagination__bullet slider-product-pagination__bullet"></span>
           </div>
         </div>
       </div>
     </section>
+    @@include('../components/global/tiker.html')
     <section class="reviews section">
       <div class="container">
         <div class="reviews__inner">
@@ -259,10 +258,10 @@
             </div>
           </div>
           <div class="reviews__slider-box">
-            <div class="slider slider-reviews">
+            <div class="slider-reviews">
               <div class="slider-reviews-connection">
                 <div class="slider-reviews__wrapper">
-                  <div class="slider__slide slider-reviews__slide slider-reviews__slide--visible">
+                  <div class="slider-reviews__slide slider-reviews__slide--visible">
                     <div class="slider-reviews__slide-inner">
                       <article class="product-card product-card--reviews">
                         <div class="product-badge">
@@ -306,7 +305,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="slider__slide slider-reviews__slide ">
+                  <div class="slider-reviews__slide ">
                     <div class="slider-reviews__slide-inner">
                       <article class="product-card product-card--reviews">
                         <div class="product-card__badges">
@@ -353,10 +352,9 @@
 
                 </div>
               </div>
-              <div class="slider-pagination slider-pagination--reviews">
-                <span
-                  class="slider-pagination__bullet slider-pagination__bullet-active slider-pagination__bullet-active--reviews"></span>
-                <span class="slider-pagination__bullet slider-pagination__bullet--reviews"></span>
+              <div class="slider-reviews-pagination">
+                <span class="slider-reviews-pagination__bullet slider-reviews-pagination__bullet--active"></span>
+                <span class="slider-reviews-pagination__bullet"></span>
               </div>
             </div>
           </div>
