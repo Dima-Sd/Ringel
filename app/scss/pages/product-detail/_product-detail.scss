@@ -401,6 +401,157 @@
   }
 }
 
+.feedback {
+  background-color: $accent;
+  position: relative;
+
+  &__picture-bg {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+  }
+  &__img {
+    height: 100%;
+  }
+
+  &__inner  {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 60px 0;
+ 
+/*   &::before {
+    background-image: url('../../images/detalis/feedback-bg.webp');
+    background-position: right 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 50%;
+    } */
+  }
+  &__content {
+  flex: 1 1 50%;
+   max-width: 760px;
+   width: 100%;
+   padding-left: 30px;
+  }
+  &__title-block {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+  &__rating {
+    display: flex;
+    align-items: center;
+  }
+  &__rating-icon {
+    fill: $dark-700;
+  }
+}
+.feedback-form {
+  gap: 5px;
+  width: 100%;
+  gap: 15px;
+  &__item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  input,
+  textarea {
+    &::placeholder {
+      @include Inter(400, 18px, 1.1);
+      color: $dark-700;
+    }
+  }
+  &__input{
+    flex: 1 1 50%;
+  }
+  &__input,
+  &__textarea{
+    padding: 15px 20px;
+    border-radius: 6px;
+    border: 1px solid $dark-700;
+    @include Inter(400, 18px, 1.1);
+    color: $dark-700;
+    background-color: transparent;
+    width: 100%;
+  }
+  &__textarea{
+    resize: none;
+    height: 110px;
+    margin-bottom: 15px;
+  }
+  &__ulpoad-file{
+    @include visually-hidden;
+  }
+  &__item-upload {
+    max-width: 50%;
+    display: inline-flex;
+    justify-content: space-between;
+    background-color: rgba($dark-700, .1);
+    width: 100%;
+    @include Inter(700, 18px, 1.1);
+    color: $dark-700;
+    padding: 15px 20px;
+    border-radius: 6px;
+    border: 1px solid $dark-700;
+    margin-bottom: 15px;
+  }
+  &__upload-box {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  &__ulpoad-icon {
+    fill: $dark-700;
+  }
+  &__submit {
+    background-color: $dark-700;
+    border: 1px solid $dark-700;
+    color: $accent;
+    .icon {
+      fill: $accent;
+    }
+    &:hover {
+      background-color: transparent;
+      color: $dark-700;
+      border-color: $dark-700;
+    .icon {
+        fill: $dark-700;
+      }
+    }
+
+    &:focus {
+      outline: 1px solid $accent;
+    }
+
+    &:active {
+      color: $dark-700;
+      background-color: $light;
+      box-shadow: inset 4px 4px 4px rgba(0, 0, 0, .25);
+    }
+  }
+}
+
+
 @media (max-width: 1560px) {
   .youlike {
     padding: 60px 0;
@@ -432,6 +583,12 @@
 
     }
   }
+  .feedback {
+    &__content {
+      width: 670px;
+    }
+
+  }
 }
 
 @media (max-width: 1390px) {
@@ -450,6 +607,66 @@
     &__big {
       width: 100%;
       margin: 0 auto 20px;
+    }
+  }
+  .feedback {
+    &__picture-bg {
+      width: 45%;
+    }
+  }
+}
+@media (max-width: 1240px) {
+  .feedback {
+    &__content {
+      width: 600px;
+    }
+  }
+}
+@media (max-width: 1110px) {
+.feedback {
+    &__title {
+      font-size: 32px;
+    }
+    &__content {
+      width: 540px;
+    }
+  }
+.feedback-form {
+    input,
+    textarea {
+    &::placeholder {
+      font-size: 16px;
+    }
+  }
+    &__input,
+    &__textarea,
+    &__submit,
+    &__item-upload {
+      font-size: 16px;
+    }
+  }
+}
+@media (max-width: 990px) {
+  .feedback {
+    &__content {
+      width: 480px;
+    }
+  }
+}
+@media (max-width: 880px) {
+.feedback {
+  padding: 30px 0;
+    &__inner {
+      display: block;
+      padding: 0;
+    }
+    &__picture-bg {
+      display: none;
+    }
+    &__content {
+      width: 100%;
+      padding: 0;
+      margin: 0 auto;
     }
   }
 }
@@ -640,7 +857,7 @@
       }
     }
   }
-.youlike {
+  .youlike {
   .slider-youlike {
     &__wrapper {
       width: 100%;
@@ -657,6 +874,30 @@
       margin: 0 auto;
     }
 
+    }
+  }
+  .feedback {
+    &__title-block {
+      display: block;
+    }
+    &__title {
+      font-size: 25px;
+    }
+  }
+  .feedback-form {
+    &__item {
+        display: block;
+      }
+    &__input {
+      display: block;
+      flex: 1 1 100%;
+      margin-bottom: 15px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &__item-upload {
+      max-width: 100%;
     }
   }
 }
