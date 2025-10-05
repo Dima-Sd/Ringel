@@ -1,0 +1,240 @@
+.checkout {
+  background-color: $light-900;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  &__order {
+    max-width: 990px;
+    width: 100%;
+  }
+  &__basket {
+    width: 480px;
+  }
+}
+.order-form {
+  &__title {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+}
+.contact-info {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid $dark-400;
+  input {
+    transition: all .3s;
+    &::placeholder {
+      @include Inter(400, 18px, 1.1);
+      color: $dark-400;
+    }
+    &:hover{
+      border-color: $accent;
+    }
+    &:focus {
+      outline: 1px solid $accent;
+    }
+  }
+  &__input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid $dark-400;
+    border-radius: 6px;
+    @include Inter(400, 18px, 1.1);
+    color: $dark-700;
+    margin-bottom: 20px; 
+    &--email,
+    &--tel {
+      max-width: 50%;
+    }
+  }
+  &__person-contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}
+.delivery,
+.payment {
+  border-bottom: 1px solid $dark-400;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  &__chose {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;  
+  }
+  &__item {
+    max-width: 312px;
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    padding: 15px 14px 15px 48px;
+    display: flex;
+    position: relative;
+    width: fit-content;
+    gap: 30px;
+    &:has(.delivery__radio:checked),
+    &:has(.payment__radio:checked){
+      border-color: $dark-700; 
+    }
+  }
+
+  &__radio {
+    @include visually-hidden;
+    &:checked+.delivery__radio-style,
+    &:checked+.payment__radio-style {
+      position: absolute;
+      border: 1px solid $dark-400;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      background-color: transparent;
+      top: 20px;
+      left: 20px;
+      &::after {
+        position: absolute;
+        content: '';
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background-color: $dark-700;
+        top: 2px;
+        left:2px;
+      }
+    }
+    &:checked+.payment__radio-style {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &__radio-style {
+    position: absolute;
+    border: 1px solid $dark-400;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    top: 20px;
+    left: 20px;
+  }
+  &__descr-title {
+    @include Inter(700, 16px, 1.25);
+    margin: 0;
+    color: $dark-700;
+  }
+  &__icon {
+    fill: $light-600;
+  }
+}
+.delivery-dropdoun {
+  margin-bottom: 20px;
+  position: relative;
+  &__display {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid $dark-400;
+    border-radius: 6px;
+    padding: 15px 20px;
+    &.list-open {
+      .delivery-dropdoun__icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 21px;
+        transform: rotate(90deg);
+      }
+    }
+  
+    &.list-close {
+      .delivery-dropdoun__icon {
+        transform: rotate(-90deg);
+      }
+    }
+    &:hover {
+      border-color: $accent;
+    }
+
+    &:focus {
+      outline: 1px solid $accent;
+    }
+  }
+  &__icon {
+    transition: all .3s;
+    fill: $dark-700;
+  }
+  &__display-input {
+    width: 100%;
+  }
+  &__list {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 15px 20px;
+    background-color: $light;
+    border: 1px solid $dark-400;
+    border-radius: 6px;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+
+    &.is-open {
+      max-height: fit-content;
+      opacity: 1;
+    }
+
+    &.is-hide {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+    }
+  }
+}
+.payment {
+  &__chose {
+    gap: 30px;
+    justify-content: start;
+  }
+    &__item {
+      max-width: 312px;
+      width: 100%;
+    }
+  &__radio-style {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.comment {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid $dark-400;
+  &__textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid $dark-400;
+    border-radius: 6px;
+    @include Inter(400, 18px, 1.1);
+    color: $dark-700;
+    resize: none;
+    max-height: 110px;
+    transition: all .3s;
+    
+      &::placeholder {
+        @include Inter(400, 18px, 1.1);
+        color: $dark-400;
+      }
+    
+      &:hover {
+        border-color: $accent;
+      }
+    
+      &:focus {
+        outline: 1px solid $accent;
+      }
+  }
+}

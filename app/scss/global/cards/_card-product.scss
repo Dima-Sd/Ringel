@@ -7,6 +7,30 @@
   overflow: hidden;
   background-color: $light;
   border-radius: 6px;
+  &--recomend {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 10px;
+    .product-card__image-box {
+      height: auto;
+    }
+    .product-card__content {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .product-card__footer {
+      width: 100%;
+    }
+    .product-rating,
+    .product-option {
+      display: none;
+    }
+    .product-price {
+      &__old {
+        display: none;
+      }
+    }
+  }
   &__image-box {
     max-width: 258px;
     width: 100%;

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    Каталог посуду Ringel
+  </title>
+  @@include('../components/global/resources/favicon.html')
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  @@include('../components/global/header.html')
+  <main>
+    <div class="top ">
+      <div class="container">
+        <div class="breadcrumbs">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="./index.html">
+                Головна
+              </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="./catalog.html">
+                Головна / Оформити замовлення
+              </a>
+            </li>
+          </ul>
+        </div>
+        <h2 class="title top__title">Головна / Оформити замовлення</h2>
+      </div>
+    </div>
+    <section class="checkout">
+      <div class="container">
+        <div class="checkout__inner">
+          <div class="checkout__order">
+            <form class="order-form" action="#">
+              <h2 class="order-form__title title">1. контактні дані</h2>
+              <div class="contact-info">
+                <div class="contact-info__person-name">
+                  <input class="contact-info__input contact-info__input--fio" type="text" placeholder="Введіть ім’я та прізвище *" required>
+                </div>
+                <div class="contact-info__person-contact">
+                  <input class="contact-info__input contact-info__input--email" type="email" placeholder="Email *" required>
+                  <input class="contact-info__input contact-info__input--tel" type="tel" placeholder="Телефон *" required>
+                </div>
+              </div>
+              <!-- Спосіб доставки -->
+               <div class="delivery">
+                <h2 class="order-form__title title">2. спосіб доставки</h2>
+
+                <!-- выпадающий список -->
+                <div class="delivery-dropdoun">
+                  <div class="delivery-dropdoun__display list-open">
+                    <input class="delivery-dropdoun__display-input"  id="name" type="text"  placeholder="Київ" />
+                    <svg class="delivery-dropdoun__icon icon" width="18px" height="13px">
+                      <use href="./images/sprite.svg#arrowRight"></use>
+                    </svg>
+                  </div>
+                  <ul class="delivery-dropdoun__list is-hide">
+                    <li class="delivery-dropdoun__item">
+                      <button class="delivery-dropdoun__unit" type="button">Київ</button>
+                    </li>
+                    <li class="delivery-dropdoun__item">
+                      <button class="delivery-dropdoun__unit" type="button">Київ</button>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- radio button -->
+                <div class="delivery__chose">
+                  <label class="delivery__item" for="del1">
+                    <input class="delivery__radio" type="radio" name="delivery" id="del1" checked>
+                    <span class="delivery__radio-style"></span>
+                    <h5 class="delivery__descr-title">
+                      Самовивіз з відділення Нова пошта
+                    </h5>
+                    <svg class="delivery__icon" width="25" height="25">
+                      <use href="./images/sprite.svg#novaPoshta"></use>
+                    </svg>
+                  </label>
+                  <label class="delivery__item" for="del2">
+                    <input class="delivery__radio" type="radio" name="delivery" id="del2">
+                    <span class="delivery__radio-style"></span>
+                    <h5 class="delivery__descr-title">
+                      Доставка кур’єром Нова пошта
+                    </h5>
+                    <svg class="delivery__icon" width="25" height="25">
+                      <use href="./images/sprite.svg#novaPoshta"></use>
+                    </svg>
+                  </label>
+                  <label class="delivery__item" for="del3">
+                    <input class="delivery__radio" type="radio" name="delivery" id="del3">
+                    <span class="delivery__radio-style"></span>
+                    <h5 class="delivery__descr-title">
+                      Самовивіз із поштомату Нова пошта
+                    </h5>
+                    <svg class="delivery__icon" width="25" height="25">
+                      <use href="./images/sprite.svg#novaPoshta"></use>
+                    </svg>
+                  </label>
+
+                </div>
+               </div>
+              <!-- Спосіб оплати -->
+               <div class="payment">
+                <h2 class="order-form__title title">3. спосіб оплати</h2>
+
+                <!-- radio button -->
+                <div class="payment__chose">
+                  <label class="payment__item" for="pay1">
+                    <input class="payment__radio" type="radio" name="payment-var" id="pay1" checked>
+                    <span class="payment__radio-style"></span>
+                    <h5 class="payment__descr-title">
+                      Накладений платіж
+                    </h5>
+                  </label>
+                  <label class="payment__item" for="pay2">
+                    <input class="payment__radio" type="radio" name="payment-var" id="pay2" checked>
+                    <span class="payment__radio-style"></span>
+                    <h5 class="payment__descr-title">
+                      Безготівковий розрахунок
+                    </h5>
+                  </label>
+                
+                </div>
+               </div>
+
+               <!-- Коментарі -->
+                <div class="comment">
+                  <h2 class="order-form__title title">4. коментар</h2>
+                  <textarea class="comment__textarea" placeholder="Текст *"></textarea>
+                </div>
+            </form>
+
+            <div class="checkout-slider">
+              @@include('../components/global/cards/card-product.html',
+              {"folder":"goods",
+              "img":"zitroneOlive",
+              "alt":"Сковорода з антипригарним покриттям і скляною кришкою",
+              "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)","mod":"product-card--recomend",
+              "bage":"@@include('../lego/bages/bestseller.html')"
+              })
+            </div>
+          </div>
+          <!-- Корзина -->
+          <div class="checkout__basket">
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  @@include('../components/global/footer.html')
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

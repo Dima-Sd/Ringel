@@ -1,8 +1,7 @@
-<article class="product-card">
+<article class="product-card @@mod">
+  <div class="product-card__head">
     <div class="product-badge">
-        <span class="product-badge__item product-badge__item--discount">-10%</span>
-        <span class="product-badge__item product-badge__item--bestseller">bestseller</span>
-        <span class="product-badge__item product-badge__item--topsale">Тов продажів</span>
+        @@bage
     </div>
     <div class="product-card__image-box">
       <picture>
@@ -10,6 +9,8 @@
         <img class="product-card__img" src="./images/@@folder/@@img.png" alt="@@alt">
       </picture>
     </div>
+  </div>
+  <div class="product-card__content">
     <div class="product-rating">
         <svg class="icon product-rating__icon" width="17" height="18">
           <use href="./images/sprite.svg#star"></use>
@@ -56,5 +57,6 @@
 
         </button>
     </div>
+  </div>
 
 </article>
