@@ -329,7 +329,7 @@
   background-color: $light;
   &__hrader {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     gap: 10px;
     justify-content: space-between;
     margin-bottom: 30px;
@@ -355,6 +355,7 @@
     text-transform: uppercase;
     color: $dark-700;
     position: relative;
+    transition: all .3s;
     &::after {
       position: absolute;
       content: '';
@@ -362,6 +363,19 @@
       bottom: 2px;
       left: 0;
       width: 100%;
+    }
+    &:hover {
+      color: $accent;
+      &::after {
+        border-color: $accent;
+      }
+    }
+    &:active {
+      opacity: .7;
+      
+      &::after {
+        opacity: .7;
+      }
     }
   }
   &__body {
