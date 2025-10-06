@@ -426,18 +426,6 @@
   align-items: flex-end;
   padding: 60px 0;
  
-/*   &::before {
-    background-image: url('../../images/detalis/feedback-bg.webp');
-    background-position: right 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    content: "";
-    height: 100%;
-    left: 0;
-    top: 0;
-    position: absolute;
-    width: 50%;
-    } */
   }
   &__content {
   flex: 1 1 50%;
@@ -714,9 +702,7 @@
   }
     
 }
-/* .slider.slider-feelings {
-  overflow: visible;
-} */
+
 
   .slider-feelings {
     &__wrapper {
