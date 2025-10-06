@@ -79,7 +79,7 @@
   margin-bottom: 30px;
   &__chose {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
     gap: 10px;  
   }
@@ -465,6 +465,7 @@
     display: flex;
     align-items: center;
     border-radius: 6px;
+    position: relative;
   }
   
   &__input {
@@ -478,7 +479,10 @@
   }
   
   &__submit {
-    margin-left: -7px;
+    padding: 14px 20px;
+   position: absolute;
+   right: 0;
+   bottom: 0;
     &:hover {
       background-color: transparent;
       color: $dark-700;

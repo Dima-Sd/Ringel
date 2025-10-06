@@ -703,7 +703,6 @@
     
 }
 
-
   .slider-feelings {
     &__wrapper {
       display: flex;
@@ -809,7 +808,7 @@
 }
 
 
-
+/* popup / quik */
 .quick-order {
   /* background-color: $light; */
   
@@ -830,6 +829,7 @@
 .quick-form {
   width: 100%;
   input {
+    margin-bottom: 10px;
     &::placeholder {
       @include Inter(400, 16px, 1.42);
       color: $dark-400;
@@ -844,7 +844,7 @@
     color: $dark-700;
     padding: 15px;
     margin-bottom: 10px;
-    &:last-child {
+    &:last-of-type {
       margin-bottom: 0;
     }
   }
@@ -1365,6 +1365,56 @@
   .success-block {
     &__title {
       font-size: 25px;
+    }
+  }
+  /* popup detalis */
+  .popup {
+    &__dialog {
+      &--quick-order,
+      &--success {
+        max-width: 335px;
+        background-color: $light;
+        padding: 30px 20px;
+        border-radius: 6px;
+    
+        .popup__close {
+          top: -64px;
+          right: -64px;
+    
+          .icon {
+            width: 24px;
+            height: 24px;
+            fill: $light;
+          }
+        }
+      }
+      .popup__close {
+        right: -20px;
+      }
+    }
+  }
+  .quick-order {
+    &__title {
+      font-size: 25px;
+    }
+  }
+  .quick-form,
+  .success-block {
+    &__btn {
+      width: 100%;
+      font-size: 16px;
+      justify-content: space-between;
+    }
+  }
+  .success-block {
+    &__icon {
+      width: 63px;
+      height: 63px;
+      margin-bottom: 10px;
+    }
+    &__text {
+      font-size: 14px;
+      margin-bottom: 10px;
     }
   }
 }

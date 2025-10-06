@@ -864,7 +864,7 @@
   @@include('../components/global/footer.html')
 
 
-<div class="popup" data-popup="quick-order">
+<div class="popup popup--hide" data-popup="quick-order">
   <div class="popup__dialog popup__dialog--quick-order">
     <div class="popup__panel">
       <button class="popup__close" aria-label="Закрити">
@@ -881,17 +881,13 @@
     </div>
 
     <!-- Мини-карточка -->
-    <div class="mini-card">
-      <div class="mini-card__image">
-        <img src="./images/product.png" alt="Каструля Ringel Zitrone Olive">
-      </div>
-      <div class="mini-card__content">
-        <h3 class="mini-card__title title">
-          Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)
-        </h3>
-        <div class="mini-card__price">1 456 ₴</div>
-      </div>
-    </div>
+      @@include('../components/global/cards/card-product.html',
+      {"folder":"goods",
+      "img":"zitroneOlive",
+      "alt":"Сковорода з антипригарним покриттям і скляною кришкою",
+      "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)","mod":"product-card--quik",
+      "bage":""
+      })
 
     <!-- Форма -->
     <form class="quick-form">
@@ -908,7 +904,7 @@
   </div>
 </div>
 
-<div class="popup " data-popup="success">
+<div class="popup popup--active" data-popup="success">
   <div class="popup__dialog popup__dialog--success">
     <div class="popup__panel">
       <button class="popup__close" aria-label="Закрити">
