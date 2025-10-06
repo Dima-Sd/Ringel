@@ -570,6 +570,7 @@
         <div class="product-price">
             <span class="product-price__old">1820 ₴</span>
             <span class="product-price__current">1456 ₴</span>
+            <span class="product-price__multiplicator">x1</span>
         </div>
         <button class="product-card__cart-btn" aria-label="Добавить в корзину">
             <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -634,6 +635,7 @@
         <div class="product-price">
             <span class="product-price__old">1820 ₴</span>
             <span class="product-price__current">1456 ₴</span>
+            <span class="product-price__multiplicator">x1</span>
         </div>
         <button class="product-card__cart-btn" aria-label="Добавить в корзину">
             <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -698,6 +700,7 @@
         <div class="product-price">
             <span class="product-price__old">1820 ₴</span>
             <span class="product-price__current">1456 ₴</span>
+            <span class="product-price__multiplicator">x1</span>
         </div>
         <button class="product-card__cart-btn" aria-label="Добавить в корзину">
             <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -762,6 +765,7 @@
         <div class="product-price">
             <span class="product-price__old">1820 ₴</span>
             <span class="product-price__current">1456 ₴</span>
+            <span class="product-price__multiplicator">x1</span>
         </div>
         <button class="product-card__cart-btn" aria-label="Добавить в корзину">
             <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -826,6 +830,7 @@
         <div class="product-price">
             <span class="product-price__old">1820 ₴</span>
             <span class="product-price__current">1456 ₴</span>
+            <span class="product-price__multiplicator">x1</span>
         </div>
         <button class="product-card__cart-btn" aria-label="Добавить в корзину">
             <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -890,6 +895,7 @@
         <div class="product-price">
             <span class="product-price__old">1820 ₴</span>
             <span class="product-price__current">1456 ₴</span>
+            <span class="product-price__multiplicator">x1</span>
         </div>
         <button class="product-card__cart-btn" aria-label="Добавить в корзину">
             <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1561,7 +1567,7 @@
 
 
 
-<div class="popup popup--hide" data-popup="quick-order">
+<div class="popup popup--active" data-popup="quick-order">
   <div class="popup__dialog popup__dialog--quick-order">
     <div class="popup__panel">
       <button class="popup__close" aria-label="Закрити">
@@ -1575,10 +1581,8 @@
       <p class="quick-order__subtitle">
         Заповніть форму, і наш консультант зв'яжеться з вами протягом 5 хвилин та допоможе з оформленням замовлення.
       </p>
-    </div>
-
-    <!-- Мини-карточка -->
-      <article class="product-card product-card--quik">
+      <div class="quick-order__content">
+        <article class="product-card product-card--quik">
   <div class="product-card__head">
     <div class="product-badge">
         
@@ -1616,6 +1620,7 @@
         <div class="product-price">
             <span class="product-price__old">1820 ₴</span>
             <span class="product-price__current">1456 ₴</span>
+            <span class="product-price__multiplicator">x1</span>
         </div>
         <button class="product-card__cart-btn" aria-label="Добавить в корзину">
             <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1640,7 +1645,8 @@
   </div>
 
 </article>
-
+      </div>
+    </div>
     <!-- Форма -->
     <form class="quick-form">
       <input type="text" class="quick-form__input" placeholder="Ім’я та Прізвище *" required>

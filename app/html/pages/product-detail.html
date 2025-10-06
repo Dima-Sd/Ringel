@@ -864,7 +864,7 @@
   @@include('../components/global/footer.html')
 
 
-<div class="popup popup--hide" data-popup="quick-order">
+<div class="popup popup--active" data-popup="quick-order">
   <div class="popup__dialog popup__dialog--quick-order">
     <div class="popup__panel">
       <button class="popup__close" aria-label="Закрити">
@@ -878,17 +878,16 @@
       <p class="quick-order__subtitle">
         Заповніть форму, і наш консультант зв'яжеться з вами протягом 5 хвилин та допоможе з оформленням замовлення.
       </p>
+      <div class="quick-order__content">
+        @@include('../components/global/cards/card-product.html',
+        {"folder":"goods",
+        "img":"zitroneOlive",
+        "alt":"Сковорода з антипригарним покриттям і скляною кришкою",
+        "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)","mod":"product-card--quik",
+        "bage":""
+        })
+      </div>
     </div>
-
-    <!-- Мини-карточка -->
-      @@include('../components/global/cards/card-product.html',
-      {"folder":"goods",
-      "img":"zitroneOlive",
-      "alt":"Сковорода з антипригарним покриттям і скляною кришкою",
-      "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)","mod":"product-card--quik",
-      "bage":""
-      })
-
     <!-- Форма -->
     <form class="quick-form">
       <input type="text" class="quick-form__input" placeholder="Ім’я та Прізвище *" required>

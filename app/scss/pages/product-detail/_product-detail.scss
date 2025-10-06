@@ -1120,6 +1120,17 @@
       flex: 0 0 23%;
     }
   }
+  .quick-order {
+    &__content {
+      .product-card {
+        &--quik {
+          .product-price__current {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
 }
 @media (max-width: 576px) {
   .feelings {
@@ -1396,6 +1407,28 @@
   .quick-order {
     &__title {
       font-size: 25px;
+    }
+    &__content {
+    .product-card {
+        &--quik {
+          .product-card__content {
+            max-width: 180px;
+          }
+    
+          .product-card__title {
+            font-size: 16px;
+            line-height: 1.4;
+          }
+    
+          .product-price__current {
+            font-size: 20px;
+          }
+    
+          .product-badge {
+            margin-bottom: 0;
+          }
+        }
+      }
     }
   }
   .quick-form,

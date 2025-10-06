@@ -11,6 +11,7 @@
   }
   &__basket {
     max-width: 32%;
+    width: 100%;
   }
   &__control-panel {
     width: 100%;
@@ -314,6 +315,10 @@
     }
   }
 }
+.recomend-slider-pagination {
+  display: none;
+}
+
 
 /* basket */
 .basket {
@@ -482,7 +487,6 @@
     padding: 14px 20px;
    position: absolute;
    right: 0;
-   bottom: 0;
     &:hover {
       background-color: transparent;
       color: $dark-700;
@@ -596,6 +600,7 @@
 }
 @media (max-width: 768px) {
   .checkout {
+    margin-bottom: 0;
     &__inner {
       display: block;
     }
@@ -606,4 +611,36 @@
       max-width: 100%;
     }
   }
+  .recomend-slider {
+    padding-bottom: 20px;
+  }
+  .recomend-slider-pagination {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 4px;
+    height: 4px;
+    background-color: $light;
+
+    &__bullet {
+      width: 50%;
+      height: 4px;
+      border-radius: 6px;
+      background-color: $light;
+      opacity: 1;
+      margin: 0;
+    }
+
+    &__bullet {
+      &--active {
+        background: $dark-700;
+      }
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  
 }
