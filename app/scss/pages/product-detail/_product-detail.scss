@@ -854,7 +854,8 @@
 }
 
 .popup {
-&--basket {
+&--basket,
+&--basket-empty {
   justify-content: flex-end;
 }
  &__dialog {

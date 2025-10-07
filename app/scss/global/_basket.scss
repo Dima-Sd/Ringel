@@ -11,7 +11,9 @@
     padding-left: 30px;
     margin-bottom: 30px;
   }
-
+  &__empty {
+    display: none;
+  }
   &__title {
     display: flex;
     align-items: flex-end;
@@ -228,7 +230,15 @@
       flex: 0 0 calc((100% - 20px) / 1.2);
     }
   }
-
+  &--empty {
+    .basket__body,
+    .basket__slider,
+    .basket__total-panel,
+    .basket__foote-order-sbmt,
+    .basket__cookie {
+      display: none;
+    }
+  }
 }
 
 

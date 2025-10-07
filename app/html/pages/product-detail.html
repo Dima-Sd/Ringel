@@ -932,7 +932,7 @@
 </div>
 
 <!-- Корзина активувати popup--active popup--basket -->
-<div class="popup popup--active popup--basket" data-popup="basket">
+<div class="popup popup--hide" data-popup="basket">
 
   <div class="basket">
     <header class="basket__hrader">
@@ -977,6 +977,17 @@
           })
         </div>
       </div>
+    </div>
+    <div class="basket__empty">
+      <p class="basket__empty-text">Ваша корзина порожня, ви ще нічого не додали.</p>
+      <ul class="basket__empty-cats">
+        <li><a href="#">Сковорідки</a></li>
+        <li><a href="#">Каструлі</a></li>
+        <li><a href="#">Сотейники</a></li>
+        <li><a href="#">Ножі та терки</a></li>
+        <li><a href="#">Сковороди-гриль</a></li>
+      </ul>
+      <a href="#" class="basket__empty-link button">Перейти в каталог</a>
     </div>
     <div class="basket__slider">
       <div class="basket__slider-panel">
@@ -1056,7 +1067,22 @@
   </div>
 </div>
 
-
+<div class="popup popup--active popup--basket-empty">
+  <div class="basket">
+    <header class="basket__hrader">
+      <h2 class="basket__title title">
+        <p class="basket__title-text">ВАШ КОШИК</p>
+        <span class="basket__title-num-box">(<span class="basket__title-num">3</span>)</span>
+      </h2>
+      <a class="basket__redag-link" href="#">редагувати</a>
+      <button class="basket__close-btn" aria-label="Закрити">
+        <svg class="icon" width="24" height="24">
+          <use href="./images/sprite.svg#close"></use>
+        </svg>
+      </button>
+    </header>
+  </div>
+</div>
 
 <body>
     <script src="js/main.min.js"></script>
