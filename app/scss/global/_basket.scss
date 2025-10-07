@@ -2,6 +2,17 @@
   padding: 40px 0px 30px 0px;
   background-color: $light;
   width: 416px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  &.basket--show {
+    transform: translateX(0); // плавно выезжает
+  }
+  &.basket--hide {
+    transform: translateX(200%); // изначально за экраном
+    transition: transform 0.4s ease-in-out;
+  }
   &__hrader {
     display: flex;
     align-items: center;
@@ -195,6 +206,8 @@
     padding-top: 20px;
     padding-left: 30px;
     padding-right: 35px;
+    padding-bottom: 30px;
+    background-color: $light;
   }
 
   &__total-panel {
@@ -300,6 +313,7 @@
     .basket__body,
     .basket__slider,
     .basket__total-panel,
+    .basket__footer,
     .basket__foote-order-sbmt,
     .basket__cookie {
       display: none;

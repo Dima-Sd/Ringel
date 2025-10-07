@@ -13,6 +13,7 @@
     max-width: 32%;
     width: 100%;
     .basket {
+      height: auto;
       width: 100%;
       .basket__hrader {
         align-items: flex-end;
@@ -22,6 +23,9 @@
       }
       .basket__close {
         display: none;
+      }
+      .basket__footer {
+        padding-bottom: 0;
       }
     }
   }
