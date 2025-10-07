@@ -1,18 +1,27 @@
 .product-card {
   display: flex;
   flex-direction: column;
+  height: 100%;
   max-width: 351px;
   width: 100%;
   padding: 20px;
   overflow: hidden;
   background-color: $light;
   border-radius: 6px;
+
   &__image-box {
     max-width: 258px;
     width: 100%;
     max-height: 181px;
     height: 100%;
     margin: 0 auto;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
   }
 
   &__img {
@@ -108,14 +117,16 @@
     &__title {
       font-size: 16px;
     }
+
     .product-option__item {
       font-size: 14px;
     }
+
     .product-price {
       &__old {
         font-size: 14px;
       }
-  
+
       &__current {
         font-size: 16px;
       }
@@ -143,6 +154,7 @@
     .product-rating {
       font-size: 8px;
       margin-bottom: 12px;
+
       &__icon {
         width: 10px;
         height: 10px;
@@ -156,15 +168,17 @@
 
     .product-option {
       margin-bottom: 5px;
+
       &__item {
         font-size: 8px;
       }
     }
+
     .product-price {
       &__old {
         font-size: 10px;
       }
-  
+
       &__current {
         font-size: 12px;
       }
