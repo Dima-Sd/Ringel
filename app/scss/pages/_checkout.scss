@@ -279,6 +279,7 @@
 .promo-code {
   border-bottom: 1px solid rgba($dark-700, 0.2);
   padding-bottom: 15px;
+  margin-bottom: 20px;
   &__checkbox {
     @include visually-hidden;
     &:checked ~ .promo-code__form {

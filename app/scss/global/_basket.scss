@@ -13,7 +13,71 @@
   }
   &__empty {
     display: none;
+    width: 100%;
+    padding: 0 30px;
   }
+  &__empty-cats {
+    flex-grow: 1;
+  }
+  &__empty-text {
+    @include DINPcond(900, 22px, 1);
+    text-transform: uppercase;
+    color: $dark-700;
+    margin-bottom: 10px;
+  }
+  &__empty-cat {
+    padding: 20px 0;
+    border-bottom: 1px solid  rgba($dark-700, 0.2);
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  &__empty-cat-link {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    .icon {
+      transition: all .3s;
+      fill: $dark-700;
+    }
+    &:hover {
+      .basket__cat-title {
+        color: $accent;
+      }
+      .icon {
+        fill: $accent;
+        margin-right: -5px;
+      }
+    }
+    &:active {
+    .basket__cat-title {
+      opacity: .7;
+      }
+      .icon {
+        opacity: .7;
+        fill: $accent;
+      }
+    }
+  }
+  &__cat-img {
+    width: 37px;
+  }
+  &__cat-title {
+    @include Inter(400, 16px, 3.83);
+    color: $dark-700;
+    margin-right: auto;
+    transition: all .3s;
+  }
+  &__empty-link-btn {
+    justify-content: space-between;
+    background-color: $light;
+    border-color: $dark-700;
+    &:hover {
+      color: $dark-700;
+      background-color: $accent;
+    }
+  }
+
   &__title {
     display: flex;
     align-items: flex-end;
@@ -88,6 +152,7 @@
   &__body {
     padding-left: 30px;
     position: relative;
+    height: auto;
 
     &::after {
       position: absolute;
@@ -101,7 +166,7 @@
   }
 
   &__list {
-    max-height: 360px;
+    max-height: 460px;
     overflow-y: auto;
     padding-right: 25px;
     margin-bottom: 15px;
@@ -124,7 +189,6 @@
   &__item {
     border-bottom: 1px solid rgba($dark-700, 0.2);
     width: 100%;
-    padding: 20px 0px;
   }
 
   &__footer {
@@ -139,7 +203,6 @@
     gap: 10px;
     justify-content: space-between;
     margin-bottom: 20px;
-    padding-top: 20px;
   }
 
   &__total-title {
@@ -231,12 +294,20 @@
     }
   }
   &--empty {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
     .basket__body,
     .basket__slider,
     .basket__total-panel,
     .basket__foote-order-sbmt,
     .basket__cookie {
       display: none;
+    }
+    .basket__empty{
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
   }
 }
