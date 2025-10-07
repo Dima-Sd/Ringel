@@ -854,6 +854,9 @@
 }
 
 .popup {
+&--basket {
+  justify-content: flex-end;
+}
  &__dialog {
   &--quick-order,
   &--success {
@@ -1462,6 +1465,33 @@
   &__item,
   &__item-props {
     font-size: 14px;
+  }
+ }
+ .popup{
+  &--basket {
+    background-color: $light;
+    padding-bottom: 30px;
+    .basket {
+      width: 100%;
+      height: 100vh;
+      padding-left: 20px;
+      &__list {
+        padding-top: 15px;
+      }
+  
+      &__redag-link {
+        display: none;
+      }
+  
+      &__footer {
+        padding-right: 15px;
+      }
+  
+      &__foote-order-sbmt {
+        font-size: 16px;
+        line-height: 1.4;
+      }
+    }
   }
  }
 }
