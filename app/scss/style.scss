@@ -1,44 +1,47 @@
 @import "reset";
 @import "vars";
 @import "fonts";
-@import "global";
-
-@import "./global/lego/date-info";
-@import "./global/lego/promo-ticker";
+@import "global";            
 
 @import "./global/header";
+@import "./global/footer";
+
 @import "./global/breadcrumbs";
 @import "./global/search";
-@import "./pages/index/hero";
-@import "./pages/index/promo";
-@import "./global/section-product";
-@import "./global/cards/promo-card";
-@import "./global/lego/bage";
+@import "./global/cookie-banner";
+@import "./global/ticker";     
+
+@import "./global/lego/date-info";
+@import "./global/lego/bage";     
 @import "./global/lego/rating";
 @import "./global/lego/options";
 @import "./global/lego/product-price";
+
+@import "./global/cards/promo-card";
 @import "./global/cards/card-product";
-@import "./global/tiker";
-@import "./pages/index/benefits";
-@import "./global/section-about";
-@import "./pages/index/reviews";
-@import "./global/cookie-banner";
-@import "./pages/catalog/catalog";
-@import "./global/footer";
-
-
-@import "./pages/category";
-@import "./pages/product-detail/product-detail";
 @import "./global/cards/card-category";
-
-
-@import "./pages/deals";
 @import "./global/cards/card-deal";
-@import "./pages/product-deal";
 @import "./global/cards/card-deal-detail";
-@import "./global/section-similar-deal";
 
-@import "./pages/contacts";
+@import "./global/section-product";
+@import "./global/section-about";
+@import "./global/section-similar-deal";
+@import "./global/series-banner";
 
 @import "./global/section-advice";
 @import "./global/modals/modal-advice";
+
+@import "./pages/index/hero";
+@import "./pages/index/promo";
+@import "./pages/index/benefits";
+@import "./pages/index/reviews";
+
+@import "./pages/catalog";
+@import "./pages/category";
+@import "./pages/series";
+
+@import "./pages/product-detail";
+@import "./pages/deals";
+@import "./pages/product-deal";
+
+@import "./pages/contacts";

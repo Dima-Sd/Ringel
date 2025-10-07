@@ -183,6 +183,7 @@ body {
     @include DINPcond(900, 45px, 1);
     color: $dark-700;
     text-transform: uppercase;
+    margin-bottom: 0;
   }
 
   &__info {
@@ -282,89 +283,3 @@ body {
   }
 }
 
-/* popup */
-.popup {
-  &--hide {
-    display: none;
-  }
-
-  &--active {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-    z-index: 50;
-    overflow-y: auto;
-  }
-
-  &__dialog {
-    max-width: 1360px;
-    width: 100%;
-    margin: 0 auto;
-    background-color: $light-900;
-    padding: 60px 80px;
-  }
-
-  &__panel {
-    display: flex;
-    position: relative;
-  }
-
-  &__title {
-    @include DINPcond(900, 25px, 1);
-    color: $dark-700;
-    text-transform: uppercase;
-  }
-
-  &__close {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    background-color: transparent;
-    position: absolute;
-    width: 38px;
-    height: 38px;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    cursor: pointer;
-    border-radius: 50%;
-    transition: color 0.3s,
-      outline 0.3s,
-      box-shadow 0.3s;
-
-    svg.icon {
-      transition: all .3s;
-      width: 24px;
-      height: 24px;
-      fill: $dark-700;
-    }
-
-    &:hover {
-      color: $accent;
-
-      svg.icon {
-        fill: $accent;
-      }
-    }
-
-    &:focus {
-      outline: 1px solid $accent;
-
-    }
-
-    &:active {
-      box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
-
-      svg.icon {
-        fill: $accent;
-      }
-    }
-  }
-}
