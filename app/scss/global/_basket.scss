@@ -1,5 +1,5 @@
 .basket {
-  padding: 40px 0px 30px 30px;
+  padding: 40px 0px 30px 0px;
   background-color: $light;
   width: 416px;
   &__hrader {
@@ -8,6 +8,7 @@
     gap: 10px;
     justify-content: space-between;
     padding-right: 35px;
+    padding-left: 30px;
     margin-bottom: 30px;
   }
 
@@ -83,6 +84,7 @@
     }
   }
   &__body {
+    padding-left: 30px;
     position: relative;
 
     &::after {
@@ -125,6 +127,7 @@
 
   &__footer {
     padding-top: 20px;
+    padding-left: 30px;
     padding-right: 35px;
   }
 
@@ -176,6 +179,7 @@
   }
   &__slider {
     padding-top: 20px;
+    padding-left: 30px;
     background-color: $light-900;
   }
   &__slider-panel {
@@ -231,7 +235,13 @@
 /* basket */
 @media (max-width: 440px) {
 .basket  {
-    padding-left: 20px;
+    &__hrader {
+      padding-left: 20px;
+    }
+    &__slider,
+    &__body {
+      padding-left: 20px;
+    }
     &__list {
       padding-top: 15px;
     }
@@ -240,6 +250,7 @@
     }
     &__footer {
       padding-right: 15px;
+      padding-left: 20px;
     }
     &__foote-order-sbmt {
       font-size: 16px;
@@ -253,6 +264,16 @@
       }
       &__submit {
         font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  .basket {
+    .recomend-slider__slide {
+      .product-card--recomend {
+        width: 335px;
       }
     }
   }

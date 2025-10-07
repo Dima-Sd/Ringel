@@ -1469,12 +1469,15 @@
  }
  .popup{
   &--basket {
-    background-color: $light;
-    padding-bottom: 30px;
     .basket {
       width: 100%;
       height: 100vh;
-      padding-left: 20px;
+      overflow-y: auto;
+      &__slider,
+      &__hrader,
+      &__body {
+        padding-left: 20px;
+      }
       &__list {
         padding-top: 15px;
       }
@@ -1485,6 +1488,7 @@
   
       &__footer {
         padding-right: 15px;
+        padding-left: 20px;
       }
   
       &__foote-order-sbmt {
