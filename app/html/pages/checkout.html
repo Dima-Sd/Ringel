@@ -233,21 +233,21 @@
                   </div>
                 </div>
               </div>
-              <!-- Промо код -->
-               <div class="promo-code">
-                 <input class="promo-code__checkbox" type="checkbox" id="promo-toggle" hidden>
-                 <div class="promo-code__trigger">
-                   <label class="promo-code__label" for="promo-toggle">
-                     + ДОДАТИ ПРОМОКОД
-                   </label>
-                 </div>
-                 <div class="promo-code__form">
-                   <input class="promo-code__input" type="text" placeholder="Введіть промокод">
-                   <button class="promo-code__submit button" type="submit">Застосувати</button>
-                 </div>
-               </div>
               
-               <footer class="basket__footer">
+              <footer class="basket__footer">
+                 <!-- Промо код -->
+                  <div class="promo-code">
+                    <input class="promo-code__checkbox" type="checkbox" id="promo-toggle" hidden>
+                    <div class="promo-code__trigger">
+                      <label class="promo-code__label" for="promo-toggle">
+                        + ДОДАТИ ПРОМОКОД
+                      </label>
+                    </div>
+                    <div class="promo-code__form">
+                      <input class="promo-code__input" type="text" placeholder="Введіть промокод">
+                      <button class="promo-code__submit button" type="submit">Застосувати</button>
+                    </div>
+                  </div>
                 <div class="basket__total-panel">
                   <h4 class="basket__total-title">До сплати</h4>
                   <span class="basket__total-sum">1 456<span class="basket__total-sum-mark">₴</span></span>
@@ -264,6 +264,9 @@
         </div>
       </div>
     </section>
+
+
+
 
   </main>
   @@include('../components/global/footer.html')

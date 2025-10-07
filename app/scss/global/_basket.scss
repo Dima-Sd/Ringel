@@ -1,0 +1,192 @@
+.basket {
+  padding: 40px 0px 30px 30px;
+  background-color: $light;
+  width: 416px;
+  &__hrader {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    justify-content: space-between;
+    padding-right: 35px;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+    margin: 0;
+  }
+
+  &__title-text {
+    font-size: 35px;
+  }
+
+  &__title-num-box,
+  &__title-num {
+    @include Inter(400, 14px, 1.57);
+    color: $dark-400
+  }
+
+  &__redag-link {
+    @include DINPcond(900, 18px, 1.2);
+    text-transform: uppercase;
+    color: $dark-700;
+    position: relative;
+    transition: all .3s;
+
+    &::after {
+      position: absolute;
+      content: '';
+      border-bottom: 1px solid $dark-700;
+      bottom: 2px;
+      left: 0;
+      width: 100%;
+    }
+
+    &:hover {
+      color: $accent;
+
+      &::after {
+        border-color: $accent;
+      }
+    }
+
+    &:active {
+      opacity: .7;
+
+      &::after {
+        opacity: .7;
+      }
+    }
+  }
+
+  &__body {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      background: linear-gradient(180.00deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 100%);
+      height: 60px;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &__list {
+    max-height: 360px;
+    overflow-y: auto;
+    padding-right: 25px;
+    margin-bottom: 15px;
+    scrollbar-color: $dark-700 $light-900;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      background-color: $light-900;
+    }
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $dark-700;
+    }
+  }
+
+  &__item {
+    border-bottom: 1px solid rgba($dark-700, 0.2);
+    width: 100%;
+    padding: 20px 0px;
+  }
+
+  &__footer {
+    padding-top: 20px;
+    padding-right: 35px;
+  }
+
+  &__total-panel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  &__total-title {
+    @include DINPcond(900, 18px, 1.2);
+    text-transform: uppercase;
+    color: $dark-700;
+  }
+
+  &__total-sum {
+    @include Manrope(800, 35px, 1);
+    text-transform: uppercase;
+    color: $dark-700;
+    padding-right: 5px;
+  }
+
+  &__foote-order-sbmt {
+    width: 100%;
+    justify-content: space-between;
+
+    &:hover {
+      background-color: transparent;
+      color: $dark-700;
+      border-color: $dark-700;
+    }
+
+    &:active {
+      background-color: $accent;
+      box-shadow: inset 4px 4px 4px rgba(0, 0, 0, .25);
+    }
+  }
+
+  &__order-sbmt-icon {
+    fill: $dark-700;
+  }
+
+  .product-card {
+    padding: 0;
+
+    &--checkout {
+      .product-price__current {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+
+/* basket */
+@media (max-width: 440px) {
+.basket  {
+    padding-left: 20px;
+    &__list {
+      padding-top: 15px;
+    }
+    &__redag-link {
+      display: none;
+    }
+    &__footer {
+      padding-right: 15px;
+    }
+    &__foote-order-sbmt {
+      font-size: 16px;
+      line-height: 1.4;
+    }
+    .promo-code {
+      &__input {
+        &::placeholder {
+          font-size: 12px;
+        }
+      }
+      &__submit {
+        font-size: 16px;
+      }
+    }
+  }
+}
