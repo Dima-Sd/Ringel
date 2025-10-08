@@ -13,7 +13,8 @@
 
     &__slide {
       flex: 0 0 calc((100% - 60px) / 4);
-      width: 351px;
+      max-width: 351px;
+      width: 100%;
       opacity: .5;
 
       &--visible {
@@ -31,11 +32,11 @@
       transform: translateY(-50%);
       cursor: pointer;
       &--next {
-        right: -25px;
+        right: -30px;
       }
       
       &--prev {
-        left: -25px;
+        left: -30px;
       }
       svg {
         path {
