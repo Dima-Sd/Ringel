@@ -161,10 +161,12 @@
     padding: 30px 0;
     .slider-product {
       padding-bottom: 20px;
-      .slider-pagination {
-        &__bullet {
-          width: 25%;
-        }
+    }
+    .slider-product-pagination {
+      height: 4px;
+      &__bullet {
+        height: 4px;
+        width: 25%;
       }
     }
   }
