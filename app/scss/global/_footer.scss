@@ -52,6 +52,7 @@
 
   &__item {
     max-width: 212px;
+    width: 100%;
     transition: all 0.3s;
   }
 
@@ -139,13 +140,33 @@
 
   &__contact-item {
     margin-bottom: 15px;
-
+    display: flex;
+    gap: 10px;
+    .icon {
+      fill: $light;
+      width: 16px;
+      height: 16px;
+    }
     &:last-child {
       margin-bottom: 0;
     }
 
   }
+    &__contact-phone-box {
+      position: relative;
+      padding-left: 26px;
 
+      &::before {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 4px;
+        background-image: url("../images/icon/call.svg");
+        width: 16px;
+        height: 16px;
+      }
+
+    }
   &__contact-link {
     display: inline-flex;
     align-items: center;
@@ -156,7 +177,6 @@
     border-radius: 3px;
     outline-offset: 3px;
     transition: color 0.3s, outline 0.3s, opacity 0.3s;
-
     &:hover {
       color: $accent;
     }
@@ -175,18 +195,28 @@
 
     &--sms,
     &--location {
+      padding-left: 26px;
       position: relative;
     }
 
     &--sms {
       &::after {
-        background-image: url('../images/icon/message-small.svg');
+        left: 0;
+        position: absolute;
+        content: '';
+        background-image: url('../images/icon/sms.svg');
+        width: 16px;
+        height: 16px;
       }
     }
-
     &--location {
       &::after {
-        background-image: url('../images/icon/location-small.svg');
+        left: 0;
+        position: absolute;
+        content: '';
+         width: 16px;
+        height: 16px;
+        background-image: url('../images/icon/location.svg');
         top: 6px;
         transform: translateY(0);
       }
@@ -293,6 +323,10 @@
 
     &__item {
       margin: 0 auto;
+      max-width: 20%;
+      &:last-child {
+        margin: 0;
+      }
     }
   }
 }
@@ -304,7 +338,9 @@
     }
 
     &__item {
-      margin-left: 20px;
+      max-width: 30%;
+      margin-left: auto;
+      margin-right: 0;
     }
 
     &__bottom {
@@ -333,6 +369,12 @@
     &__title {
       &::after {
         display: block;
+      }
+    }
+    &__contact-item {
+      &--phone {
+        display: flex;
+        flex-direction: column;
       }
     }
 
