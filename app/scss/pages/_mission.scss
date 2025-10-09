@@ -75,7 +75,7 @@
       top: 0;
       left: 0;
       transform: rotate(1.5deg);
-    box-shadow: 0px 2.0520594120025635px 2.0520594120025635px 0px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 2.0520594120025635px 2.0520594120025635px 0px rgba(0, 0, 0, 0.25);
       background: rgba(103, 112, 63, 0.75);
      }
      &::before {
@@ -87,8 +87,8 @@
       top: 0;
       left: 0;
         transform: rotate(-1.50deg);
-box-shadow: 0px 2.0520594120025635px 2.0520594120025635px 0px rgba(0, 0, 0, 0.25);
-  background: rgba(103, 112, 63, 0.75);
+      box-shadow: 0px 2.0520594120025635px 2.0520594120025635px 0px rgba(0, 0, 0, 0.25);
+      background: rgba(103, 112, 63, 0.75);
      }
   } 
   &__descr {
@@ -475,26 +475,11 @@ box-shadow: 0px 2.0520594120025635px 2.0520594120025635px 0px rgba(0, 0, 0, 0.25
   }
   .friends {
     &__title {
-      font-size: 25px;
+      font-size: 22px;
     }
     &__title-text--bg {
-      width: 200px;
       padding: 10px 10px;
       margin-bottom: 10px;
-      
-      &::after {
-        transform: rotate(2.50deg);
-        overflow: hidden;
-        height: 64px;
-        width: 200px;
-        left: 0px;
-      }
-      &::before {
-        transform: rotate(-2.50deg);
-        
-        height: 64px;
-        width: 200px;
-      }
     }
     &__items {
       grid-template-columns: repeat(1, 1fr);
@@ -543,5 +528,13 @@ box-shadow: 0px 2.0520594120025635px 2.0520594120025635px 0px rgba(0, 0, 0, 0.25
 @media (max-width: 390px) {
   .mission-top {
     background-size: 400%;
+  }
+}
+
+@media (max-width: 365px) {
+  .friends {
+    &__title {
+      font-size: 20px;
+    }
   }
 }

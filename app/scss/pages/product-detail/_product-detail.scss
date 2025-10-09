@@ -297,7 +297,7 @@
   .slider-youlike {
     padding: 60px 0;
 
-    &__wrapper {
+    &__track {
       width: 880px;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -426,18 +426,6 @@
   align-items: flex-end;
   padding: 60px 0;
  
-/*   &::before {
-    background-image: url('../../images/detalis/feedback-bg.webp');
-    background-position: right 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    content: "";
-    height: 100%;
-    left: 0;
-    top: 0;
-    position: absolute;
-    width: 50%;
-    } */
   }
   &__content {
   flex: 1 1 50%;
@@ -459,10 +447,33 @@
   }
   &__rating {
     display: flex;
-    align-items: center;
-  }
-  &__rating-icon {
-    fill: $dark-700;
+    flex-direction: row-reverse; // чтобы правильно подсвечивались предыдущие
+    justify-content: flex-end;
+    gap: 5px;
+    
+    input {
+      display: none;
+    }
+
+    .feedback__rating-icon {
+      stroke: $dark-700;
+      fill: $accent;
+      stroke-width: 1px;
+      cursor: pointer;
+      transition: fill 0.2s;
+    }
+  
+    // при наведении — все звёзды справа (следующие) окрашиваются
+    .feedback__star:hover~.feedback__star .feedback__rating-icon,
+    .feedback__star:hover .feedback__rating-icon {
+      fill: #fff;
+    }
+  
+    // при клике — все звёзды справа от выбранной окрашиваются
+    input:checked~.feedback__star .feedback__rating-icon,
+    input:checked+.feedback__rating-icon {
+      fill: #fff;
+    }
   }
 }
 .feedback-form {
@@ -714,12 +725,8 @@
   }
     
 }
-/* .slider.slider-feelings {
-  overflow: visible;
-} */
-
   .slider-feelings {
-    &__wrapper {
+    &__track {
       display: flex;
       gap: 30px;
     }
@@ -1064,7 +1071,7 @@
       font-size: 16px;
     }
     .slider-youlike {
-      &__wrapper {
+      &__track {
         width: 100%;
         display: flex;
         justify-content: flex-end;
@@ -1311,10 +1318,10 @@
     .slider-youlike {
       position: relative;
       padding-bottom: 25px;
-      &__wrapper {
+      &__track {
         width: 100%;
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-start;
         overflow: visible;
         gap: 20px;
       }
@@ -1357,6 +1364,7 @@
     }
     &__title {
       font-size: 25px;
+      margin-bottom: 10px;
     }
   }
   .feedback-form {
