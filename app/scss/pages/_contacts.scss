@@ -193,6 +193,7 @@
     .contacts {
         &__item {
             max-width: 550px;
+            align-items: flex-start;
         }
 
         &__wrap {
