@@ -11,6 +11,7 @@ body {
    @include Inter(700, 18px, 1.11);
   display: flex;
   flex-direction: column;
+  cursor: url('../images/cursor.svg') 8 8, auto;
 }
 
 .main {

@@ -487,16 +487,11 @@
     gap: 10px;
     margin-bottom: 15px;
   }
-  input,
-  textarea {
-    &::placeholder {
-      @include Inter(400, 18px, 1.1);
-      color: $dark-700;
-    }
-  }
-  &__input{
+  &__input-box {
+    position: relative;
     flex: 1 1 50%;
   }
+
   &__input,
   &__textarea{
     padding: 15px 20px;
@@ -506,7 +501,40 @@
     color: $dark-700;
     background-color: transparent;
     width: 100%;
+    &::placeholder {
+      @include Inter(400, 18px, 1.1);
+      color: $dark-700;
+    }
   }
+  &__input {
+    &:invalid {
+      border-color: $light-600;
+    }
+    &:valid {
+      border-color: $dark-700;
+    }
+    &:focus {
+      border-color: $dark-700;
+    }
+  }
+  &__input:invalid:not(:focus)+&__error {
+    opacity: 1;
+  }
+
+  &__input:valid {
+    border-color: $dark-700; // або інший колір успіху
+  }
+
+  &__error {
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    font-size: 10px;
+    color: $light-600;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
   &__textarea{
     resize: none;
     height: 110px;

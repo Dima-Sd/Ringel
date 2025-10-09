@@ -1335,8 +1335,14 @@
             </div>
             <form class="feedback-form" action="#">
               <label class="feedback-form__item" for="#">
-                <input class="feedback-form__input" type="text" placeholder="Ім’я та Прізвище *" required>
-                <input class="feedback-form__input" type="text" placeholder="Телефон *" required>
+                <div class="feedback-form__input-box">
+                  <input class="feedback-form__input" type="text" value="" required placeholder="Ім’я та Прізвище *">
+                  <span class="feedback-form__error">Це поле обовязкове для заповнення</span>
+                </div>
+                <div class="feedback-form__input-box">
+                  <input class="feedback-form__input" type="text" placeholder="Телефон *" required >
+                  <span class="feedback-form__error">Це поле обовязкове для заповнення</span>
+                </div>
               </label>
               <textarea class="feedback-form__textarea" placeholder="Текст *"></textarea>
               <label class="feedback-form__item-upload">
