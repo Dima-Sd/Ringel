@@ -1,5 +1,26 @@
 .menu-panel {
     position: absolute;
-    z-index: 1000;
+    z-index: 888;
     background-color: $light;
+    width: 100vw;
+    top: 79px;
+    left: 50%;
+    height: calc(50vh - 79px);
+    transform: translateX(-50%);
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__info {
+        display: flex;
+        gap: 60px;
+    }
+
+    &__title {
+        color: $dark-700;
+        margin-bottom: 24px;
+        font-weight: 600;
+    }
 }
