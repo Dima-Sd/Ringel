@@ -92,7 +92,10 @@ body {
     transform: scale(0.9) translateY(8px);
   }
 }
-
+a,
+button {
+  cursor: url('../images/cursor.svg') 8 8, auto !important;
+}
 .button {
   display: flex;
   align-items: center;

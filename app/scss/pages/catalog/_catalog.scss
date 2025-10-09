@@ -487,6 +487,9 @@
 
     &--prev {
       left: 0;
+      svg {
+        transform: rotate(180deg);
+      }
     }
 
     &--next {

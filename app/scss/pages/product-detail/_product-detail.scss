@@ -1417,6 +1417,12 @@
       font-size: 25px;
     }
   }
+  .popup__dialog--quick-order {
+      .popup__close {
+        right: 0;
+      }
+    
+  }
 }
 
 @media (max-width: 440px) {
