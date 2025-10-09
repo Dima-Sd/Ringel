@@ -1,4 +1,5 @@
 $dark: #1D1D1B;
+$dark-opacity: rgba(0, 0, 0, 0.25);
 $dark-950: rgba(0, 0, 0, 0.44);
 $dark-750: #393A46;
 $dark-700: #282934;
@@ -49,6 +50,7 @@ $accent: #FFDE14;
   font-size: $size;
   line-height: $line;
 }
+
 @mixin visually-hidden {
   position: absolute;
   width: 1px;

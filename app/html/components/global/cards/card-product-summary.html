@@ -1,0 +1,15 @@
+<article class="product-summary">
+    <picture>
+        <source srcset="./images/@@folder/@@img.webp" type="image/webp">
+        <img class="product-summary__img" src="./images/@@folder/@@img.png" alt="@@alt" width="@@width" height="@@height">
+    </picture>
+    <div class="product-summary__info">
+        <h4 class="product-summary__title">
+            @@title
+        </h4>
+        @@include('../lego/price.html', {
+        "showOldPrice": "false",
+        "currentPrice": "1 456 ₴"
+        })
+    </div>
+</article>

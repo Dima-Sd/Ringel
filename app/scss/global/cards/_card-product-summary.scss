@@ -1,0 +1,43 @@
+.product-summary {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    max-width: 355px;
+    width: 100%;
+    padding: 16px;
+    overflow: hidden;
+    background-color: $light;
+    border-radius: 6px;
+
+    &__info {
+        max-width: 195px;
+        width: 100%;
+    }
+
+    &__title {
+        margin-bottom: 15px;
+        font-size: 22px;
+        color: $dark-700;
+        font-family: 'DINPro-CondensedBlack';
+        text-transform: uppercase;
+        line-height: 1.13;
+    }
+
+    &__price {
+        font-weight: 800;
+        font-family: 'DINPro-CondensedBlack';
+    }
+}
+
+@media(max-width: 576px) {
+    .product-summary {
+        &__title {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        &__info {
+            max-width: 181px;
+        }
+    }
+}

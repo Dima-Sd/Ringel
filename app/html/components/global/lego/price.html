@@ -1,4 +1,10 @@
 <div class="product-price">
-  <span class="product-price__old">1820 ₴</span>
-  <span class="product-price__current">1456 ₴</span>
+  @@if(context.showOldPrice === 'true') {
+  <span class="product-price__item @@product-price--old">
+    @@oldPrice
+  </span>
+  }
+  <span class="product-price__item @@product-price--current">
+    @@currentPrice
+  </span>
 </div>

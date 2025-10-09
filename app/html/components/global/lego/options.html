@@ -1,11 +1,13 @@
 <div class="product-option">
-  <button class="product-option__item product-option__item--active"><span>0.5</span> л</button>
-  <button type="button" class="product-option__item">1.0 л</button>
-  <button type="button" class="product-option__item">1.5 л</button>
-  <button type="button" class="product-option__item product-option__item--more" aria-expanded="false">+3</button>
-  <div class="product-option--hedden">
-    <button type="button" class="product-option__item">2.0 л</button>
-    <button type="button" class="product-option__item">2.5 л</button>
-    <button type="button" class="product-option__item">3.0 л</button>
-  </div>
+  <button class="product-option__item product-option__item--active"><span>
+      @@firstOption
+      <button type="button" class="product-option__item">
+        @@secondOption
+      </button>
+      <button type="button" class="product-option__item">
+        @@thirdOption
+      </button>
+      @@if(context.showOptionsMore === 'true') {
+      <button type="button" class="product-option__item product-option__item--more" aria-expanded="false">+3</button>
+      }
 </div>

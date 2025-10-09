@@ -1,10 +1,12 @@
 .product {
   background-color: $light-900;
   overflow-x: hidden;
+
   .slider-product {
     padding: 20px 0 40px 0;
     position: relative;
     overflow: visible;
+
     &__wrapper {
       display: flex;
       justify-content: center;
@@ -30,13 +32,15 @@
       align-items: center;
       transform: translateY(-50%);
       cursor: pointer;
+
       &--next {
         right: -25px;
       }
-      
+
       &--prev {
         left: -25px;
       }
+
       svg {
         path {
           fill: $dark-700;
@@ -59,9 +63,10 @@
           }
         }
       }
-     
+
     }
   }
+
   .slider-product-pagination {
     display: flex;
     position: absolute;
@@ -97,6 +102,7 @@
       &--next {
         right: 0px;
       }
+
       &--prev {
         left: 0px;
       }
@@ -119,6 +125,7 @@
           display: block;
         }
       }
+
       &__control {
         display: none;
       }
@@ -159,8 +166,10 @@
 @media (max-width: 528px) {
   .product {
     padding: 30px 0;
+
     .slider-product {
       padding-bottom: 20px;
+
       .slider-pagination {
         &__bullet {
           width: 25%;

@@ -1,27 +1,11 @@
 .product-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
   max-width: 351px;
   width: 100%;
-  height: 100%;
-  padding: 20px;
+  padding: 63px 20px 20px 20px;
   overflow: hidden;
   background-color: $light;
   border-radius: 6px;
-  &__image-box {
-    max-width: 258px;
-    width: 100%;
-    max-height: 181px;
-    height: 100%;
-    margin: 0 auto;
-  }
-
-  &__img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+  position: relative;
 
   &__title {
     @include DINPcond(900, 22px, 1.13);
@@ -35,10 +19,18 @@
     align-items: center;
   }
 
+  &__price {
+    font-size: 20px;
+    color: $dark-700;
+    font-weight: 800;
+    font-family: 'Manrope-VariableFont_wght';
+  }
+
   &__cart-btn {
     display: flex;
     justify-content: center;
     align-items: center;
+
     svg {
       rect {
         fill: $accent;
@@ -74,9 +66,6 @@
       }
     }
   }
-  &__remove {
-    display: none;
-  }
 
   &--reviews {
 
@@ -94,7 +83,6 @@
     .product-card__reviews-img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
     }
 
     .product-card__decr {
@@ -109,6 +97,7 @@
       color: $dark-700;
     }
   }
+
   &--recomend,
   &--quik,
   &--checkout,
@@ -127,10 +116,6 @@
       color: $dark-700;
     }
 
-    .product-card__image-box {
-      height: auto;
-    }
-
     .product-card__content {
       display: flex;
       flex-wrap: wrap;
@@ -139,56 +124,47 @@
     .product-card__footer {
       width: 100%;
     }
-
-    .product-rating,
-    .product-option {
-      display: none;
-    }
-
-    .product-price {
-      &__old {
-        display: none;
-      }
-    }
   }
+
   &--quik {
     .product-card__content {
       max-width: 200px;
       justify-content: space-between;
     }
+
     .product-card__title {
       font-size: 22px;
     }
+
     .product-card__cart-btn {
       display: none;
     }
+
     .product-card__image-box {
       max-width: 86px;
     }
-
   }
+
   &--checkout,
   &--basket {
     padding: 20px 10px;
     max-width: 100%;
-    .product-card__cart-btn {
-      display: none;
-    }
-    .product-badge {
-      display: none;
-    }
+
     .product-card__image-box {
       width: 86px;
     }
+
     .product-card__title {
       font-size: 22px;
     }
+
     .product-price {
       position: relative;
       padding-left: 21px;
       display: flex;
       align-items: flex-end;
     }
+
     .product-price__multiplicator {
       display: block;
       position: absolute;
@@ -198,17 +174,18 @@
       color: $dark-400;
     }
   }
+
   &--basket {
     padding: 10px;
     gap: 30px;
+
     .product-card__title {
       padding-right: 35px;
     }
+
     .product-card__footer {
       width: 100%;
-     .product-card__cart-btn {
-        display: none;
-      }
+
       .product-counter {
         @include Inter(700, 16px, 1.25);
         color: $dark-700;
@@ -227,6 +204,7 @@
           color: $dark-700;
         }
       }
+
       .product-card__remove {
         display: flex;
         justify-content: center;
@@ -234,11 +212,13 @@
         position: absolute;
         right: 30px;
         top: 20px;
+
         svg {
           width: 24px;
           height: 24px;
         }
       }
+
       .product-price__current {
         font-size: 22px;
       }
@@ -246,23 +226,21 @@
   }
 }
 
-.product-counter {
-  display: none;
-}
-
 @media (max-width: 680px) {
   .product-card {
     &__title {
       font-size: 16px;
     }
+
     .product-option__item {
       font-size: 14px;
     }
+
     .product-price {
       &__old {
         font-size: 14px;
       }
-  
+
       &__current {
         font-size: 16px;
       }
@@ -290,6 +268,7 @@
     .product-rating {
       font-size: 8px;
       margin-bottom: 12px;
+
       &__icon {
         width: 10px;
         height: 10px;
@@ -297,21 +276,22 @@
     }
 
     &__title {
-      font-size: 12px;
       margin-bottom: 5px;
     }
 
     .product-option {
       margin-bottom: 5px;
+
       &__item {
         font-size: 8px;
       }
     }
+
     .product-price {
       &__old {
         font-size: 10px;
       }
-  
+
       &__current {
         font-size: 12px;
       }
@@ -330,12 +310,6 @@
         font-size: 16px;
         margin: 0;
       }
-
-      .product-card__decr,
-      .product-card__recomend {
-        display: none;
-      }
     }
-
   }
 }
