@@ -919,6 +919,8 @@
    .popup__close {
     top: -64px;
     right: -64px;
+    width: 24px;
+    height: 24px;
     .icon {
       width: 24px;
       height: 24px;
@@ -1483,6 +1485,12 @@
         line-height: 1.4;
       }
     }
+  }
+  &__dialog {
+   &--quick-order,
+   &--success {
+    padding: 30px 20px;
+   }
   }
  }
 }
