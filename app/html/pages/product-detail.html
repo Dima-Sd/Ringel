@@ -246,8 +246,8 @@
         <div class="youlike__inner">
           <div class="youlike__slider">
             <div class="slider slider-youlike">
-              <div class="slider-youlike-connertion">
-                <div class="slider-youlike__wrapper">
+              <div class="slider-youlike__wrapper">
+                <div class="slider-youlike__track">
                   <div class="slider__slide slider-youlike__slide">
                     <div class="youlike-card">
                       <picture>
@@ -361,14 +361,14 @@
         </div>
       </div>
     </section>
-    @@include('../components/global/tiker.html')
+   
     
   <section class="product section">
     <div class="container">
       <h2 class="title">рекомендовані товари</h2>
       <div class="slider-product">
-        <div class="slider-product-connection">
-          <div class="slider-product__wrapper">
+        <div class="slider-product__wrapper">
+          <div class="slider-product__track">
             <div class="slider-product__slide">
               @@include('../components/global/cards/card-product.html',
               {"folder":"goods",
@@ -449,6 +449,8 @@
       </div>
     </div>
   </section>
+@@include('../components/global/tiker.html')
+ @@include('../components/global/section-accardion.html')
 
     <section class="feelings section">
       <div class="container">
@@ -475,8 +477,8 @@
               </div>
             </div>
             <div class="slider-feelings">
-              <div class="slider-feelings-connection">
-                <div class="slider-feelings__wrapper">
+              <div class="slider-feelings__wrapper">
+                <div class="slider-feelings__track">
                   <div class="slider-feelings__slide">
                     <div class="slider-feelings__slide-inner">
                       <div class="feelings-card">
@@ -815,27 +817,48 @@
             <div class="feedback__title-block">
               <h2 class="feedback__title title">залишити відгук</h2>
               <div class="feedback__rating">
-                <svg class="feedback__rating-icon" width="33" height="33">
-                  <use href="./images/sprite.svg#starForm"></use>
+              <label class="feedback__star">
+                <input type="radio" name="rating" value="1" />
+                <svg class="feedback__rating-icon icon" width="33" height="33">
+                  <use href="./images/sprite.svg#star"></use>
                 </svg>
-                <svg class="feedback__rating-icon" width="33" height="33">
-                  <use href="./images/sprite.svg#starForm"></use>
+              </label>
+              <label class="feedback__star">
+                <input type="radio" name="rating" value="2" />
+                <svg class="feedback__rating-icon icon" width="33" height="33">
+                  <use href="./images/sprite.svg#star"></use>
                 </svg>
-                <svg class="feedback__rating-icon" width="33" height="33">
-                  <use href="./images/sprite.svg#starForm"></use>
+              </label>
+              <label class="feedback__star">
+                <input type="radio" name="rating" value="3" />
+                <svg class="feedback__rating-icon icon" width="33" height="33">
+                  <use href="./images/sprite.svg#star"></use>
                 </svg>
-                <svg class="feedback__rating-icon" width="33" height="33">
-                  <use href="./images/sprite.svg#starForm"></use>
+              </label>
+              <label class="feedback__star">
+                <input type="radio" name="rating" value="4" />
+                <svg class="feedback__rating-icon icon" width="33" height="33">
+                  <use href="./images/sprite.svg#star"></use>
                 </svg>
-                <svg class="feedback__rating-icon" width="33" height="33">
-                  <use href="./images/sprite.svg#starForm"></use>
+              </label>
+              <label class="feedback__star">
+                <input type="radio" name="rating" value="5" />
+                <svg class="feedback__rating-icon icon" width="33" height="33">
+                  <use href="./images/sprite.svg#star"></use>
                 </svg>
+              </label>
               </div>
             </div>
             <form class="feedback-form" action="#">
               <label class="feedback-form__item" for="#">
-                <input class="feedback-form__input" type="text" placeholder="Ім’я та Прізвище *" required>
-                <input class="feedback-form__input" type="text" placeholder="Телефон *" required>
+                <div class="feedback-form__input-box">
+                  <input class="feedback-form__input" type="text" value="" required placeholder="Ім’я та Прізвище *">
+                  <span class="feedback-form__error">Це поле обовязкове для заповнення</span>
+                </div>
+                <div class="feedback-form__input-box">
+                  <input class="feedback-form__input" type="text" placeholder="Телефон *" required >
+                  <span class="feedback-form__error">Це поле обовязкове для заповнення</span>
+                </div>
               </label>
               <textarea class="feedback-form__textarea" placeholder="Текст *"></textarea>
               <label class="feedback-form__item-upload">

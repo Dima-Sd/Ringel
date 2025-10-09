@@ -369,8 +369,10 @@
       right: 15px;
     }
 
-    &__link-logo {
-      max-width: 100px;
+    &__logo {
+      display: inline-block;
+      max-width: 150px;
+      margin-bottom: 20px;
     }
 
     &__contact-link {

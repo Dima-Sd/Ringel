@@ -50,43 +50,6 @@
     display: flex;
     align-items: center;
     gap: 10px;
-
-    .slider__btn {
-      background-color: $light;
-      width: 51px;
-      height: 51px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid $light;
-      border-radius: 6px;
-      transition: background-color .3s, outline .3s, opacity .3s;
-      outline-offset: 3px;
-
-      svg.icon {
-        fill: $dark-700;
-      }
-
-      &:hover {
-        background-color: $accent;
-      }
-
-      &:focus {
-        outline: 1px solid $accent;
-      }
-
-      &:active {
-        box-shadow: inset 4px 4px 4px rgba(0, 0, 0, .25);
-      }
-    }
-
-    .slider__btn-prev {
-      &--reviews {
-        svg {
-          transform: rotate(180deg);
-        }
-      }
-    }
   }
 
   &__slider-box {
@@ -97,7 +60,7 @@
 
 .slider-reviews {
   overflow: visible;
-  &__wrapper {
+  &__track {
     display: flex;
     gap: 30px;
   }
@@ -159,6 +122,39 @@
   &__rating-value {
     @include Inter(700, 16px, 1.2);
     color: $dark-700;
+  }
+  &__btn {
+    background-color: $light;
+    width: 51px;
+    height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $light;
+    border-radius: 6px;
+    transition: background-color .3s, outline .3s, opacity .3s;
+    outline-offset: 3px;
+
+    svg.icon {
+      fill: $dark-700;
+    }
+
+    &:hover {
+      background-color: $accent;
+    }
+
+    &:focus {
+      outline: 1px solid $accent;
+    }
+
+    &:active {
+      box-shadow: inset 4px 4px 4px rgba(0, 0, 0, .25);
+    }
+    &--prev {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
   }
   .slider-reviews-pagination {
     display: none;
@@ -227,7 +223,7 @@
         margin: 0;
 
         &--active {
-          background: $accent;
+          background: $dark-700;
         }
       }
     }

@@ -5,7 +5,7 @@
     padding: 20px 0 40px 0;
     position: relative;
     overflow: visible;
-    &__wrapper {
+    &__track {
       display: flex;
       justify-content: center;
       gap: 30px;
@@ -13,7 +13,8 @@
 
     &__slide {
       flex: 0 0 calc((100% - 60px) / 4);
-      width: 351px;
+      max-width: 351px;
+      width: 100%;
       opacity: .5;
 
       &--visible {
@@ -31,11 +32,11 @@
       transform: translateY(-50%);
       cursor: pointer;
       &--next {
-        right: -25px;
+        right: -30px;
       }
       
       &--prev {
-        left: -25px;
+        left: -30px;
       }
       svg {
         path {
@@ -129,7 +130,7 @@
 @media (max-width: 880px) {
   .product {
     .slider-product {
-      &__wrapper {
+      &__track {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
@@ -156,15 +157,17 @@
   }
 }
 
-@media (max-width: 528px) {
+@media (max-width: 576px) {
   .product {
     padding: 30px 0;
     .slider-product {
       padding-bottom: 20px;
-      .slider-pagination {
-        &__bullet {
-          width: 25%;
-        }
+    }
+    .slider-product-pagination {
+      height: 4px;
+      &__bullet {
+        height: 4px;
+        width: 25%;
       }
     }
   }
