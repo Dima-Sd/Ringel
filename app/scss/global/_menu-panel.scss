@@ -20,7 +20,7 @@
       justify-content: space-between;
       height: auto;
       width: 100%;
-      padding-top: 00px;
+      padding-top: 60px;
       padding-bottom: 30px;
     }
     &__to-menu {
@@ -119,6 +119,7 @@
     }
     &__inner {
       display: block;
+      padding-top: 0;
     }
     &__to-menu {
       display: inline-flex;
