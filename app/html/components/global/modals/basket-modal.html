@@ -1,5 +1,5 @@
 <!-- Корзина активувати popup--active popup--basket / basket--show та basket--hide - анімація-->
-<div class="popup popup--hide" data-popup="basket">
+<div class="popup" data-popup="basket">
     <div class="basket">
         <header class="basket__hrader">
             <h2 class="basket__title title">
@@ -71,6 +71,18 @@
                     "product-price--current": "product-price--current"
                     })
                 </div>
+            </div>
+        </div>
+        <div class="promo-code">
+            <input class="promo-code__checkbox" type="checkbox" id="promo-toggle" hidden>
+            <div class="promo-code__trigger">
+                <label class="promo-code__label" for="promo-toggle">
+                    + ДОДАТИ ПРОМОКОД
+                </label>
+            </div>
+            <div class="promo-code__form">
+                <input class="promo-code__input" type="text" placeholder="Промокод">
+                <button class="promo-code__submit button" type="submit">Застосувати</button>
             </div>
         </div>
         <div class="basket__empty">
@@ -163,7 +175,6 @@
                 </svg>
             </a>
         </div>
-
         <div class="basket__slider">
             <div class="basket__slider-panel">
                 <h2 class="basket__slider-title title">Рекомендовані товари</h2>

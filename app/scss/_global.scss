@@ -183,6 +183,7 @@ body {
     @include DINPcond(900, 45px, 1);
     color: $dark-700;
     text-transform: uppercase;
+    margin-bottom: 0;
   }
 
   &__info {
@@ -282,7 +283,6 @@ body {
   }
 }
 
-/* popup */
 .popup {
   &--hide {
     display: none;
@@ -367,3 +367,6 @@ body {
   }
 }
 
+.hidden {
+  display: none;
+}

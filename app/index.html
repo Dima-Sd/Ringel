@@ -20,7 +20,7 @@
   <header class="header">
     <div class="container">
         <nav class="menu">
-            <a class="logo header__logo" href="">
+            <a class="logo header__logo" href="./index.html">
                 <img class="logo__img" src="./images/logo.svg" alt="Логотип інтернет магазину Ringel" width="217"
                     height="100">
             </a>
@@ -36,6 +36,31 @@
                 <li class="menu__item">
                     <a class="menu__link" href="">
                         Для приготування
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        Для зберігання
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        сервірування
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        аксесуари
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        Інше
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        Серії
                     </a>
                 </li>
                 <div class="menu-panel">
@@ -192,33 +217,6 @@
                 </ul>
             </div>
         </div>
-    </div>
-</div>
-                <li class="menu__item">
-                    <a class="menu__link" href="">
-                        Для зберігання
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="">
-                        сервірування
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="">
-                        аксесуари
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="">
-                        Інше
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="">
-                        Серії
-                    </a>
-                </li>
             </ul>
             <ul class="user-menu">
                 <li class="user-menu__item">
@@ -245,7 +243,7 @@
                     </button>
                 </li>
                 <!-- Корзина активувати popup--active popup--basket / basket--show та basket--hide - анімація-->
-<div class="popup popup--hide" data-popup="basket">
+<div class="popup" data-popup="basket">
     <div class="basket">
         <header class="basket__hrader">
             <h2 class="basket__title title">
@@ -451,6 +449,18 @@
                 </div>
             </div>
         </div>
+        <div class="promo-code">
+            <input class="promo-code__checkbox" type="checkbox" id="promo-toggle" hidden>
+            <div class="promo-code__trigger">
+                <label class="promo-code__label" for="promo-toggle">
+                    + ДОДАТИ ПРОМОКОД
+                </label>
+            </div>
+            <div class="promo-code__form">
+                <input class="promo-code__input" type="text" placeholder="Промокод">
+                <button class="promo-code__submit button" type="submit">Застосувати</button>
+            </div>
+        </div>
         <div class="basket__empty">
             <p class="basket__empty-text">Ваша корзина поки порожна.
                 з чого хочете почати?</p>
@@ -541,7 +551,6 @@
                 </svg>
             </a>
         </div>
-
         <div class="basket__slider">
             <div class="basket__slider-panel">
                 <h2 class="basket__slider-title title">Рекомендовані товари</h2>
@@ -684,7 +693,7 @@
     </div>
 </div>
             </ul>
-            <div class="search-panel">
+            <div class="search-panel hidden">
     <form class="search">
         <div class="search__bar">
             <button class="search__button" type="button">
@@ -733,6 +742,9 @@
     </div>
 </header>
   <main class="main">
+    <h1 class="visually-hidden">
+      Надійний та стильний посуд Ringel
+    </h1>
     <section class="hero">
       <div class="container">
         <div class="hero__inner">
@@ -872,16 +884,14 @@
                         <article class="product-card">
     <div class="product-card__head">
         
-        <span class="badge-bestseller product-recommended__badge-bestseller">
-    bestseller
-</span>
         
+        <span class="badge-discount">-10%</span>
         
         
         <picture>
-            <source srcset="./images/goods/zira.webp" type="image/webp">
-            <img class="product-card__img" src="./images/goods/zira.png" alt="Сковорода з антипригарним покриттям і скляною кришкою" width="@@width"
-                height="@@height">
+            <source srcset="./images/goods/ringelMeyer.webp" type="image/webp">
+            <img class="product-card__img" src="./images/goods/ringelMeyer.png" alt="Сковорода з антипригарним покриттям і скляною кришкою" width="47"
+                height="63">
         </picture>
     </div>
     <div class="product-card__content">
@@ -912,8 +922,12 @@
             <div class="product-card__prices">
                 <div class="product-price">
   
-  <span class="product-price__item @@product-price--current">
-    @@currentPrice
+  <span class="product-price__item product-price--old">
+    1 820 ₴
+  </span>
+  
+  <span class="product-price__item product-price--current">
+    1 456 ₴
   </span>
 </div>
                 
@@ -953,8 +967,8 @@
         
         <picture>
             <source srcset="./images/goods/zitroneOlive.webp" type="image/webp">
-            <img class="product-card__img" src="./images/goods/zitroneOlive.png" alt="Сковорода з антипригарним покриттям і скляною кришкою" width="@@width"
-                height="@@height">
+            <img class="product-card__img" src="./images/goods/zitroneOlive.png" alt="Сковорода з антипригарним покриттям і скляною кришкою" width="47"
+                height="63">
         </picture>
     </div>
     <div class="product-card__content">
@@ -1026,8 +1040,8 @@
         
         <picture>
             <source srcset="./images/goods/koriander.webp" type="image/webp">
-            <img class="product-card__img" src="./images/goods/koriander.png" alt="Сковорода з антипригарним покриттям і скляною кришкою" width="@@width"
-                height="@@height">
+            <img class="product-card__img" src="./images/goods/koriander.png" alt="Сковорода з антипригарним покриттям і скляною кришкою" width="47"
+                height="63">
         </picture>
     </div>
     <div class="product-card__content">
@@ -1097,8 +1111,8 @@
         
         <picture>
             <source srcset="./images/goods/ringelMeyer.webp" type="image/webp">
-            <img class="product-card__img" src="./images/goods/ringelMeyer.png" alt="Сковорода з антипригарним покриттям і скляною кришкою" width="@@width"
-                height="@@height">
+            <img class="product-card__img" src="./images/goods/ringelMeyer.png" alt="Сковорода з антипригарним покриттям і скляною кришкою" width="47"
+                height="63">
         </picture>
     </div>
     <div class="product-card__content">
@@ -1167,11 +1181,13 @@
     <div class="product-card__head">
         
         
+        <span class="badge-discount">-10%</span>
+        
         
         <picture>
-            <source srcset="./images/goods/zitroneOlive.webp" type="image/webp">
-            <img class="product-card__img" src="./images/goods/zitroneOlive.png" alt="Сковорода з антипригарним покриттям і скляною кришкою" width="@@width"
-                height="@@height">
+            <source srcset="./images/goods/ringelMeyer.webp" type="image/webp">
+            <img class="product-card__img" src="./images/goods/ringelMeyer.png" alt="Сковорода з антипригарним покриттям і скляною кришкою" width="47"
+                height="63">
         </picture>
     </div>
     <div class="product-card__content">
@@ -1202,19 +1218,16 @@
             <div class="product-card__prices">
                 <div class="product-price">
   
-  <span class="product-price__item @@product-price--current">
-    
+  <span class="product-price__item product-price--old">
+    1 820 ₴
+  </span>
+  
+  <span class="product-price__item product-price--current">
+    1 456 ₴
   </span>
 </div>
                 
             </div>
-            
-            <span class="badge-status">
-    <svg class="icon" width="22" height="23">
-        <use href="./images/sprite.svg#clock"></use>
-    </svg>
-    Очікується
-</span>
             
             <button class="product-card__cart-btn" aria-label="Добавить в корзину">
                 <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1250,8 +1263,8 @@
         
         <picture>
             <source srcset="./images/goods/zira.webp" type="image/webp">
-            <img class="product-card__img" src="./images/goods/zira.png" alt="Сковорода з антипригарним покриттям і скляною кришкою" width="@@width"
-                height="@@height">
+            <img class="product-card__img" src="./images/goods/zira.png" alt="Сковорода з антипригарним покриттям і скляною кришкою" width="47"
+                height="63">
         </picture>
     </div>
     <div class="product-card__content">
@@ -1347,40 +1360,40 @@
         </div>
     </div>
 </section>
-    <div class="tiker">
+    <div class="ticker">
   <div class="container">
-    <ul class="tiker__list">
-      <li class="tiker__item">
+    <ul class="ticker__list">
+      <li class="ticker__item">
         Подарункова упаковка
       </li>
-      <li class="tiker__item">
-        <img class="tiker__img" src="./images/logo.svg" alt="Ringel">
+      <li class="ticker__item">
+        <img class="ticker__img" src="./images/logo.svg" alt="Ringel">
       </li>
-      <li class="tiker__item">
+      <li class="ticker__item">
         Безкоштовна доставка
       </li>
-      <li class="tiker__item">
-        <img class="tiker__img" src="./images/logo.svg" alt="Ringel">
+      <li class="ticker__item">
+        <img class="ticker__img" src="./images/logo.svg" alt="Ringel">
       </li>
-      <li class="tiker__item">
+      <li class="ticker__item">
         100 днів на повернення
       </li>
-      <li class="tiker__item">
-        <img class="tiker__img" src="./images/logo.svg" alt="Ringel">
+      <li class="ticker__item">
+        <img class="ticker__img" src="./images/logo.svg" alt="Ringel">
       </li>
-      <li class="tiker__item">
+      <li class="ticker__item">
         Безкоштовне повернення
       </li>
-      <li class="tiker__item">
-        <img class="tiker__img" src="./images/logo.svg" alt="Ringel">
+      <li class="ticker__item">
+        <img class="ticker__img" src="./images/logo.svg" alt="Ringel">
       </li>
-      <li class="tiker__item">
+      <li class="ticker__item">
         відмінна якість
       </li>
-      <li class="tiker__item">
-        <img class="tiker__img" src="./images/logo.svg" alt="Ringel">
+      <li class="ticker__item">
+        <img class="ticker__img" src="./images/logo.svg" alt="Ringel">
       </li>
-      <li class="tiker__item">
+      <li class="ticker__item">
         Офіційна гарантія
       </li>
     </ul>
@@ -1530,46 +1543,48 @@
         </h2>
         <ul class="benefits__list">
           <li class="benefits__item">
-            <picture>
-              <source srcset="./images/index/reviews/ringelMeyer.webp" type="image/webp">
-              <img class="benefits__img" src="./images/index/reviews/ringelMeyer.jpg"
-                alt="Сковорідка Ringel Meyer з антипригарним покриттям на кухонній плиті" width="755" height="504">
-            </picture>
-            <div class="benefits__info">
-              <h3 class="benefits__title">
-                Каструля Ringel Meyer з кришкою 4.2 л
-              </h3>
-              <p class="benefits__desc">
-                «Я обрав цю сковорідку, бо вона красива
-              </p>
-              <a class="button benefits__button" href="">
-                Детальніше
-                <svg class="icon" width="18" height="13">
-                  <use href="./images/sprite.svg#arrowRight"></use>
-                </svg>
-              </a>
-            </div>
+            <article class="benefit-card">
+    <picture>
+        <source srcset="./images/index/reviews/ringelMeyer.webp" type="image/webp">
+        <img class="benefit-card__img" src="./images/index/reviews/ringelMeyer.jpg" alt="Сковорідка Ringel Meyer з антипригарним покриттям на кухонній плиті" width="755" height="504">
+    </picture>
+    <div class="benefit-card__info">
+        <h3 class="benefit-card__title">
+            Каструля Ringel Meyer з кришкою 4.2 л
+        </h3>
+        <p class="benefit-card__desc">
+            «Я обрав цю сковорідку, бо вона красива
+        </p>
+        <a class="button benefit-card__button" href="">
+            Детальніше
+            <svg class="icon" width="18" height="13">
+                <use href="./images/sprite.svg#arrowRight"></use>
+            </svg>
+        </a>
+    </div>
+</article>
           </li>
           <li class="benefits__item">
-            <picture>
-              <source srcset="./images/index/reviews/potRingel.webp" type="image/webp">
-              <img class="benefits__img" src="./images/index/reviews/potRingel.jpg"
-                alt="Сковорідка Ringel Meyer з антипригарним покриттям на кухонній плиті" width="755" height="504">
-            </picture>
-            <div class="benefits__info">
-              <h3 class="benefits__title">
-                Каструля Ringel Meyer з кришкою 4.2 л
-              </h3>
-              <p class="benefits__desc">
-                «Я обрав цю сковорідку, бо вона красива
-              </p>
-              <a class="button benefits__button" href="">
-                Детальніше
-                <svg class="icon" width="18" height="13">
-                  <use href="./images/sprite.svg#arrowRight"></use>
-                </svg>
-              </a>
-            </div>
+            <article class="benefit-card">
+    <picture>
+        <source srcset="./images/index/reviews/potRingel.webp" type="image/webp">
+        <img class="benefit-card__img" src="./images/index/reviews/potRingel.jpg" alt="Каструля Ringel Meyer з кришкою" width="755" height="504">
+    </picture>
+    <div class="benefit-card__info">
+        <h3 class="benefit-card__title">
+            Каструля Ringel Meyer з кришкою 4.2 л
+        </h3>
+        <p class="benefit-card__desc">
+            «Я обрав цю сковорідку, бо вона красива
+        </p>
+        <a class="button benefit-card__button" href="">
+            Детальніше
+            <svg class="icon" width="18" height="13">
+                <use href="./images/sprite.svg#arrowRight"></use>
+            </svg>
+        </a>
+    </div>
+</article>
           </li>
         </ul>
       </div>

@@ -1,4 +1,4 @@
-.tiker {
+.ticker {
   background-color: $dark-700;
   padding: 30px 0;
   overflow-x: hidden;
@@ -28,7 +28,7 @@
   }
 }
 @media (max-width: 576px) {
-  .tiker {
+  .ticker {
     &__list {
       gap: 15px;
     }

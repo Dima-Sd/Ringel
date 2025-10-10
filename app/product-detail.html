@@ -18,7 +18,7 @@
 <header class="header">
     <div class="container">
         <nav class="menu">
-            <a class="logo header__logo" href="">
+            <a class="logo header__logo" href="./index.html">
                 <img class="logo__img" src="./images/logo.svg" alt="Логотип інтернет магазину Ringel" width="217"
                     height="100">
             </a>
@@ -34,6 +34,31 @@
                 <li class="menu__item">
                     <a class="menu__link" href="">
                         Для приготування
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        Для зберігання
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        сервірування
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        аксесуари
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        Інше
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        Серії
                     </a>
                 </li>
                 <div class="menu-panel">
@@ -190,33 +215,6 @@
                 </ul>
             </div>
         </div>
-    </div>
-</div>
-                <li class="menu__item">
-                    <a class="menu__link" href="">
-                        Для зберігання
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="">
-                        сервірування
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="">
-                        аксесуари
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="">
-                        Інше
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="">
-                        Серії
-                    </a>
-                </li>
             </ul>
             <ul class="user-menu">
                 <li class="user-menu__item">
@@ -243,7 +241,7 @@
                     </button>
                 </li>
                 <!-- Корзина активувати popup--active popup--basket / basket--show та basket--hide - анімація-->
-<div class="popup popup--hide" data-popup="basket">
+<div class="popup" data-popup="basket">
     <div class="basket">
         <header class="basket__hrader">
             <h2 class="basket__title title">
@@ -449,6 +447,18 @@
                 </div>
             </div>
         </div>
+        <div class="promo-code">
+            <input class="promo-code__checkbox" type="checkbox" id="promo-toggle" hidden>
+            <div class="promo-code__trigger">
+                <label class="promo-code__label" for="promo-toggle">
+                    + ДОДАТИ ПРОМОКОД
+                </label>
+            </div>
+            <div class="promo-code__form">
+                <input class="promo-code__input" type="text" placeholder="Промокод">
+                <button class="promo-code__submit button" type="submit">Застосувати</button>
+            </div>
+        </div>
         <div class="basket__empty">
             <p class="basket__empty-text">Ваша корзина поки порожна.
                 з чого хочете почати?</p>
@@ -539,7 +549,6 @@
                 </svg>
             </a>
         </div>
-
         <div class="basket__slider">
             <div class="basket__slider-panel">
                 <h2 class="basket__slider-title title">Рекомендовані товари</h2>
@@ -682,7 +691,7 @@
     </div>
 </div>
             </ul>
-            <div class="search-panel">
+            <div class="search-panel hidden">
     <form class="search">
         <div class="search__bar">
             <button class="search__button" type="button">
@@ -760,7 +769,7 @@
       <h2 class="title top__title">Сковорода кована Ringel Koriander 24 см (RG-2008-22)</h2>
     </div>
   </div>
-  <section class="section detail-one">
+  <section class="detail-one section">
     <div class="container">
       <div class="detail-one__inner">
         <div class="detail-one__slider detail-slider">
@@ -935,7 +944,8 @@
                 <button class="detail-one__btn detail-one__btn--quick" type="button">Швидке замовлення
                 </button>
               </div>
-              <div class="popup popup--hide" data-popup="quick-order">
+              <!-- Корзина активувати popup--active popup--basket / basket--show та basket--hide - анімація--> 
+<div class="popup popup--hide" data-popup="quick-order">
     <div class="popup__dialog popup__dialog--quick-order">
         <div class="popup__panel">
             <button class="popup__close" aria-label="Закрити">
@@ -986,7 +996,8 @@
         </form>
     </div>
 </div>
-              <div class="popup popup--hide" data-popup="success">
+              <!-- Корзина активувати popup--active popup--basket / basket--show та basket--hide - анімація--> 
+<div class="popup popup--hide" data-popup="success">
     <div class="popup__dialog popup__dialog--success">
         <div class="popup__panel">
             <button class="popup__close" aria-label="Закрити">
@@ -1052,6 +1063,8 @@
     </div>
   </section>
   <section class="youlike">
+<<<<<<< HEAD
+=======
     <div class="container">
       <div class="youlike__inner">
         <div class="youlike__slider">
@@ -1171,45 +1184,6 @@
       </div>
     </div>
   </section>
-  <div class="tiker">
-  <div class="container">
-    <ul class="tiker__list">
-      <li class="tiker__item">
-        Подарункова упаковка
-      </li>
-      <li class="tiker__item">
-        <img class="tiker__img" src="./images/logo.svg" alt="Ringel">
-      </li>
-      <li class="tiker__item">
-        Безкоштовна доставка
-      </li>
-      <li class="tiker__item">
-        <img class="tiker__img" src="./images/logo.svg" alt="Ringel">
-      </li>
-      <li class="tiker__item">
-        100 днів на повернення
-      </li>
-      <li class="tiker__item">
-        <img class="tiker__img" src="./images/logo.svg" alt="Ringel">
-      </li>
-      <li class="tiker__item">
-        Безкоштовне повернення
-      </li>
-      <li class="tiker__item">
-        <img class="tiker__img" src="./images/logo.svg" alt="Ringel">
-      </li>
-      <li class="tiker__item">
-        відмінна якість
-      </li>
-      <li class="tiker__item">
-        <img class="tiker__img" src="./images/logo.svg" alt="Ringel">
-      </li>
-      <li class="tiker__item">
-        Офіційна гарантія
-      </li>
-    </ul>
-  </div>
-</div>
   <section class="product section">
     <div class="container">
         <h2 class="title">
@@ -1222,16 +1196,14 @@
                         <article class="product-card">
     <div class="product-card__head">
         
-        <span class="badge-bestseller product-recommended__badge-bestseller">
-    bestseller
-</span>
         
+        <span class="badge-discount">-10%</span>
         
         
         <picture>
-            <source srcset="./images/goods/zira.webp" type="image/webp">
-            <img class="product-card__img" src="./images/goods/zira.png" alt="Сковорода з антипригарним покриттям і скляною кришкою" width="@@width"
-                height="@@height">
+            <source srcset="./images/goods/ringelMeyer.webp" type="image/webp">
+            <img class="product-card__img" src="./images/goods/ringelMeyer.png" alt="Сковорода з антипригарним покриттям і скляною кришкою" width="47"
+                height="63">
         </picture>
     </div>
     <div class="product-card__content">
@@ -1262,8 +1234,12 @@
             <div class="product-card__prices">
                 <div class="product-price">
   
-  <span class="product-price__item @@product-price--current">
-    @@currentPrice
+  <span class="product-price__item product-price--old">
+    1 820 ₴
+  </span>
+  
+  <span class="product-price__item product-price--current">
+    1 456 ₴
   </span>
 </div>
                 
@@ -1303,8 +1279,8 @@
         
         <picture>
             <source srcset="./images/goods/zitroneOlive.webp" type="image/webp">
-            <img class="product-card__img" src="./images/goods/zitroneOlive.png" alt="Сковорода з антипригарним покриттям і скляною кришкою" width="@@width"
-                height="@@height">
+            <img class="product-card__img" src="./images/goods/zitroneOlive.png" alt="Сковорода з антипригарним покриттям і скляною кришкою" width="47"
+                height="63">
         </picture>
     </div>
     <div class="product-card__content">
@@ -1376,8 +1352,8 @@
         
         <picture>
             <source srcset="./images/goods/koriander.webp" type="image/webp">
-            <img class="product-card__img" src="./images/goods/koriander.png" alt="Сковорода з антипригарним покриттям і скляною кришкою" width="@@width"
-                height="@@height">
+            <img class="product-card__img" src="./images/goods/koriander.png" alt="Сковорода з антипригарним покриттям і скляною кришкою" width="47"
+                height="63">
         </picture>
     </div>
     <div class="product-card__content">
@@ -1447,8 +1423,8 @@
         
         <picture>
             <source srcset="./images/goods/ringelMeyer.webp" type="image/webp">
-            <img class="product-card__img" src="./images/goods/ringelMeyer.png" alt="Сковорода з антипригарним покриттям і скляною кришкою" width="@@width"
-                height="@@height">
+            <img class="product-card__img" src="./images/goods/ringelMeyer.png" alt="Сковорода з антипригарним покриттям і скляною кришкою" width="47"
+                height="63">
         </picture>
     </div>
     <div class="product-card__content">
@@ -1517,11 +1493,13 @@
     <div class="product-card__head">
         
         
+        <span class="badge-discount">-10%</span>
+        
         
         <picture>
-            <source srcset="./images/goods/zitroneOlive.webp" type="image/webp">
-            <img class="product-card__img" src="./images/goods/zitroneOlive.png" alt="Сковорода з антипригарним покриттям і скляною кришкою" width="@@width"
-                height="@@height">
+            <source srcset="./images/goods/ringelMeyer.webp" type="image/webp">
+            <img class="product-card__img" src="./images/goods/ringelMeyer.png" alt="Сковорода з антипригарним покриттям і скляною кришкою" width="47"
+                height="63">
         </picture>
     </div>
     <div class="product-card__content">
@@ -1552,19 +1530,16 @@
             <div class="product-card__prices">
                 <div class="product-price">
   
-  <span class="product-price__item @@product-price--current">
-    
+  <span class="product-price__item product-price--old">
+    1 820 ₴
+  </span>
+  
+  <span class="product-price__item product-price--current">
+    1 456 ₴
   </span>
 </div>
                 
             </div>
-            
-            <span class="badge-status">
-    <svg class="icon" width="22" height="23">
-        <use href="./images/sprite.svg#clock"></use>
-    </svg>
-    Очікується
-</span>
             
             <button class="product-card__cart-btn" aria-label="Добавить в корзину">
                 <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1600,8 +1575,8 @@
         
         <picture>
             <source srcset="./images/goods/zira.webp" type="image/webp">
-            <img class="product-card__img" src="./images/goods/zira.png" alt="Сковорода з антипригарним покриттям і скляною кришкою" width="@@width"
-                height="@@height">
+            <img class="product-card__img" src="./images/goods/zira.png" alt="Сковорода з антипригарним покриттям і скляною кришкою" width="47"
+                height="63">
         </picture>
     </div>
     <div class="product-card__content">
@@ -1694,6 +1669,166 @@
                 <span class="slider-product-pagination__bullet slider-product-pagination__bullet--active"></span>
                 <span class="slider-product-pagination__bullet slider-product-pagination__bullet"></span>
             </div>
+        </div>
+    </div>
+</section>
+  <div class="ticker">
+  <div class="container">
+    <ul class="ticker__list">
+      <li class="ticker__item">
+        Подарункова упаковка
+      </li>
+      <li class="ticker__item">
+        <img class="ticker__img" src="./images/logo.svg" alt="Ringel">
+      </li>
+      <li class="ticker__item">
+        Безкоштовна доставка
+      </li>
+      <li class="ticker__item">
+        <img class="ticker__img" src="./images/logo.svg" alt="Ringel">
+      </li>
+      <li class="ticker__item">
+        100 днів на повернення
+      </li>
+      <li class="ticker__item">
+        <img class="ticker__img" src="./images/logo.svg" alt="Ringel">
+      </li>
+      <li class="ticker__item">
+        Безкоштовне повернення
+      </li>
+      <li class="ticker__item">
+        <img class="ticker__img" src="./images/logo.svg" alt="Ringel">
+      </li>
+      <li class="ticker__item">
+        відмінна якість
+      </li>
+      <li class="ticker__item">
+        <img class="ticker__img" src="./images/logo.svg" alt="Ringel">
+      </li>
+      <li class="ticker__item">
+        Офіційна гарантія
+      </li>
+    </ul>
+  </div>
+</div>
+  <section class="faq section">
+    <div class="container">
+        <h2 class="title">
+            Часті запитання
+        </h2>
+        <div class="faq__inner">
+            <ul class="faq__list">
+                <li class="faq__item active">
+                    <button class="faq__button" type="button">
+                        <span class="visually-hidden">
+                            Відкрити/закрити акардеон
+                        </span>
+                    </button>
+                    <div class="faq__info">
+                        <h3 class="faq__title">
+                            Як працює антипригарне покриття Ringel?
+                        </h3>
+                        <p class="faq__answer">
+                            Технологія Ringel використовує титанове посилення, яке у 3 рази твердіше за
+                            нержавіючу
+                            сталь, та спеціальну мікротекстуру, що повторює ефект лотоса. Це робить поверхню
+                            гідрофобною, запобігає прилипанню їжі та полегшує догляд за каструлею.
+                        </p>
+                    </div>
+                </li>
+                <li class="faq__item">
+                    <button class="faq__button" type="button">
+                        <span class="visually-hidden">
+                            Відкрити/закрити акардеон
+                        </span>
+                    </button>
+                    <div class="faq__info">
+                        <h3 class="faq__title">
+                            Як працює антипригарне покриття Ringel?
+                        </h3>
+                        <p class="faq__answer">
+                            Технологія Ringel використовує титанове посилення, яке у 3 рази твердіше за
+                            нержавіючу
+                            сталь, та спеціальну мікротекстуру, що повторює ефект лотоса. Це робить поверхню
+                            гідрофобною, запобігає прилипанню їжі та полегшує догляд за каструлею.
+                        </p>
+                    </div>
+                </li>
+                <li class="faq__item">
+                    <button class="faq__button" type="button">
+                        <span class="visually-hidden">
+                            Відкрити/закрити акардеон
+                        </span>
+                    </button>
+                    <div class="faq__info">
+                        <h3 class="faq__title">
+                            Як працює антипригарне покриття Ringel?
+                        </h3>
+                        <p class="faq__answer">
+                            Технологія Ringel використовує титанове посилення, яке у 3 рази твердіше за
+                            нержавіючу
+                            сталь, та спеціальну мікротекстуру, що повторює ефект лотоса. Це робить поверхню
+                            гідрофобною, запобігає прилипанню їжі та полегшує догляд за каструлею.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="faq__list">
+                <li class="faq__item">
+                    <button class="faq__button" type="button">
+                        <span class="visually-hidden">
+                            Відкрити/закрити акардеон
+                        </span>
+                    </button>
+                    <div class="faq__info active">
+                        <h3 class="faq__title">
+                            Як працює антипригарне покриття Ringel?
+                        </h3>
+                        <p class="faq__answer">
+                            Технологія Ringel використовує титанове посилення, яке у 3 рази твердіше за
+                            нержавіючу
+                            сталь, та спеціальну мікротекстуру, що повторює ефект лотоса. Це робить поверхню
+                            гідрофобною, запобігає прилипанню їжі та полегшує догляд за каструлею.
+                        </p>
+                    </div>
+                </li>
+                <li class="faq__item">
+                    <button class="faq__button" type="button">
+                        <span class="visually-hidden">
+                            Відкрити/закрити акардеон
+                        </span>
+                    </button>
+                    <div class="faq__info active">
+                        <h3 class="faq__title">
+                            Як працює антипригарне покриття Ringel?
+                        </h3>
+                        <p class="faq__answer">
+                            Технологія Ringel використовує титанове посилення, яке у 3 рази твердіше за
+                            нержавіючу
+                            сталь, та спеціальну мікротекстуру, що повторює ефект лотоса. Це робить поверхню
+                            гідрофобною, запобігає прилипанню їжі та полегшує догляд за каструлею.
+                        </p>
+                    </div>
+                </li>
+                <li class="faq__item">
+                    <button class="faq__button" type="button">
+                        <span class="visually-hidden">
+                            Відкрити/закрити акардеон
+                        </span>
+                    </button>
+                    <div class="faq__info active">
+                        <h3 class="faq__title">
+                            Як працює антипригарне покриття Ringel?
+                        </h3>
+                        <p class="faq__answer">
+                            Технологія Ringel використовує титанове посилення, яке у 3 рази твердіше за
+                            нержавіючу
+                            сталь, та спеціальну мікротекстуру, що повторює ефект лотоса. Це робить поверхню
+                            гідрофобною, запобігає прилипанню їжі та полегшує догляд за каструлею.
+                        </p>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 </section>
@@ -2418,7 +2553,6 @@
     </div>
   </div>
 </div>
-
 <body>
   <script src="js/main.min.js"></script>
 </body>

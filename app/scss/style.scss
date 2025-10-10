@@ -1,12 +1,11 @@
+// --- БАЗА ---
 @import "reset";
 @import "vars";
 @import "fonts";
-
 @import "global";
 
 // --- LEGO (дрібні елементи) ---
 @import "./global/lego/date-info";
-@import "./global/lego/promo-ticker";
 @import "./global/lego/badges/bestseller";
 @import "./global/lego/badges/discount";
 @import "./global/lego/badges/status";
@@ -20,11 +19,13 @@
 
 // --- ГЛОБАЛЬНІ БЛОКИ ---
 @import "./global/header";
+@import "./global/footer";
 @import "./global/breadcrumbs";
 @import "./global/search";
-@import "./global/tiker";
+@import "./global/ticker";
 @import "./global/cookie-banner";
-@import "./global/footer";
+@import "./global/menu-panel";
+@import "./global/series-banner";
 
 // --- СЕКЦІЇ ---
 @import "./global/section-product";
@@ -52,18 +53,15 @@
 @import "./global/modals/basket-modal";
 @import "./global/modals/modal-advice";
 
-// --- МЕНЮ ---
-@import "./global/menu-panel";
-
 // --- СТОРІНКИ ---
 @import "./pages/index/hero";
 @import "./pages/index/promo";
 @import "./pages/index/benefits";
 @import "./pages/index/reviews";
 
-@import "./pages/catalog/catalog";
+@import "./pages/catalog";
 @import "./pages/category";
-@import "./pages/product-detail/product-detail";
+@import "./pages/product-detail";
 @import "./pages/deals";
 @import "./pages/product-deal";
 @import "./pages/checkout";

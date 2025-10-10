@@ -160,30 +160,30 @@
                 <div class="recomend-slider__wrapper">
                   <div class="recomend-slider__track">
                     <div class="recomend-slider__slide">
-                      @@include('../components/global/cards/card-product.html',
+                      @@include('../components/global/cards/card-product-recommended.html',
                       {"folder":"goods",
-                      "img":"zitroneOlive",
+                      "img":"zira",
                       "alt":"Сковорода з антипригарним покриттям і скляною кришкою",
                       "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)","mod":"product-card--recomend",
-                      "bage":"@@include('../lego/bages/bestseller.html')"
+                      "showBadgeSeller": "true"
                       })
                     </div>
                     <div class="recomend-slider__slide">
-                      @@include('../components/global/cards/card-product.html',
+                      @@include('../components/global/cards/card-product-recommended.html',
                       {"folder":"goods",
                       "img":"zitroneOlive",
                       "alt":"Сковорода з антипригарним покриттям і скляною кришкою",
                       "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)","mod":"product-card--recomend",
-                      "bage":"@@include('../lego/bages/bestseller.html')"
+                      "showBadgeSeller": "true"
                       })
                     </div>
                     <div class="recomend-slider__slide">
-                      @@include('../components/global/cards/card-product.html',
+                      @@include('../components/global/cards/card-product-recommended.html',
                       {"folder":"goods",
-                      "img":"zitroneOlive",
+                      "img":"ringelMeyer",
                       "alt":"Сковорода з антипригарним покриттям і скляною кришкою",
                       "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)","mod":"product-card--recomend",
-                      "bage":"@@include('../lego/bages/bestseller.html')"
+                      "showBadgeSeller": "true"
                       })
                     </div>
                   </div>
@@ -197,160 +197,98 @@
           </div>
           <!-- Корзина -->
           <div class="checkout__basket">
-            <div class="basket">
-              <header class="basket__hrader">
-                <h2 class="basket__title title">
-                  <p class="basket__title-text">ВАШ КОШИК</p>
-                  <span class="basket__title-num-box">(<span class="basket__title-num">3</span>)</span>
-                </h2>
-                <a class="basket__redag-link" href="#">редагувати</a>
-              </header>
-              <div class="basket__body">
-                <div class="basket__list">
-                  <div class="basket__item">
-                    @@include('../components/global/cards/card-product.html',
-                    {"folder":"goods",
-                    "img":"zitroneOlive",
-                    "alt":"Сковорода з антипригарним покриттям і скляною кришкою",
-                    "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)","mod":"product-card--checkout",
-                    "bage":""
-                    })
-                  </div>
-                  <div class="basket__item">
-                    @@include('../components/global/cards/card-product.html',
-                    {"folder":"goods",
-                    "img":"zitroneOlive",
-                    "alt":"Сковорода з антипригарним покриттям і скляною кришкою",
-                    "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)","mod":"product-card--checkout",
-                    "bage":""
-                    })
-                  </div>
-                  <div class="basket__item">
-                    @@include('../components/global/cards/card-product.html',
-                    {"folder":"goods",
-                    "img":"zitroneOlive",
-                    "alt":"Сковорода з антипригарним покриттям і скляною кришкою",
-                    "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)","mod":"product-card--checkout",
-                    "bage":""
-                    })
-                  </div>
-                </div>
-              </div>
-              <div class="basket__empty">
-                <p class="basket__empty-text">Ваша корзина поки порожна.
-                  з чого хочете почати?</p>
-                <ul class="basket__empty-cats">
-                  <li class="basket__empty-cat">
-                    <a class="basket__empty-cat-link" href="#">
-                      <picture>
-                        <source srcset="../images/categories/cookware/skillet.webp" type="image/webp">
-                        <img class="basket__cat-img" src="../images/categories/cookware/skillet.png"
-                          alt="Овочі тушковані на сковороді Ringel">
-                      </picture>
-                      <h3 class="basket__cat-title">Сковорідки</h3>
-                      <svg class="icon" width="24px" height="24px">
-                        <use href="./images/sprite.svg#arrowRight"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="basket__empty-cat">
-                    <a class="basket__empty-cat-link" href="#">
-                      <picture>
-                        <source srcset="../images/goods/zitroneOlive.webp" type="image/webp">
-                        <img class="basket__cat-img" src="../images/goods/zitroneOlive.png"
-                          alt="Овочі тушковані на сковороді Ringel">
-                      </picture>
-                      <h3 class="basket__cat-title">Каструлі та ковші</h3>
-                      <svg class="icon" width="24px" height="24px">
-                        <use href="./images/sprite.svg#arrowRight"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="basket__empty-cat">
-                    <a class="basket__empty-cat-link" href="#">
-                      <picture>
-                        <source srcset="../images/goods/knife.webp" type="image/webp">
-                        <img class="basket__cat-img" src="../images/goods/knife.png"
-                          alt="Овочі тушковані на сковороді Ringel">
-                      </picture>
-                      <h3 class="basket__cat-title">Ножі та приладдя</h3>
-                      <svg class="icon" width="24px" height="24px">
-                        <use href="./images/sprite.svg#arrowRight"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="basket__empty-cat">
-                    <a class="basket__empty-cat-link" href="#">
-                      <picture>
-                        <source srcset="../images/goods/spoonfork.webp" type="image/webp">
-                        <img class="basket__cat-img" src="../images/goods/spoonfork.png"
-                          alt="Овочі тушковані на сковороді Ringel">
-                      </picture>
-                      <h3 class="basket__cat-title">Столові приладия</h3>
-                      <svg class="icon" width="24px" height="24px">
-                        <use href="./images/sprite.svg#arrowRight"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="basket__empty-cat">
-                    <a class="basket__empty-cat-link" href="#">
-                      <picture>
-                        <source srcset="../images/goods/katle.webp" type="image/webp">
-                        <img class="basket__cat-img" src="../images/goods/katle.png"
-                          alt="Овочі тушковані на сковороді Ringel">
-                      </picture>
-                      <h3 class="basket__cat-title">Інше</h3>
-                      <svg class="icon" width="24px" height="24px">
-                        <use href="./images/sprite.svg#arrowRight"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="basket__empty-cat">
-                    <a class="basket__empty-cat-link" href="#">
-                      <picture>
-                        <source srcset="../images/goods/series.webp" type="image/webp">
-                        <img class="basket__cat-img" src="../images/goods/series.png"
-                          alt="Овочі тушковані на сковороді Ringel">
-                      </picture>
-                      <h3 class="basket__cat-title">Серії</h3>
-                      <svg class="icon" width="24px" height="24px">
-                        <use href="./images/sprite.svg#arrowRight"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-                <a class="basket__empty-link-btn button" href="#">
-                  <p>Перейти в каталог</p>
-                  <svg class="icon" width="24px" height="24px">
-                    <use href="./images/sprite.svg#arrowRight"></use>
-                  </svg>
-                </a>
-              </div>
-              <footer class="basket__footer">
-                <!-- Промо код -->
-                <div class="promo-code">
-                  <input class="promo-code__checkbox" type="checkbox" id="promo-toggle" hidden>
-                  <div class="promo-code__trigger">
-                    <label class="promo-code__label" for="promo-toggle">
-                      + ДОДАТИ ПРОМОКОД
-                    </label>
-                  </div>
-                  <div class="promo-code__form">
-                    <input class="promo-code__input" type="text" placeholder="Промокод">
-                    <button class="promo-code__submit button" type="submit">Застосувати</button>
-                  </div>
-                </div>
-                <div class="basket__total-panel">
-                  <h4 class="basket__total-title">До сплати</h4>
-                  <span class="basket__total-sum">1 456<span class="basket__total-sum-mark">₴</span></span>
-                </div>
-                <button class="basket__foote-order-sbmt button">
-                  <p class="basket__foote-sbmt-text">Оформити замовлення</p>
-                  <svg class="basket__order-sbmt-icon" width="18px" height="18px">
-                    <use href="./images/sprite.svg#arrowRight"></use>
-                  </svg>
-                </button>
-              </footer>
+
+            @@include('../components/global/modals/basket-modal.html')
+
+            <div class="basket__empty">
+              <p class="basket__empty-text">Ваша корзина поки порожна.
+                з чого хочете почати?</p>
+              <ul class="basket__empty-cats">
+                <li class="basket__empty-cat">
+                  <a class="basket__empty-cat-link" href="#">
+                    <picture>
+                      <source srcset="../images/categories/cookware/skillet.webp" type="image/webp">
+                      <img class="basket__cat-img" src="../images/categories/cookware/skillet.png"
+                        alt="Овочі тушковані на сковороді Ringel">
+                    </picture>
+                    <h3 class="basket__cat-title">Сковорідки</h3>
+                    <svg class="icon" width="24px" height="24px">
+                      <use href="./images/sprite.svg#arrowRight"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="basket__empty-cat">
+                  <a class="basket__empty-cat-link" href="#">
+                    <picture>
+                      <source srcset="../images/goods/zitroneOlive.webp" type="image/webp">
+                      <img class="basket__cat-img" src="../images/goods/zitroneOlive.png"
+                        alt="Овочі тушковані на сковороді Ringel">
+                    </picture>
+                    <h3 class="basket__cat-title">Каструлі та ковші</h3>
+                    <svg class="icon" width="24px" height="24px">
+                      <use href="./images/sprite.svg#arrowRight"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="basket__empty-cat">
+                  <a class="basket__empty-cat-link" href="#">
+                    <picture>
+                      <source srcset="../images/goods/knife.webp" type="image/webp">
+                      <img class="basket__cat-img" src="../images/goods/knife.png"
+                        alt="Овочі тушковані на сковороді Ringel">
+                    </picture>
+                    <h3 class="basket__cat-title">Ножі та приладдя</h3>
+                    <svg class="icon" width="24px" height="24px">
+                      <use href="./images/sprite.svg#arrowRight"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="basket__empty-cat">
+                  <a class="basket__empty-cat-link" href="#">
+                    <picture>
+                      <source srcset="../images/goods/spoonfork.webp" type="image/webp">
+                      <img class="basket__cat-img" src="../images/goods/spoonfork.png"
+                        alt="Овочі тушковані на сковороді Ringel">
+                    </picture>
+                    <h3 class="basket__cat-title">Столові приладия</h3>
+                    <svg class="icon" width="24px" height="24px">
+                      <use href="./images/sprite.svg#arrowRight"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="basket__empty-cat">
+                  <a class="basket__empty-cat-link" href="#">
+                    <picture>
+                      <source srcset="../images/goods/katle.webp" type="image/webp">
+                      <img class="basket__cat-img" src="../images/goods/katle.png"
+                        alt="Овочі тушковані на сковороді Ringel">
+                    </picture>
+                    <h3 class="basket__cat-title">Інше</h3>
+                    <svg class="icon" width="24px" height="24px">
+                      <use href="./images/sprite.svg#arrowRight"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="basket__empty-cat">
+                  <a class="basket__empty-cat-link" href="#">
+                    <picture>
+                      <source srcset="../images/goods/series.webp" type="image/webp">
+                      <img class="basket__cat-img" src="../images/goods/series.png"
+                        alt="Овочі тушковані на сковороді Ringel">
+                    </picture>
+                    <h3 class="basket__cat-title">Серії</h3>
+                    <svg class="icon" width="24px" height="24px">
+                      <use href="./images/sprite.svg#arrowRight"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+              <a class="basket__empty-link-btn button" href="#">
+                <p>Перейти в каталог</p>
+                <svg class="icon" width="24px" height="24px">
+                  <use href="./images/sprite.svg#arrowRight"></use>
+                </svg>
+              </a>
             </div>
           </div>
         </div>

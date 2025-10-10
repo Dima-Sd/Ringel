@@ -20,7 +20,7 @@
     <header class="header">
     <div class="container">
         <nav class="menu">
-            <a class="logo header__logo" href="">
+            <a class="logo header__logo" href="./index.html">
                 <img class="logo__img" src="./images/logo.svg" alt="Логотип інтернет магазину Ringel" width="217"
                     height="100">
             </a>
@@ -36,6 +36,31 @@
                 <li class="menu__item">
                     <a class="menu__link" href="">
                         Для приготування
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        Для зберігання
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        сервірування
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        аксесуари
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        Інше
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        Серії
                     </a>
                 </li>
                 <div class="menu-panel">
@@ -192,33 +217,6 @@
                 </ul>
             </div>
         </div>
-    </div>
-</div>
-                <li class="menu__item">
-                    <a class="menu__link" href="">
-                        Для зберігання
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="">
-                        сервірування
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="">
-                        аксесуари
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="">
-                        Інше
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="">
-                        Серії
-                    </a>
-                </li>
             </ul>
             <ul class="user-menu">
                 <li class="user-menu__item">
@@ -245,7 +243,7 @@
                     </button>
                 </li>
                 <!-- Корзина активувати popup--active popup--basket / basket--show та basket--hide - анімація-->
-<div class="popup popup--hide" data-popup="basket">
+<div class="popup" data-popup="basket">
     <div class="basket">
         <header class="basket__hrader">
             <h2 class="basket__title title">
@@ -451,6 +449,18 @@
                 </div>
             </div>
         </div>
+        <div class="promo-code">
+            <input class="promo-code__checkbox" type="checkbox" id="promo-toggle" hidden>
+            <div class="promo-code__trigger">
+                <label class="promo-code__label" for="promo-toggle">
+                    + ДОДАТИ ПРОМОКОД
+                </label>
+            </div>
+            <div class="promo-code__form">
+                <input class="promo-code__input" type="text" placeholder="Промокод">
+                <button class="promo-code__submit button" type="submit">Застосувати</button>
+            </div>
+        </div>
         <div class="basket__empty">
             <p class="basket__empty-text">Ваша корзина поки порожна.
                 з чого хочете почати?</p>
@@ -541,7 +551,6 @@
                 </svg>
             </a>
         </div>
-
         <div class="basket__slider">
             <div class="basket__slider-panel">
                 <h2 class="basket__slider-title title">Рекомендовані товари</h2>
@@ -684,7 +693,7 @@
     </div>
 </div>
             </ul>
-            <div class="search-panel">
+            <div class="search-panel hidden">
     <form class="search">
         <div class="search__bar">
             <button class="search__button" type="button">
