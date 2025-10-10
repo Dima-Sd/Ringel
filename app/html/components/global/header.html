@@ -19,6 +19,7 @@
                         Для приготування
                     </a>
                 </li>
+                @@include('./menu-panel.html')
                 <li class="menu__item">
                     <a class="menu__link" href="">
                         Для зберігання
@@ -47,17 +48,17 @@
             </ul>
             <ul class="user-menu">
                 <li class="user-menu__item">
-                    <a class="user-menu__link" href="">
+                    <button class="user-menu__link" type="button">
                         <svg class="icon" width="23" height="23">
                             <use href="./images/sprite.svg#search"></use>
                         </svg>
                         <svg class="visually-hidden">
                             Перехід до пошуку товарів на сайті
                         </svg>
-                    </a>
+                    </button>
                 </li>
                 <li class="user-menu__item">
-                    <a class="user-menu__link" href="">
+                    <button class="user-menu__link" type="button">
                         <svg class="icon" width="23" height="23">
                             <use href="./images/sprite.svg#basket"></use>
                         </svg>
@@ -67,8 +68,9 @@
                         <svg class="visually-hidden">
                             Перехід до корзини з обраними товарами
                         </svg>
-                    </a>
+                    </button>
                 </li>
+                @@include('./modals/basket-modal.html')
             </ul>
             @@include('./search.html')
         </nav>

@@ -1,40 +1,59 @@
 @import "reset";
 @import "vars";
 @import "fonts";
+
 @import "global";
 
 @import "./global/lego/date-info";
+<<<<<<< HEAD
 @import "./global/lego/promo-ticker";
+=======
+@import "./global/lego/badges/bestseller";
+@import "./global/lego/badges/discount";
+@import "./global/lego/badges/status";
+@import "./global/lego/rating";
+@import "./global/lego/options";
+@import "./global/lego/price";
+@import "./global/lego/counter";
+>>>>>>> checkout
 
 @import "./global/header";
 @import "./global/breadcrumbs";
 @import "./global/search";
-@import "./pages/index/hero";
-@import "./pages/index/promo";
-@import "./global/section-product";
-@import "./global/cards/promo-card";
-@import "./global/lego/bage";
-@import "./global/lego/rating";
-@import "./global/lego/options";
-@import "./global/lego/product-price";
-@import "./global/cards/card-product";
 @import "./global/tiker";
-@import "./pages/index/benefits";
-@import "./global/section-about";
-@import "./pages/index/reviews";
 @import "./global/cookie-banner";
-@import "./pages/catalog/catalog";
 @import "./global/footer";
 
+@import "./global/section-product";
+@import "./global/section-about";
 
+@import "./global/cards/promo-card";
+@import "./global/cards/card-category";
+@import "./global/cards/card-product";
+@import "./global/cards/card-product-summary";
+@import "./global/cards/card-product-basket";
+@import "./global/cards/card-product-recommended";
+@import "./global/cards/card-deal";
+@import "./global/cards/card-deal-detail";
+@import "./global/cards/card-benefit";
+
+@import "./global/recomend-slider";
+
+@import "./global/modals/quick-order-modal";
+@import "./global/modals/success-order-modal";
+@import "./global/modals/basket-modal";
+
+@import "./pages/index/hero";
+@import "./pages/index/promo";
+@import "./pages/index/benefits";
+@import "./pages/index/reviews";
+
+@import "./pages/catalog/catalog";
 @import "./pages/category";
 @import "./pages/product-detail/product-detail";
-@import "./global/cards/card-category";
-
-
 @import "./pages/deals";
-@import "./global/cards/card-deal";
 @import "./pages/product-deal";
+<<<<<<< HEAD
 @import "./global/cards/card-deal-detail";
 @import "./global/section-similar-deal";
 
@@ -42,3 +61,8 @@
 
 @import "./global/section-advice";
 @import "./global/modals/modal-advice";
+=======
+@import "./global/section-similar-deal";
+@import "./global/menu-panel";
+@import "./pages/checkout";
+>>>>>>> checkout

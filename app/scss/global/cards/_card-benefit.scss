@@ -1,0 +1,23 @@
+.benefit-card {
+    &__info {
+        padding: 22px;
+    }
+
+    &__title {
+        color: $dark-700;
+        text-transform: uppercase;
+        font-family: 'DINPro-CondensedBlack', sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        line-height: 1.13;
+    }
+
+    &__desc {
+        margin-bottom: 16px;
+    }
+
+    &__button {
+        display: inline-flex;
+    }
+}

@@ -1,0 +1,30 @@
+<article class="product-basket">
+    <div class="product-basket__info">
+        <picture>
+            <source srcset="./images/@@folder/@@img.webp" type="image/webp">
+            <img class="product-basket__img" src="./images/@@folder/@@img.png" alt="@@alt" width="@@width"
+                height="@@height">
+        </picture>
+        <h4 class="product-basket__title">
+            @@title
+        </h4>
+    </div>
+    <div class="product-basket__inner">
+        @@include('../lego/price.html', {
+        "oldPrice": "@@oldPrice",
+        "currentPrice": "@@currentPrice",
+        "showOldPrice": "@@showOldPrice",
+        "product-price--old": "@@product-price--old",
+        "product-price--current": "@@product-price--current"
+        })
+        @@include('../lego/counter.html')
+    </div>
+    <button class="product-basket__remove">
+        <svg class="icon" width="18" height="18">
+            <use href="./images/sprite.svg#trash"></use>
+        </svg>
+        <span class="visually-hidden">
+            Видалити товар
+        </span>
+    </button>
+</article>

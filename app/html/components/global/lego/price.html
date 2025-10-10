@@ -1,0 +1,10 @@
+<div class="product-price">
+  @@if(context.showOldPrice === 'true') {
+  <span class="product-price__item @@product-price--old">
+    @@oldPrice
+  </span>
+  }
+  <span class="product-price__item @@product-price--current">
+    @@currentPrice
+  </span>
+</div>

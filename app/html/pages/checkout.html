@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    Каталог посуду Ringel
+  </title>
+  @@include('../components/global/resources/favicon.html')
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+
+<body>
+  @@include('../components/global/header.html')
+  <main>
+    <div class="top ">
+      <div class="container">
+        <div class="breadcrumbs">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="./index.html">
+                Головна
+              </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="./catalog.html">
+                Головна / Оформити замовлення
+              </a>
+            </li>
+          </ul>
+        </div>
+        <h2 class="title top__title">Головна / Оформити замовлення</h2>
+      </div>
+    </div>
+    <section class="checkout section">
+      <div class="container">
+        <div class="checkout__inner">
+          <div class="checkout__order">
+            <form class="order-form" action="#">
+              <h2 class="order-form__title title">1. контактні дані</h2>
+              <div class="contact-info">
+                <div class="contact-info__person-name">
+                  <input class="contact-info__input contact-info__input--fio" type="text"
+                    placeholder="Введіть ім’я та прізвище *" required>
+                </div>
+                <div class="contact-info__person-contact">
+                  <input class="contact-info__input contact-info__input--email" type="email" placeholder="Email *"
+                    required>
+                  <input class="contact-info__input contact-info__input--tel" type="tel" placeholder="Телефон *"
+                    required>
+                </div>
+              </div>
+              <!-- Спосіб доставки -->
+              <div class="delivery">
+                <h2 class="order-form__title title">2. спосіб доставки</h2>
+
+                <!-- выпадающий список -->
+                <div class="delivery-dropdoun">
+                  <div class="delivery-dropdoun__display list-open">
+                    <input class="delivery-dropdoun__display-input" id="name" type="text" placeholder="Київ" />
+                    <svg class="delivery-dropdoun__icon icon" width="18px" height="13px">
+                      <use href="./images/sprite.svg#arrowRight"></use>
+                    </svg>
+                  </div>
+                  <ul class="delivery-dropdoun__list is-hide">
+                    <li class="delivery-dropdoun__item">
+                      <button class="delivery-dropdoun__unit" type="button">Київ</button>
+                    </li>
+                    <li class="delivery-dropdoun__item">
+                      <button class="delivery-dropdoun__unit" type="button">Київ</button>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- radio button -->
+                <div class="delivery__chose">
+                  <label class="delivery__item" for="del1">
+                    <input class="delivery__radio" type="radio" name="delivery" id="del1" checked>
+                    <span class="delivery__radio-style"></span>
+                    <h5 class="delivery__descr-title">
+                      Самовивіз з відділення Нова пошта
+                    </h5>
+                    <svg class="delivery__icon" width="25px" height="25px">
+                      <use href="./images/sprite.svg#novaPoshta"></use>
+                    </svg>
+                  </label>
+                  <label class="delivery__item" for="del2">
+                    <input class="delivery__radio" type="radio" name="delivery" id="del2">
+                    <span class="delivery__radio-style"></span>
+                    <h5 class="delivery__descr-title">
+                      Доставка кур’єром Нова пошта
+                    </h5>
+                    <svg class="delivery__icon" width="25px" height="25px">
+                      <use href="./images/sprite.svg#novaPoshta"></use>
+                    </svg>
+                  </label>
+                  <label class="delivery__item" for="del3">
+                    <input class="delivery__radio" type="radio" name="delivery" id="del3">
+                    <span class="delivery__radio-style"></span>
+                    <h5 class="delivery__descr-title">
+                      Самовивіз із поштомату Нова пошта
+                    </h5>
+                    <svg class="delivery__icon" width="25px" height="25px">
+                      <use href="./images/sprite.svg#novaPoshta"></use>
+                    </svg>
+                  </label>
+
+                </div>
+              </div>
+              <!-- Спосіб оплати -->
+              <div class="payment">
+                <h2 class="order-form__title title">3. спосіб оплати</h2>
+
+                <!-- radio button -->
+                <div class="payment__chose">
+                  <label class="payment__item" for="pay1">
+                    <input class="payment__radio" type="radio" name="payment-var" id="pay1" checked>
+                    <span class="payment__radio-style"></span>
+                    <h5 class="payment__descr-title">
+                      Накладений платіж
+                    </h5>
+                  </label>
+                  <label class="payment__item" for="pay2">
+                    <input class="payment__radio" type="radio" name="payment-var" id="pay2">
+                    <span class="payment__radio-style"></span>
+                    <h5 class="payment__descr-title">
+                      Безготівковий розрахунок
+                    </h5>
+                  </label>
+
+                </div>
+              </div>
+
+              <!-- Коментарі -->
+              <div class="comment">
+                <h2 class="order-form__title title">4. коментар</h2>
+                <textarea class="comment__textarea" placeholder="Текст *"></textarea>
+              </div>
+            </form>
+
+            <div class="checkout__slider">
+              <div class="checkout__control-panel">
+                <h2 class="checkout__slider-title title">з цими товарами також покупають</h2>
+                <div class="recomend-slider__nav">
+                  <button class="recomend-slider__btn recomend-slider__btn--prev">
+                    <svg class="recomend-slider__btn-icon icon" width="18px" height="13px">
+                      <use href="./images/sprite.svg#arrowRight"></use>
+                    </svg>
+                  </button>
+                  <button class="recomend-slider__btn recomend-slider__btn--next">
+                    <svg class="recomend-slider__btn-icon icon" width="18px" height="13px">
+                      <use href="./images/sprite.svg#arrowRight"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="recomend-slider">
+                <div class="recomend-slider__wrapper">
+                  <div class="recomend-slider__track">
+                    <div class="recomend-slider__slide">
+                      @@include('../components/global/cards/card-product.html',
+                      {"folder":"goods",
+                      "img":"zitroneOlive",
+                      "alt":"Сковорода з антипригарним покриттям і скляною кришкою",
+                      "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)","mod":"product-card--recomend",
+                      "bage":"@@include('../lego/bages/bestseller.html')"
+                      })
+                    </div>
+                    <div class="recomend-slider__slide">
+                      @@include('../components/global/cards/card-product.html',
+                      {"folder":"goods",
+                      "img":"zitroneOlive",
+                      "alt":"Сковорода з антипригарним покриттям і скляною кришкою",
+                      "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)","mod":"product-card--recomend",
+                      "bage":"@@include('../lego/bages/bestseller.html')"
+                      })
+                    </div>
+                    <div class="recomend-slider__slide">
+                      @@include('../components/global/cards/card-product.html',
+                      {"folder":"goods",
+                      "img":"zitroneOlive",
+                      "alt":"Сковорода з антипригарним покриттям і скляною кришкою",
+                      "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)","mod":"product-card--recomend",
+                      "bage":"@@include('../lego/bages/bestseller.html')"
+                      })
+                    </div>
+                  </div>
+                </div>
+                <div class="recomend-slider-pagination">
+                  <span class="recomend-slider-pagination__bullet recomend-slider-pagination__bullet--active"></span>
+                  <span class="recomend-slider-pagination__bullet"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Корзина -->
+          <div class="checkout__basket">
+            <div class="basket">
+              <header class="basket__hrader">
+                <h2 class="basket__title title">
+                  <p class="basket__title-text">ВАШ КОШИК</p>
+                  <span class="basket__title-num-box">(<span class="basket__title-num">3</span>)</span>
+                </h2>
+                <a class="basket__redag-link" href="#">редагувати</a>
+              </header>
+              <div class="basket__body">
+                <div class="basket__list">
+                  <div class="basket__item">
+                    @@include('../components/global/cards/card-product.html',
+                    {"folder":"goods",
+                    "img":"zitroneOlive",
+                    "alt":"Сковорода з антипригарним покриттям і скляною кришкою",
+                    "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)","mod":"product-card--checkout",
+                    "bage":""
+                    })
+                  </div>
+                  <div class="basket__item">
+                    @@include('../components/global/cards/card-product.html',
+                    {"folder":"goods",
+                    "img":"zitroneOlive",
+                    "alt":"Сковорода з антипригарним покриттям і скляною кришкою",
+                    "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)","mod":"product-card--checkout",
+                    "bage":""
+                    })
+                  </div>
+                  <div class="basket__item">
+                    @@include('../components/global/cards/card-product.html',
+                    {"folder":"goods",
+                    "img":"zitroneOlive",
+                    "alt":"Сковорода з антипригарним покриттям і скляною кришкою",
+                    "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)","mod":"product-card--checkout",
+                    "bage":""
+                    })
+                  </div>
+                </div>
+              </div>
+              <div class="basket__empty">
+                <p class="basket__empty-text">Ваша корзина поки порожна.
+                  з чого хочете почати?</p>
+                <ul class="basket__empty-cats">
+                  <li class="basket__empty-cat">
+                    <a class="basket__empty-cat-link" href="#">
+                      <picture>
+                        <source srcset="../images/categories/cookware/skillet.webp" type="image/webp">
+                        <img class="basket__cat-img" src="../images/categories/cookware/skillet.png"
+                          alt="Овочі тушковані на сковороді Ringel">
+                      </picture>
+                      <h3 class="basket__cat-title">Сковорідки</h3>
+                      <svg class="icon" width="24px" height="24px">
+                        <use href="./images/sprite.svg#arrowRight"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="basket__empty-cat">
+                    <a class="basket__empty-cat-link" href="#">
+                      <picture>
+                        <source srcset="../images/goods/zitroneOlive.webp" type="image/webp">
+                        <img class="basket__cat-img" src="../images/goods/zitroneOlive.png"
+                          alt="Овочі тушковані на сковороді Ringel">
+                      </picture>
+                      <h3 class="basket__cat-title">Каструлі та ковші</h3>
+                      <svg class="icon" width="24px" height="24px">
+                        <use href="./images/sprite.svg#arrowRight"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="basket__empty-cat">
+                    <a class="basket__empty-cat-link" href="#">
+                      <picture>
+                        <source srcset="../images/goods/knife.webp" type="image/webp">
+                        <img class="basket__cat-img" src="../images/goods/knife.png"
+                          alt="Овочі тушковані на сковороді Ringel">
+                      </picture>
+                      <h3 class="basket__cat-title">Ножі та приладдя</h3>
+                      <svg class="icon" width="24px" height="24px">
+                        <use href="./images/sprite.svg#arrowRight"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="basket__empty-cat">
+                    <a class="basket__empty-cat-link" href="#">
+                      <picture>
+                        <source srcset="../images/goods/spoonfork.webp" type="image/webp">
+                        <img class="basket__cat-img" src="../images/goods/spoonfork.png"
+                          alt="Овочі тушковані на сковороді Ringel">
+                      </picture>
+                      <h3 class="basket__cat-title">Столові приладия</h3>
+                      <svg class="icon" width="24px" height="24px">
+                        <use href="./images/sprite.svg#arrowRight"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="basket__empty-cat">
+                    <a class="basket__empty-cat-link" href="#">
+                      <picture>
+                        <source srcset="../images/goods/katle.webp" type="image/webp">
+                        <img class="basket__cat-img" src="../images/goods/katle.png"
+                          alt="Овочі тушковані на сковороді Ringel">
+                      </picture>
+                      <h3 class="basket__cat-title">Інше</h3>
+                      <svg class="icon" width="24px" height="24px">
+                        <use href="./images/sprite.svg#arrowRight"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="basket__empty-cat">
+                    <a class="basket__empty-cat-link" href="#">
+                      <picture>
+                        <source srcset="../images/goods/series.webp" type="image/webp">
+                        <img class="basket__cat-img" src="../images/goods/series.png"
+                          alt="Овочі тушковані на сковороді Ringel">
+                      </picture>
+                      <h3 class="basket__cat-title">Серії</h3>
+                      <svg class="icon" width="24px" height="24px">
+                        <use href="./images/sprite.svg#arrowRight"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+                <a class="basket__empty-link-btn button" href="#">
+                  <p>Перейти в каталог</p>
+                  <svg class="icon" width="24px" height="24px">
+                    <use href="./images/sprite.svg#arrowRight"></use>
+                  </svg>
+                </a>
+              </div>
+              <footer class="basket__footer">
+                <!-- Промо код -->
+                <div class="promo-code">
+                  <input class="promo-code__checkbox" type="checkbox" id="promo-toggle" hidden>
+                  <div class="promo-code__trigger">
+                    <label class="promo-code__label" for="promo-toggle">
+                      + ДОДАТИ ПРОМОКОД
+                    </label>
+                  </div>
+                  <div class="promo-code__form">
+                    <input class="promo-code__input" type="text" placeholder="Промокод">
+                    <button class="promo-code__submit button" type="submit">Застосувати</button>
+                  </div>
+                </div>
+                <div class="basket__total-panel">
+                  <h4 class="basket__total-title">До сплати</h4>
+                  <span class="basket__total-sum">1 456<span class="basket__total-sum-mark">₴</span></span>
+                </div>
+                <button class="basket__foote-order-sbmt button">
+                  <p class="basket__foote-sbmt-text">Оформити замовлення</p>
+                  <svg class="basket__order-sbmt-icon" width="18px" height="18px">
+                    <use href="./images/sprite.svg#arrowRight"></use>
+                  </svg>
+                </button>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  @@include('../components/global/footer.html')
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
