@@ -80,7 +80,7 @@ body {
 
 .logo {
   border-radius: 10px;
-  z-index: 999;
+  z-index: 1000;
   transition: transform 0.3s, opacity 0.3s, outline 0.3s;
 
   &:hover {

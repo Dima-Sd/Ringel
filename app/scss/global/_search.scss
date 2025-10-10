@@ -1,10 +1,10 @@
 .search-panel {
-    display: none;
     position: relative;
     grid-column: 1 / -1;
     grid-row: 2;
     overflow: visible;
     z-index: 0;
+    display: none;
 
     &::before {
         content: "";
