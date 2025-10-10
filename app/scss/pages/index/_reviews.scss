@@ -92,11 +92,12 @@
   &__slider-box {
     max-width: 860px;
     width: 100%;
-  }  
+  }
 }
 
 .slider-reviews {
   overflow: visible;
+
   &__wrapper {
     display: flex;
     gap: 30px;
@@ -160,6 +161,7 @@
     @include Inter(700, 16px, 1.2);
     color: $dark-700;
   }
+
   .slider-reviews-pagination {
     display: none;
   }
@@ -201,12 +203,15 @@
       display: none;
     }
   }
+
   .slider-reviews {
     position: relative;
     padding-bottom: 25px;
+
     &__slide {
       flex: 0 0 100%;
     }
+
     .slider-reviews-pagination {
       position: absolute;
       bottom: 0;
@@ -247,6 +252,7 @@
       font-size: 14px;
     }
   }
+
   .slider-reviews {
     &__rating-value {
       font-size: 12px;

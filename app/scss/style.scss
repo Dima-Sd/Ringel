@@ -4,19 +4,21 @@
 
 @import "global";
 
+// --- LEGO (дрібні елементи) ---
 @import "./global/lego/date-info";
-<<<<<<< HEAD
 @import "./global/lego/promo-ticker";
-=======
 @import "./global/lego/badges/bestseller";
 @import "./global/lego/badges/discount";
 @import "./global/lego/badges/status";
+@import "./global/lego/badges/taste";
+@import "./global/lego/badges/type";
+@import "./global/lego/badges/topsale";
 @import "./global/lego/rating";
 @import "./global/lego/options";
 @import "./global/lego/price";
 @import "./global/lego/counter";
->>>>>>> checkout
 
+// --- ГЛОБАЛЬНІ БЛОКИ ---
 @import "./global/header";
 @import "./global/breadcrumbs";
 @import "./global/search";
@@ -24,9 +26,13 @@
 @import "./global/cookie-banner";
 @import "./global/footer";
 
+// --- СЕКЦІЇ ---
 @import "./global/section-product";
 @import "./global/section-about";
+@import "./global/section-similar-deal";
+@import "./global/section-advice";
 
+// --- КАРТКИ ---
 @import "./global/cards/promo-card";
 @import "./global/cards/card-category";
 @import "./global/cards/card-product";
@@ -37,12 +43,19 @@
 @import "./global/cards/card-deal-detail";
 @import "./global/cards/card-benefit";
 
+// --- СЛАЙДЕРИ ---
 @import "./global/recomend-slider";
 
+// --- МОДАЛЬНІ ВІКНА ---
 @import "./global/modals/quick-order-modal";
 @import "./global/modals/success-order-modal";
 @import "./global/modals/basket-modal";
+@import "./global/modals/modal-advice";
 
+// --- МЕНЮ ---
+@import "./global/menu-panel";
+
+// --- СТОРІНКИ ---
 @import "./pages/index/hero";
 @import "./pages/index/promo";
 @import "./pages/index/benefits";
@@ -53,16 +66,5 @@
 @import "./pages/product-detail/product-detail";
 @import "./pages/deals";
 @import "./pages/product-deal";
-<<<<<<< HEAD
-@import "./global/cards/card-deal-detail";
-@import "./global/section-similar-deal";
-
-@import "./pages/contacts";
-
-@import "./global/section-advice";
-@import "./global/modals/modal-advice";
-=======
-@import "./global/section-similar-deal";
-@import "./global/menu-panel";
 @import "./pages/checkout";
->>>>>>> checkout
+@import "./pages/contacts";

@@ -255,9 +255,17 @@
   }
 }
 
-@media (max-width: 528px) {
+@media (max-width: 576px) {
   .product-card {
     padding: 10px;
+
+    &__descr-text {
+      display: none;
+    }
+
+    &__recomend {
+      display: none;
+    }
 
     .product-badge {
       &__item {

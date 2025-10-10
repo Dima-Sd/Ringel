@@ -1,4 +1,20 @@
 <article class="product-card">
+    <div class="product-card__head">
+        @@if(context.showBadgeSeller === 'true') {
+        @@include('../lego/badges/bestseller.html')
+        }
+        @@if(context.showBagdeDiscount === 'true') {
+        @@include('../lego/badges/discount.html')
+        }
+        @@if(context.showBagdeTopSale === 'true') {
+        @@include('../lego/badges/topsale.html')
+        }
+        <picture>
+            <source srcset="./images/@@folder/@@img.webp" type="image/webp">
+            <img class="product-card__img" src="./images/@@folder/@@img.png" alt="@@alt" width="@@width"
+                height="@@height">
+        </picture>
+    </div>
     <div class="product-card__content">
         @@include('../lego/rating.html', {
         "number": "5"
