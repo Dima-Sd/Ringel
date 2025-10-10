@@ -28,7 +28,7 @@
         display: flex;
         justify-content: space-between;
         gap: 30px;
-        max-width: 50%;
+        max-width: 60%;
         width: 100%;
     }
     &__info-offers-block {
@@ -40,16 +40,25 @@
     }
 
     &__title {
-        @include Inter(700, 16px, 1.25);
-        color: $dark-700;
-        margin-bottom: 24px;
+      @include Inter(700, 16px, 1.25);
+      color: $dark-700;
+      margin-bottom: 24px;
     }
     &__reviews {
-      max-width: 50%;
+      /* max-width: 35%; */
       display: flex;
+      justify-content: space-between;
+      gap: 30px;
     }
     &__reviews-item {
-      max-width: 50%;
+      border: 1px solid #000;
+      max-width: 240px;
+      /* aspect-ratio: 240 / 322; */
+      .benefit-card {
+        .benefit-card__button {
+          display: none;
+        }
+      }
     }
     &__categories-link {
       font-size: 18px;
@@ -61,3 +70,14 @@
       }
     }
 }
+
+/* @media (max-width: 1124px) {
+  .menu-panel {
+    &__info {
+      max-width: 100%;
+    }
+    &__reviews {
+      display: none;
+    }
+  }
+} */
