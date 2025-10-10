@@ -1,26 +1,63 @@
 .menu-panel {
-    position: absolute;
+    position: fixed;
     z-index: 888;
     background-color: $light;
-    width: 100vw;
+    width: 100%;
+    height: calc(100vh - 79px);
+    left: 0;
     top: 79px;
-    left: 50%;
-    height: calc(50vh - 79px);
-    transform: translateX(-50%);
-
+    background: rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    &__wrraper {
+      background-color: #fff;
+      width: 100%;
+    }
     &__inner {
-        display: flex;
-        justify-content: space-between;
+      display: flex;
+      justify-content: space-between;
+      height: auto;
+      width: 100%;
+      padding-top: 60px;
+      padding-bottom: 30px;
     }
 
     &__info {
         display: flex;
-        gap: 60px;
+        justify-content: space-between;
+        gap: 30px;
+        max-width: 50%;
+        width: 100%;
+    }
+    &__info-offers-block {
+      width: 100%;
+      max-width: 351px;
+    }
+    &__info-categories-block {
+      flex: 1 1 auto;
     }
 
     &__title {
+        @include Inter(700, 16px, 1.25);
         color: $dark-700;
         margin-bottom: 24px;
-        font-weight: 600;
+    }
+    &__reviews {
+      max-width: 50%;
+      display: flex;
+    }
+    &__reviews-item {
+      max-width: 50%;
+    }
+    &__categories-link {
+      font-size: 18px;
+      line-height: 3;
+      color: $dark-700;
+      transition: all 0.3s;
+      &:hover {
+        color: $accent;
+      }
     }
 }
