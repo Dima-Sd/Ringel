@@ -1,13 +1,14 @@
 <div class="product-option">
-  <button class="product-option__item product-option__item--active"><span>
-      @@firstOption
-      <button type="button" class="product-option__item">
-        @@secondOption
-      </button>
-      <button type="button" class="product-option__item">
-        @@thirdOption
-      </button>
-      @@if(context.showOptionsMore === 'true') {
-      <button type="button" class="product-option__item product-option__item--more" aria-expanded="false">+3</button>
-      }
+  <button class="product-option__item product-option__item--active">
+    @@firstOption
+  </button>
+  <button type="button" class="product-option__item">
+    @@secondOption
+  </button>
+  <button type="button" class="product-option__item">
+    @@thirdOption
+  </button>
+  @@if(context.showOptionsMore === 'true') {
+  <button type="button" class="product-option__item product-option__item--more" aria-expanded="false">+3</button>
+  }
 </div>
