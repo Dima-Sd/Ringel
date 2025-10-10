@@ -1,10 +1,16 @@
 <div class="menu-panel">
-  <div class="menu-panel__wrraper">
+  <div class="menu-panel__wrapper">
     <div class="container">
         <div class="menu-panel__inner">
+          <button class="menu-panel__to-menu">
+            <svg class="icon" width="24px" height="24px">
+              <use xlink:href="./images/sprite.svg#arrowRight"></use>
+            </svg>
+            <p class="menu-panel__to-menu-title">меню</p>
+          </button>
             <div class="menu-panel__info">
               <div class="menu-panel__info-offers-block">
-                <p class="menu-panel__title">
+                <p class="menu-panel__title menu-panel__title--offers">
                     Популярні пропозиції
                 </p>
                 <ul class="menu-panel__offers">
@@ -33,8 +39,8 @@
                 </ul>
               </div>
               <div class="menu-panel__info-categories-block">
-                <p class="menu-panel__title">
-                  Популярні пропозиції
+                <p class="menu-panel__title menu-panel__title--categories">
+                  Популярні Категорії
                 </p>
               <ul class="menu-panel__categories">
                   <li class="menu-panel__categories-item">
@@ -72,10 +78,20 @@
             </div>
             <ul class="menu-panel__reviews">
                 <li class="menu-panel__reviews-item">
-                    @@include('./cards/card-benefit.html')
+                    @@include('./cards/card-benefit.html',{
+                      "folder":"reviews",
+                      "img":"hero-promo-1",
+                      "title": "Каструля Ringel Meyer з кришкою 4.2 л",
+                      "review":"«Я обрав цю сковорідку, бо вона красива"
+                    })
                 </li>
                 <li class="menu-panel__reviews-item">
-                    @@include('./cards/card-benefit.html')
+                    @@include('./cards/card-benefit.html',{
+                    "folder":"reviews",
+                    "img":"hero-promo-2",
+                    "title": "Каструля Ringel Meyer з кришкою 4.2 л",
+                    "review":"«Я обрав цю сковорідку, бо вона красива"
+                    })
                 </li>
             </ul>
         </div>
