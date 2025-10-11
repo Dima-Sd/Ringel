@@ -8,9 +8,10 @@ body {
   letter-spacing: normal;
   font-style: normal;
   background-color: $light-900;
-  @include Inter(400, 16px, 1.48);
+   @include Inter(700, 18px, 1.11);
   display: flex;
   flex-direction: column;
+  cursor: url('../images/cursor.svg') 8 8, auto;
 }
 
 .main {
@@ -91,7 +92,10 @@ body {
     transform: scale(0.9) translateY(8px);
   }
 }
-
+a,
+button {
+  cursor: url('../images/cursor.svg') 8 8, auto !important;
+}
 .button {
   display: flex;
   align-items: center;

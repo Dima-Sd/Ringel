@@ -21,6 +21,7 @@
     @include Inter(400, 18px, 1.38);
     padding-right: 20px;
     position: relative;
+    border-bottom: 1px solid $dark-400;
     &::after {
       content: '/';
       position: absolute;
@@ -30,10 +31,10 @@
     }
 
     &:last-child {
-      color: $dark-400;
       padding-right: 0;
-      border-bottom: 1px solid $dark-400;
-      &::after {
+      border-bottom: none;
+      &::after,
+      &::before {
         display: none;
       }
     }

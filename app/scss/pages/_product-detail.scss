@@ -344,7 +344,7 @@
   .slider-youlike {
     padding: 60px 0;
 
-    &__wrapper {
+    &__track {
       width: 880px;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -519,6 +519,33 @@
 
   &__rating-icon {
     fill: $dark-700;
+    flex-direction: row-reverse; // чтобы правильно подсвечивались предыдущие
+    justify-content: flex-end;
+    gap: 5px;
+
+    input {
+      display: none;
+    }
+
+    .feedback__rating-icon {
+      stroke: $dark-700;
+      fill: $accent;
+      stroke-width: 1px;
+      cursor: pointer;
+      transition: fill 0.2s;
+    }
+
+    // при наведении — все звёзды справа (следующие) окрашиваются
+    .feedback__star:hover~.feedback__star .feedback__rating-icon,
+    .feedback__star:hover .feedback__rating-icon {
+      fill: #fff;
+    }
+
+    // при клике — все звёзды справа от выбранной окрашиваются
+    input:checked~.feedback__star .feedback__rating-icon,
+    input:checked+.feedback__rating-icon {
+      fill: #fff;
+    }
   }
 }
 
@@ -544,7 +571,10 @@
   }
 
   &__input {
-    flex: 1 1 50%;
+    &__input-box {
+      position: relative;
+      flex: 1 1 50%;
+    }
   }
 
   &__input,
@@ -556,75 +586,112 @@
     color: $dark-700;
     background-color: transparent;
     width: 100%;
+
+    &::placeholder {
+      @include Inter(400, 18px, 1.1);
+      color: $dark-700;
+    }
   }
 
   &__textarea {
-    resize: none;
-    height: 110px;
-    margin-bottom: 15px;
-  }
+    &__input {
+      &:invalid {
+        border-color: $light-600;
+      }
 
-  &__ulpoad-file {
-    @include visually-hidden;
-  }
+      &:valid {
+        border-color: $dark-700;
+      }
 
-  &__item-upload {
-    max-width: 50%;
-    display: inline-flex;
-    justify-content: space-between;
-    background-color: rgba($dark-700, .1);
-    width: 100%;
-    @include Inter(700, 18px, 1.1);
-    color: $dark-700;
-    padding: 15px 20px;
-    border-radius: 6px;
-    border: 1px solid $dark-700;
-    margin-bottom: 15px;
-  }
-
-  &__upload-box {
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-
-  &__ulpoad-icon {
-    fill: $dark-700;
-  }
-
-  &__submit {
-    background-color: $dark-700;
-    border: 1px solid $dark-700;
-    color: $accent;
-
-    .icon {
-      fill: $accent;
-    }
-
-    &:hover {
-      background-color: transparent;
-      color: $dark-700;
-      border-color: $dark-700;
-
-      .icon {
-        fill: $dark-700;
+      &:focus {
+        border-color: $dark-700;
       }
     }
 
-    &:focus {
-      outline: 1px solid $accent;
+    &__input:invalid:not(:focus)+&__error {
+      opacity: 1;
     }
 
-    &:active {
+    &__input:valid {
+      border-color: $dark-700; // або інший колір успіху
+    }
+
+    &__error {
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      font-size: 10px;
+      color: $light-600;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    &__textarea {
+      resize: none;
+      height: 110px;
+      margin-bottom: 15px;
+    }
+
+    &__ulpoad-file {
+      @include visually-hidden;
+    }
+
+    &__item-upload {
+      max-width: 50%;
+      display: inline-flex;
+      justify-content: space-between;
+      background-color: rgba($dark-700, .1);
+      width: 100%;
+      @include Inter(700, 18px, 1.1);
       color: $dark-700;
-      background-color: $light;
-      box-shadow: inset 4px 4px 4px rgba(0, 0, 0, .25);
+      padding: 15px 20px;
+      border-radius: 6px;
+      border: 1px solid $dark-700;
+      margin-bottom: 15px;
+    }
+
+    &__upload-box {
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    &__ulpoad-icon {
+      fill: $dark-700;
+    }
+
+    &__submit {
+      background-color: $dark-700;
+      border: 1px solid $dark-700;
+      color: $accent;
+
+      .icon {
+        fill: $accent;
+      }
+
+      &:hover {
+        background-color: transparent;
+        color: $dark-700;
+        border-color: $dark-700;
+
+        .icon {
+          fill: $dark-700;
+        }
+      }
+
+      &:focus {
+        outline: 1px solid $accent;
+      }
+
+      &:active {
+        color: $dark-700;
+        background-color: $light;
+        box-shadow: inset 4px 4px 4px rgba(0, 0, 0, .25);
+      }
     }
   }
 }
-
-/* Враження клієнтів */
 
 .feelings {
   background-color: $dark-700;
@@ -799,6 +866,26 @@
   &__img {
     max-width: 110px;
     object-fit: cover;
+  }
+}
+
+.slider-feelings {
+  &__track {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__slide {
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
+    padding: 0 5px;
+  }
+
+  &__slide-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
   }
 }
 
@@ -1142,7 +1229,7 @@
     }
 
     .slider-youlike {
-      &__wrapper {
+      &__track {
         width: 100%;
         display: flex;
         justify-content: flex-end;
@@ -1432,166 +1519,176 @@
       padding-bottom: 25px;
 
       &__wrapper {
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        overflow: visible;
-        gap: 20px;
-      }
+        &__track {
+          width: 100%;
+          display: flex;
+          justify-content: flex-start;
+          overflow: visible;
+          gap: 20px;
+        }
 
-      &__slide {
-        flex: 0 0 calc((100% - 20px) / 1);
-        max-width: 464px;
-        width: 100%;
-        margin: 0 auto;
-      }
+        &__slide {
+          flex: 0 0 calc((100% - 20px) / 1);
+          max-width: 464px;
+          width: 100%;
+          margin: 0 auto;
+        }
 
-      .slider-youlike-pagination {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        display: flex;
-        align-items: center;
-        width: 100%;
-        border-radius: 6px;
-        height: 4px;
-        background-color: $light;
-
-        &__bullet {
-          width: 50%;
-          height: 4px;
+        .slider-youlike-pagination {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          display: flex;
+          align-items: center;
+          width: 100%;
           border-radius: 6px;
+          height: 4px;
           background-color: $light;
-          opacity: 1;
-          margin: 0;
 
-          &--active {
-            background: $accent;
+          &__bullet {
+            width: 50%;
+            height: 4px;
+            border-radius: 6px;
+            background-color: $light;
+            opacity: 1;
+            margin: 0;
+
+            &--active {
+              background: $accent;
+            }
           }
         }
       }
     }
-  }
 
-  .feedback {
-    &__title-block {
-      display: block;
-    }
+    .feedback {
+      &__title-block {
+        display: block;
+      }
 
-    &__title {
-      font-size: 25px;
-    }
-  }
-
-  .feedback-form {
-    &__item {
-      display: block;
-    }
-
-    &__input {
-      display: block;
-      flex: 1 1 100%;
-      margin-bottom: 15px;
-
-      &:last-child {
-        margin-bottom: 0;
+      &__title {
+        font-size: 25px;
+        margin-bottom: 10px;
       }
     }
 
-    &__item-upload {
-      max-width: 100%;
+    .feedback-form {
+      &__item {
+        display: block;
+      }
+
+      &__input {
+        display: block;
+        flex: 1 1 100%;
+        margin-bottom: 15px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      &__item-upload {
+        max-width: 100%;
+      }
     }
-  }
 
-  .popup {
-    &__dialog {
+    .popup {
+      &__dialog {
 
-      &--quick-order,
-      &--success {
-        max-width: 335px;
-        background-color: $light;
-        padding: 30px 20px;
-        border-radius: 6px;
+        &--quick-order,
+        &--success {
+          max-width: 335px;
+          background-color: $light;
+          padding: 30px 20px;
+          border-radius: 6px;
+
+          .popup__close {
+            top: -64px;
+            right: -64px;
+
+            .icon {
+              width: 24px;
+              height: 24px;
+              fill: $light;
+            }
+          }
+        }
 
         .popup__close {
-          top: -64px;
-          right: -64px;
+          right: -20px;
+        }
 
-          .icon {
-            width: 24px;
-            height: 24px;
-            fill: $light;
+        .quick-order,
+        .success-block {
+          &__title {
+            font-size: 25px;
           }
         }
       }
+    }
 
+    .popup__dialog--quick-order {
       .popup__close {
-        right: -20px;
+        right: 0;
       }
 
-      .quick-order,
-      .success-block {
-        &__title {
-          font-size: 25px;
-        }
+    }
+  }
+
+  @media (max-width: 440px) {
+    .detail-one {
+      &__content-card {
+        padding: 15px 25px 20px 10px;
       }
     }
-  }
-}
 
-@media (max-width: 440px) {
-  .detail-one {
-    &__content-card {
-      padding: 15px 25px 20px 10px;
+    .properties {
+
+      &__item,
+      &__item-props {
+        font-size: 14px;
+      }
     }
-  }
 
-  .properties {
+    .popup {
+      &--basket {
+        .basket {
+          width: 100%;
+          height: 100vh;
+          overflow-y: auto;
 
-    &__item,
-    &__item-props {
-      font-size: 14px;
-    }
-  }
+          &__slider,
+          &__hrader {
+            padding-left: 20px;
+          }
 
-  .popup {
-    &--basket {
-      .basket {
-        width: 100%;
-        height: 100vh;
-        overflow-y: auto;
+          &__list {
+            padding-top: 15px;
+          }
 
-        &__slider,
-        &__hrader {
-          padding-left: 20px;
-        }
+          &__redag-link {
+            display: none;
+          }
 
-        &__list {
-          padding-top: 15px;
-        }
+          &__footer {
+            padding-right: 15px;
+            padding-left: 20px;
+          }
 
-        &__redag-link {
-          display: none;
-        }
-
-        &__footer {
-          padding-right: 15px;
-          padding-left: 20px;
-        }
-
-        &__foote-order-sbmt {
-          font-size: 16px;
-          line-height: 1.4;
+          &__foote-order-sbmt {
+            font-size: 16px;
+            line-height: 1.4;
+          }
         }
       }
     }
   }
-}
 
-@media (max-width: 365px) {
-  .detail-one {
-    &__content-card-subtext {
-      font-size: 10px;
+  @media (max-width: 365px) {
+    .detail-one {
+      &__content-card-subtext {
+        font-size: 10px;
+      }
     }
   }
 }
