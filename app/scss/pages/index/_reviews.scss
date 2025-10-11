@@ -60,12 +60,8 @@
 
 .slider-reviews {
   overflow: visible;
-<<<<<<< HEAD
 
-  &__wrapper {
-=======
   &__track {
->>>>>>> 7bd84717391c2f8b016d268f3c237cb595723d13
     display: flex;
     gap: 30px;
   }
@@ -128,9 +124,7 @@
     @include Inter(700, 16px, 1.2);
     color: $dark-700;
   }
-<<<<<<< HEAD
 
-=======
   &__btn {
     background-color: $light;
     width: 51px;
@@ -158,13 +152,14 @@
     &:active {
       box-shadow: inset 4px 4px 4px rgba(0, 0, 0, .25);
     }
+
     &--prev {
       svg {
         transform: rotate(180deg);
       }
     }
   }
->>>>>>> 7bd84717391c2f8b016d268f3c237cb595723d13
+
   .slider-reviews-pagination {
     display: none;
   }
