@@ -60,12 +60,9 @@
         fill: $accent;
       }
 
-      &rect:nth-child(1) {
-        fill: #282934;
-      }
-
-      g {
-        path {
+      path {
+        fill: none;
+        &:last-child {
           fill: $dark-700;
         }
       }
@@ -77,16 +74,12 @@
         rect {
           fill: $light-700;
         }
-
-        &rect:nth-child(1) {
+      path {
+        fill: $light;
+        &:last-child {
           fill: $light;
         }
-
-        g {
-          path {
-            fill: $light;
-          }
-        }
+      }
       }
     }
   }

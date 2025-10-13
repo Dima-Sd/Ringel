@@ -104,14 +104,16 @@
 @media (max-width: 440px) {
   .hero {
     background-image: url('../../images/index/hero/hero-bg-s.jpg');
-    height: 571px;
-
     &::before {
       background-image: url('../../images/index/hero/hero-bg-blur-s.png');
     }
 
     &__inner {
-      padding-top: 97px;
+      height: 570px;
+      display: flex;
+      align-items: center;
+      padding-top: 80px;
+      padding-bottom: 0;
     }
 
     &__title,
