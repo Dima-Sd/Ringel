@@ -141,15 +141,8 @@
 @media (max-width: 880px) {
   .product {
     .slider-product {
-      &__track {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        justify-items: center;
-      }
-
       &__slide {
-        margin: 15px;
+        flex: 0 0 calc((100% - 60px) / 2);
       }
     }
   }
@@ -175,6 +168,19 @@
 
     .slider-product {
       padding-bottom: 20px;
+      &__track {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        justify-items: center;
+      }
+      .product-card {
+        .badge-bestseller,
+        .badge-discount {
+          top: 10px;
+          left: 10px;
+        }
+      }
     }
 
     .slider-product-pagination {

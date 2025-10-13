@@ -103,9 +103,9 @@
 
 @media (max-width: 440px) {
   .hero {
-    background-image: url('../../images/index/hero/hero-bg-s.jpg');
+    background-image: url('../images/index/hero/hero-bg-s.jpg');
     &::before {
-      background-image: url('../../images/index/hero/hero-bg-blur-s.png');
+      background-image: url('../images/index/hero/hero-bg-blur-s.png');
     }
 
     &__inner {
