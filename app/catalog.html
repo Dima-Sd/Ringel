@@ -891,11 +891,11 @@
             <div class="catalog-content__banner">
               <picture class="catalog-content__banner-picture">
                 <source srcset="../images/catalog/catalog-bg.webp" type="image/webp">
-                <img class="catalog-content__banner-img" src="../images/catalog/catalog-bg.jpg"
+                <img class="catalog-content__banner-img" src="./images/catalog/catalog-bg.jpg"
                   alt="Овочі тушковані на сковороді Ringel">
               </picture>
               <div class="catalog-content__banner-content">
-                <img class="catalog-content__banner-logo" src="../../images/logo.svg" alt="Ringel logo">
+                <img class="catalog-content__banner-logo" src="./images/logo.svg" alt="Ringel logo">
                 <div class="catalog-content__banner-title-box">
                   <h3 class="catalog-content__banner-title">ОВОЧІ</h3>
                   <p class="catalog-content__banner-subtitle">ТУШКОВАНІ НА</p>
@@ -1991,16 +1991,26 @@
                             </svg>
                             +38 (044) 123-45-67
                         </a>
-                        <a class="footer__contact-link" href="tel:+380678901234">+38 (067) 890-12-34</a>
+                        <a class="footer__contact-link footer__contact-link--number" href="tel:+380678901234">
+                            +38 (067) 890-12-34
+                        </a>
                     </li>
                     <li class="footer__contact-item">
-                        <a class="footer__contact-link footer__contact-link--sms"
-                            href="mailto:support@ringel.ua">support@ringel.ua</a>
+                        <a class="footer__contact-link footer__contact-link--sms" href="mailto:support@ringel.ua">
+                            <svg class="icon" width="16" height="16">
+                                <use href="./images/sprite.svg#envelope"></use>
+                            </svg>
+                            support@ringel.ua
+                        </a>
                     </li>
                     <li class="footer__contact-item">
                         <a class="footer__contact-link footer__contact-link--location" href="#" target="_blank"
                             rel="noopener noreferrer">
-                            вул. Прикладна, 12,м. Київ, 01001, Україна
+                            <svg class="icon" width="16" height="16">
+                                <use href="./images/sprite.svg#point"></use>
+                            </svg>
+                            вул. Прикладна, 12,
+                            м. Київ, 01001, Україна
                         </a>
                     </li>
                 </ul>
@@ -2090,8 +2100,6 @@
         </svg>
     </a>
 </footer>
-
-
 
   <!-- popup filters для активации добавить popup--active-->
   <div class="popup popup--hide" data-popup='filter'>
@@ -2253,7 +2261,6 @@
             <a class="sort__unit" href="#">За знижками</a>
           </li>
         </ul>
-
       </div>
     </div>
   </div>
