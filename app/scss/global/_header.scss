@@ -175,6 +175,9 @@
 }
 
 @media (max-width: 576px) {
+    .header {
+      min-height: 47px;
+    }
     .logo {
         width: 100px;
         height: 46px;

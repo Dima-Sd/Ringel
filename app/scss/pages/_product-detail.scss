@@ -177,6 +177,11 @@
       border: 1px solid $accent;
       color: $dark-700;
       justify-content: space-between;
+      svg.icon {
+        width: 24px;
+        height: 25px;
+        fill: $dark-700;
+      }
 
       &:hover {
         background-color: transparent;

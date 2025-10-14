@@ -191,6 +191,7 @@
       flex: 1 1 auto;
       max-width: 100%;
       margin-bottom: 30px;
+      padding-bottom: 0;
     }
 
     &__promo-text {
@@ -245,13 +246,34 @@
     &__title {
       font-size: 25px;
     }
-
+    &__content {
+      margin-bottom: 20px;
+    }
     &__promo-text {
       font-size: 14px;
     }
   }
 
   .slider-reviews {
+    .product-card {
+      padding: 30px 15px 10px;
+      .product-badge {
+        .badge-type,
+        .badge-taste {
+          top: 10px;
+          left: 10px;
+        }
+        .badge-taste {
+          left: 80px;
+        }
+      }
+      .product-card__picture {
+        margin-bottom: 10px;
+      }
+      .product-card__decr {
+        display: none;
+      }
+    }
     &__rating-value {
       font-size: 12px;
     }
