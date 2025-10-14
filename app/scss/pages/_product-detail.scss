@@ -487,6 +487,7 @@
 
   &__img {
     height: 100%;
+    width: 100%;
   }
 
   &__inner {
@@ -1111,7 +1112,7 @@
     .slider-youlike {
       padding: 0;
 
-      &__wrapper {
+      &__track {
         width: 100%;
       }
 

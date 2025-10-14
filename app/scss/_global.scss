@@ -170,21 +170,17 @@ body {
 .is-active::after {}
 
 
-@media (max-width: 576px) {
-  .title {
-    font-size: 22px;
-    margin-bottom: 15px;
-  }
-}
+
 
 .top {
-  padding: 32px 0 30px;
+  background-color: $light-900;
+  padding: 135px 0 0px;
 
   &__title {
     @include DINPcond(900, 45px, 1);
     color: $dark-700;
     text-transform: uppercase;
-    margin-bottom: 0;
+    margin-bottom: 20px;
   }
 
   &__info {
@@ -246,43 +242,6 @@ body {
   }
 }
 
-.breadcrumbs {
-  display: inline-flex;
-  justify-content: center;
-  margin-bottom: 17px;
-
-  &__list {
-    display: flex;
-  }
-
-  &__item {
-    color: $dark-400;
-    @include Inter(400, 18px, 1.38);
-    padding-right: 20px;
-    position: relative;
-
-    &::after {
-      content: '/';
-      position: absolute;
-      right: 6px;
-      color: $dark-400;
-      @include Inter(400, 18px, 1.38);
-    }
-
-    &:last-child {
-      color: $dark-400;
-      padding-right: 0;
-
-      &::after {
-        display: none;
-      }
-    }
-  }
-
-  &__link {
-    color: inherit;
-  }
-}
 
 .popup {
   &--hide {
@@ -369,4 +328,21 @@ body {
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .top {
+    padding: 92px 0 0;
+  }
+
+  .breadcrumbs {
+    &__link {
+      font-size: 14px;
+    }
+  }
 }

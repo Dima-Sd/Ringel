@@ -6,8 +6,9 @@
     color: $dark-700;
     background-color: $light;
     border-radius: 6px;
-    box-shadow: 0 4px 4px 0 $dark-opacity;
-
+    box-shadow:
+    0px 4px 8px 0px rgba(0, 0, 0, 0.06),
+    0px 0px 4px 0px rgba(0, 0, 0, 0.04);
     &__info {
         display: flex;
         gap: 23px;

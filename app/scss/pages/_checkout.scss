@@ -35,7 +35,7 @@
         display: inline-block;
       }
 
-      .basket__close {
+      .basket__close-btn{
         display: none;
       }
 
@@ -135,6 +135,7 @@
     justify-content: space-between;
     position: relative;
     gap: 10px;
+    background-color: $light;
 
     &:has(.delivery__radio:checked),
     &:has(.payment__radio:checked) {

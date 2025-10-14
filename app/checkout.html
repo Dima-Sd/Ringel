@@ -450,18 +450,6 @@
                 </div>
             </div>
         </div>
-        <div class="promo-code">
-            <input class="promo-code__checkbox" type="checkbox" id="promo-toggle" hidden>
-            <div class="promo-code__trigger">
-                <label class="promo-code__label" for="promo-toggle">
-                    + ДОДАТИ ПРОМОКОД
-                </label>
-            </div>
-            <div class="promo-code__form">
-                <input class="promo-code__input" type="text" placeholder="Промокод">
-                <button class="promo-code__submit button" type="submit">Застосувати</button>
-            </div>
-        </div>
         <div class="basket__empty">
             <p class="basket__empty-text">Ваша корзина поки порожна.
                 з чого хочете почати?</p>
@@ -672,6 +660,16 @@
             </div>
         </div>
         <footer class="basket__footer">
+            <div class="promo-code">
+              <input type="checkbox" class="promo-code__checkbox" id="promo-trigger">
+              <label class="promo-code__trigger-label" for="promo-trigger">
+                + ДОДАТИ ПРОМОКОД
+              </label>
+              <div class="promo-code__form">
+                <input class="promo-code__input" type="text" placeholder="Промокод">
+                <button class="promo-code__submit button" type="submit">Застосувати</button>
+              </div>
+            </div>
             <div class="basket__total-panel">
                 <h4 class="basket__total-title">До сплати</h4>
                 <span class="basket__total-sum">1 456<span class="basket__total-sum-mark">₴</span></span>
@@ -1199,18 +1197,6 @@
                 </div>
             </div>
         </div>
-        <div class="promo-code">
-            <input class="promo-code__checkbox" type="checkbox" id="promo-toggle" hidden>
-            <div class="promo-code__trigger">
-                <label class="promo-code__label" for="promo-toggle">
-                    + ДОДАТИ ПРОМОКОД
-                </label>
-            </div>
-            <div class="promo-code__form">
-                <input class="promo-code__input" type="text" placeholder="Промокод">
-                <button class="promo-code__submit button" type="submit">Застосувати</button>
-            </div>
-        </div>
         <div class="basket__empty">
             <p class="basket__empty-text">Ваша корзина поки порожна.
                 з чого хочете почати?</p>
@@ -1421,6 +1407,16 @@
             </div>
         </div>
         <footer class="basket__footer">
+            <div class="promo-code">
+              <input type="checkbox" class="promo-code__checkbox" id="promo-trigger">
+              <label class="promo-code__trigger-label" for="promo-trigger">
+                + ДОДАТИ ПРОМОКОД
+              </label>
+              <div class="promo-code__form">
+                <input class="promo-code__input" type="text" placeholder="Промокод">
+                <button class="promo-code__submit button" type="submit">Застосувати</button>
+              </div>
+            </div>
             <div class="basket__total-panel">
                 <h4 class="basket__total-title">До сплати</h4>
                 <span class="basket__total-sum">1 456<span class="basket__total-sum-mark">₴</span></span>
@@ -1443,96 +1439,6 @@
     </div>
 </div>
 
-            <div class="basket__empty">
-              <p class="basket__empty-text">Ваша корзина поки порожна.
-                з чого хочете почати?</p>
-              <ul class="basket__empty-cats">
-                <li class="basket__empty-cat">
-                  <a class="basket__empty-cat-link" href="#">
-                    <picture>
-                      <source srcset="../images/categories/cookware/skillet.webp" type="image/webp">
-                      <img class="basket__cat-img" src="../images/categories/cookware/skillet.png"
-                        alt="Овочі тушковані на сковороді Ringel">
-                    </picture>
-                    <h3 class="basket__cat-title">Сковорідки</h3>
-                    <svg class="icon" width="24px" height="24px">
-                      <use href="./images/sprite.svg#arrowRight"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="basket__empty-cat">
-                  <a class="basket__empty-cat-link" href="#">
-                    <picture>
-                      <source srcset="../images/goods/zitroneOlive.webp" type="image/webp">
-                      <img class="basket__cat-img" src="../images/goods/zitroneOlive.png"
-                        alt="Овочі тушковані на сковороді Ringel">
-                    </picture>
-                    <h3 class="basket__cat-title">Каструлі та ковші</h3>
-                    <svg class="icon" width="24px" height="24px">
-                      <use href="./images/sprite.svg#arrowRight"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="basket__empty-cat">
-                  <a class="basket__empty-cat-link" href="#">
-                    <picture>
-                      <source srcset="../images/goods/knife.webp" type="image/webp">
-                      <img class="basket__cat-img" src="../images/goods/knife.png"
-                        alt="Овочі тушковані на сковороді Ringel">
-                    </picture>
-                    <h3 class="basket__cat-title">Ножі та приладдя</h3>
-                    <svg class="icon" width="24px" height="24px">
-                      <use href="./images/sprite.svg#arrowRight"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="basket__empty-cat">
-                  <a class="basket__empty-cat-link" href="#">
-                    <picture>
-                      <source srcset="../images/goods/spoonfork.webp" type="image/webp">
-                      <img class="basket__cat-img" src="../images/goods/spoonfork.png"
-                        alt="Овочі тушковані на сковороді Ringel">
-                    </picture>
-                    <h3 class="basket__cat-title">Столові приладия</h3>
-                    <svg class="icon" width="24px" height="24px">
-                      <use href="./images/sprite.svg#arrowRight"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="basket__empty-cat">
-                  <a class="basket__empty-cat-link" href="#">
-                    <picture>
-                      <source srcset="../images/goods/katle.webp" type="image/webp">
-                      <img class="basket__cat-img" src="../images/goods/katle.png"
-                        alt="Овочі тушковані на сковороді Ringel">
-                    </picture>
-                    <h3 class="basket__cat-title">Інше</h3>
-                    <svg class="icon" width="24px" height="24px">
-                      <use href="./images/sprite.svg#arrowRight"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="basket__empty-cat">
-                  <a class="basket__empty-cat-link" href="#">
-                    <picture>
-                      <source srcset="../images/goods/series.webp" type="image/webp">
-                      <img class="basket__cat-img" src="../images/goods/series.png"
-                        alt="Овочі тушковані на сковороді Ringel">
-                    </picture>
-                    <h3 class="basket__cat-title">Серії</h3>
-                    <svg class="icon" width="24px" height="24px">
-                      <use href="./images/sprite.svg#arrowRight"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-              <a class="basket__empty-link-btn button" href="#">
-                <p>Перейти в каталог</p>
-                <svg class="icon" width="24px" height="24px">
-                  <use href="./images/sprite.svg#arrowRight"></use>
-                </svg>
-              </a>
-            </div>
           </div>
         </div>
       </div>
