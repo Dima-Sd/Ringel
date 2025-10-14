@@ -290,7 +290,9 @@ body {
   }
 
   &--active {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -327,8 +329,8 @@ body {
     border: none;
     background-color: transparent;
     position: absolute;
-    width: 38px;
-    height: 38px;
+    width: 44px;
+    height: 44px;
     top: 50%;
     right: 0;
     transform: translateY(-50%);
@@ -340,9 +342,6 @@ body {
 
     svg.icon {
       transition: all .3s;
-      width: 24px;
-      height: 24px;
-      fill: $dark-700;
     }
 
     &:hover {
