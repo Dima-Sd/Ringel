@@ -8,10 +8,6 @@
     height: auto;
     z-index: 999;
 
-    .popup {
-        display: none;
-    }
-
     &__logo {
         position: relative;
         transform: translateY(8px);
@@ -132,10 +128,19 @@
             left: 50%;
             width: 100vw;
             height: 100vh;
-            transform: translateX(-50%);
+            transform: translateX(-170%);
+            opacity: 0;
+            pointer-events: none;
             z-index: 9;
             padding-top: 200px;
             background-color: $dark-700;
+            transition: transform 0.3s;
+        }
+
+        &__list.active {
+            opacity: 1;
+            transform: translateX(-50%);
+            z-index: 988;
         }
 
         &__item:not(:last-child) {
@@ -176,8 +181,9 @@
 
 @media (max-width: 576px) {
     .header {
-      min-height: 47px;
+        min-height: 47px;
     }
+
     .logo {
         width: 100px;
         height: 46px;
