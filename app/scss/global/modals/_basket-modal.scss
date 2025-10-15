@@ -1,9 +1,10 @@
 .basket {
   padding: 40px 0px 20px 0px;
   background-color: $light;
-  width: 416px;
-  height: 100%;
-  display: none;
+  max-width: 416px;
+  width: 100%;
+  height: auto;
+  
   flex-direction: column;
   position: relative;
   z-index: 888;
@@ -202,7 +203,7 @@
 
   &__list {
     padding: 0 30px;
-    max-height: 430px;
+    max-height: 360px;
     overflow-y: auto;
     margin-bottom: 15px;
     scrollbar-color: $dark-700 $light-900;
