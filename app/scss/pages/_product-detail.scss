@@ -1037,24 +1037,7 @@
 .popup {
   &__dialog {
 
-    &--quick-order,
-    &--success {
-      max-width: 416px;
-      background-color: $light;
-      padding: 38px 30px;
-      border-radius: 6px;
 
-      .popup__close {
-        top: -64px;
-        right: -64px;
-
-        .icon {
-          width: 24px;
-          height: 24px;
-          fill: $light;
-        }
-      }
-    }
   }
 }
 
@@ -1637,13 +1620,6 @@
     &__title {
       font-size: 25px;
     }
-  }
-
-  .popup__dialog--quick-order {
-    .popup__close {
-      right: 0;
-    }
-
   }
 }
 

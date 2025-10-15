@@ -1139,6 +1139,85 @@
         </footer>
     </div>
 </div>
+<!-- Корзина активувати popup--active popup--basket / basket--show та basket--hide - анімація--> 
+<div class="popup popup--active" data-popup="quick-order">
+    <div class="popup__dialog popup__dialog--quick-order">
+        <div class="popup__panel">
+            <button class="popup__close" aria-label="Закрити">
+                <svg class="icon" width="24" height="24">
+                    <use href="./images/sprite.svg#close"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="quick-order">
+            <h2 class="quick-order__title title">
+                Швидке замовлення
+            </h2>
+            <p class="quick-order__subtitle">
+                Заповніть форму, і наш консультант зв'яжеться з вами протягом 5 хвилин та допоможе з оформленням
+                замовлення.
+            </p>
+            <div class="quick-order__content">
+                <article class="product-summary">
+    <picture>
+        <source srcset="./images/goods/zitroneOlive.webp" type="image/webp">
+        <img class="product-summary__img" src="./images/goods/zitroneOlive.png" alt="Каструля Ringel Zitrone Olive 4.2 л із кришкою" width="86"
+            height="61">
+    </picture>
+    <div class="product-summary__info">
+        <h4 class="product-summary__title">
+            Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)
+        </h4>
+        <div class="product-price">
+  
+  <span class="product-price__item @@product-price--current">
+    1 456 ₴
+  </span>
+</div>
+        
+    </div>
+</article>
+            </div>
+        </div>
+        <form class="quick-form">
+            <input type="text" class="quick-form__input" placeholder="Ім’я та Прізвище *" required>
+            <input type="tel" class="quick-form__input" placeholder="Телефон *" required>
+            <button type="submit" class="quick-form__btn button">
+                Залишити заявку
+                <svg class="icon" width="18" height="13">
+                    <use href="./images/sprite.svg#arrowRight"></use>
+                </svg>
+            </button>
+        </form>
+    </div>
+</div>
+<!-- Корзина активувати popup--active popup--basket / basket--show та basket--hide - анімація--> 
+<div class="popup popup--hide" data-popup="success">
+    <div class="popup__dialog popup__dialog--success">
+        <div class="popup__panel">
+            <button class="popup__close" aria-label="Закрити">
+                <svg class="icon" width="24" height="24">
+                    <use href="./images/sprite.svg#close"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="success-block">
+            <svg class="success-block__icon icon" width="78" height="78">
+                <use href="./images/sprite.svg#successMark"></use>
+            </svg>
+            <h2 class="success-block__title title">дякуємо!</h2>
+            <p class="success-block__text">
+                Наш консультант зв'яжеться з вами протягом 5 хвилин та допоможе з оформленням замовлення.
+            </p>
+            <button type="submit" class="success-block__btn button">
+                На головну
+                <svg class="icon" width="18" height="13">
+                    <use href="./images/sprite.svg#arrowRight"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
     <script src="js/main.min.js"></script>
 </body>
 

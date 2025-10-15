@@ -276,6 +276,24 @@ label {
     margin: 0 auto;
     background-color: $light-900;
     padding: 60px 80px;
+    &--quick-order,
+    &--success {
+      max-width: 416px;
+      background-color: $light;
+      padding: 38px 30px;
+      border-radius: 6px;
+  
+      .popup__close {
+        top: -64px;
+        right: -64px;
+  
+        .icon {
+          width: 24px;
+          height: 24px;
+          fill: $light;
+        }
+      }
+    }
   }
 
   &__panel {
@@ -296,8 +314,8 @@ label {
     border: none;
     background-color: transparent;
     position: absolute;
-    width: 44px;
-    height: 44px;
+    width: 24px;
+    height: 24px;
     top: 50%;
     right: 0;
     transform: translateY(-50%);
@@ -351,6 +369,28 @@ label {
   .breadcrumbs {
     &__link {
       font-size: 14px;
+    }
+  }
+  .popup {
+    &__dialog {
+      &--quick-order,
+      &--success {
+        padding: 30px 20px;
+        .popup__close {
+          right: -24px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 440px) {
+  .popup {
+    &__dialog {
+
+      &--quick-order,
+      &--success {
+        max-width: 335px;
+      }
     }
   }
 }
