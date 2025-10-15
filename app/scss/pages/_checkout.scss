@@ -538,7 +538,12 @@
       flex: 0 0 100%;
       max-width: 100%;
       padding: 0;
-
+      .product-recommended__title {
+        font-size: 18px;
+      }
+      .product-recommended__img {
+        margin-top: 20px;
+      }
       .product-card {
         &--recomend {
           max-width: 100%;
