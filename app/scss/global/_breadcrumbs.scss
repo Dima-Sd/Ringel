@@ -1,15 +1,8 @@
-.top {
-  background-color: $light-900;
-  padding: 55px 0 30px;
-  &__title {
-    @include DINPcond(900, 45px, 1);
-    margin-top: 20px;
-    color: $dark-700;
-  }
-}
+
 .breadcrumbs {
   display: inline-flex;
   justify-content: center;
+  margin-bottom: 17px;
 
   &__list {
     display: flex;
@@ -21,7 +14,6 @@
     @include Inter(400, 18px, 1.38);
     padding-right: 20px;
     position: relative;
-    border-bottom: 1px solid $dark-400;
     &::after {
       content: '/';
       position: absolute;
@@ -37,10 +29,14 @@
       &::before {
         display: none;
       }
+      a.breadcrumbs__link {
+        border-color: transparent;
+      }
     }
   }
 
   &__link {
     color: inherit;
+    border-bottom: 1px solid $dark-400;
   }
 }

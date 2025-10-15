@@ -89,7 +89,8 @@
                     </button>
                 </li>
                 <!-- Корзина активувати popup--active popup--basket / basket--show та basket--hide - анімація-->
-<div class="popup popup--hide" data-popup="basket">
+ <!-- basket basket--empty - пуста корзина -->
+<div class="popup" data-popup="basket">
     <div class="basket">
         <header class="basket__hrader">
             <h2 class="basket__title title">
@@ -293,18 +294,6 @@
     </button>
 </article>
                 </div>
-            </div>
-        </div>
-        <div class="promo-code">
-            <input class="promo-code__checkbox" type="checkbox" id="promo-toggle" hidden>
-            <div class="promo-code__trigger">
-                <label class="promo-code__label" for="promo-toggle">
-                    + ДОДАТИ ПРОМОКОД
-                </label>
-            </div>
-            <div class="promo-code__form">
-                <input class="promo-code__input" type="text" placeholder="Промокод">
-                <button class="promo-code__submit button" type="submit">Застосувати</button>
             </div>
         </div>
         <div class="basket__empty">
@@ -517,6 +506,16 @@
             </div>
         </div>
         <footer class="basket__footer">
+            <div class="promo-code">
+              <input type="checkbox" class="promo-code__checkbox" id="promo-trigger">
+              <label class="promo-code__trigger-label" for="promo-trigger">
+                + ДОДАТИ ПРОМОКОД
+              </label>
+              <form action="#" class="promo-code__form">
+                <input class="promo-code__input" type="text" placeholder="Промокод">
+                <button class="promo-code__submit button" type="submit">Застосувати</button>
+              </form>
+            </div>
             <div class="basket__total-panel">
                 <h4 class="basket__total-title">До сплати</h4>
                 <span class="basket__total-sum">1 456<span class="basket__total-sum-mark">₴</span></span>
@@ -693,6 +692,7 @@
                 </ul>
             </div>
         </div>
+
             <div class="search-panel hidden">
     <form class="search">
         <div class="search__bar">
@@ -952,7 +952,7 @@
             </div>
             <div class="catalog-content__inner">
               <div class="catalog-content__item">
-                <article class="product-card">
+                <article class="product-card ">
     <div class="product-card__head">
         
         
@@ -1014,7 +1014,7 @@
 </article>
               </div>
               <div class="catalog-content__item">
-                <article class="product-card">
+                <article class="product-card ">
     <div class="product-card__head">
         
         
@@ -1082,7 +1082,7 @@
 </article>
               </div>
               <div class="catalog-content__item">
-                <article class="product-card">
+                <article class="product-card ">
     <div class="product-card__head">
         
         
@@ -1148,7 +1148,7 @@
 </article>
               </div>
               <div class="catalog-content__item">
-                <article class="product-card">
+                <article class="product-card ">
     <div class="product-card__head">
         
         <span class="badge-bestseller product-recommended__badge-bestseller">
@@ -1237,7 +1237,7 @@
                 </div>
               </div>
               <div class="catalog-content__item">
-                <article class="product-card">
+                <article class="product-card @@mod">
     <div class="product-card__head">
         
         
@@ -1303,7 +1303,7 @@
 </article>
               </div>
               <div class="catalog-content__item">
-                <article class="product-card">
+                <article class="product-card @@mod">
     <div class="product-card__head">
         
         <span class="badge-bestseller product-recommended__badge-bestseller">
@@ -1373,7 +1373,7 @@
 </article>
               </div>
               <div class="catalog-content__item">
-                <article class="product-card">
+                <article class="product-card @@mod">
     <div class="product-card__head">
         
         
@@ -1437,7 +1437,7 @@
 </article>
               </div>
               <div class="catalog-content__item">
-                <article class="product-card">
+                <article class="product-card @@mod">
     <div class="product-card__head">
         
         
@@ -1503,7 +1503,7 @@
 </article>
               </div>
               <div class="catalog-content__item">
-                <article class="product-card">
+                <article class="product-card @@mod">
     <div class="product-card__head">
         
         
@@ -1565,7 +1565,7 @@
 </article>
               </div>
               <div class="catalog-content__item">
-                <article class="product-card">
+                <article class="product-card @@mod">
     <div class="product-card__head">
         
         
@@ -1629,7 +1629,7 @@
 </article>
               </div>
               <div class="catalog-content__item">
-                <article class="product-card">
+                <article class="product-card @@mod">
     <div class="product-card__head">
         
         
@@ -1695,7 +1695,7 @@
 </article>
               </div>
               <div class="catalog-content__item">
-                <article class="product-card">
+                <article class="product-card @@mod">
     <div class="product-card__head">
         
         <span class="badge-bestseller product-recommended__badge-bestseller">
@@ -2017,8 +2017,8 @@
     </a>
 </footer>
 
-  <!-- popup filters для активации добавить popup--active-->
-  <div class="popup popup--hide" data-popup='filter'>
+  <!-- popup filters для активации добавить popup--active popup--active--filters-->
+  <div class="popup popup--hide popup--active--filters" data-popup='filter'>
     <div class="popup__dialog popup__dialog--filters">
       <div class="popup__panel">
         <h2 class="popup__title">Фільтр</h2>

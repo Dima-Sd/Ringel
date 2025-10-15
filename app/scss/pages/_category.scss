@@ -1,5 +1,5 @@
 .cookware {
-    padding-top: 0;
+    padding-top: 30px;
 }
 
 .category-list {
@@ -51,8 +51,6 @@
 
 @media(max-width: 576px) {
     .top {
-        padding: 22px 0 20px;
-
         &__info {
             display: none;
         }
@@ -63,11 +61,6 @@
         }
     }
 
-    .breadcrumbs {
-        &__link {
-            font-size: 14px;
-        }
-    }
 
     .category-list {
         &::before,

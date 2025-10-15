@@ -1,5 +1,6 @@
 <!-- Корзина активувати popup--active popup--basket / basket--show та basket--hide - анімація-->
-<div class="popup popup--hide" data-popup="basket">
+ <!-- basket basket--empty - пуста корзина -->
+<div class="popup" data-popup="basket">
     <div class="basket">
         <header class="basket__hrader">
             <h2 class="basket__title title">
@@ -71,18 +72,6 @@
                     "product-price--current": "product-price--current"
                     })
                 </div>
-            </div>
-        </div>
-        <div class="promo-code">
-            <input class="promo-code__checkbox" type="checkbox" id="promo-toggle" hidden>
-            <div class="promo-code__trigger">
-                <label class="promo-code__label" for="promo-toggle">
-                    + ДОДАТИ ПРОМОКОД
-                </label>
-            </div>
-            <div class="promo-code__form">
-                <input class="promo-code__input" type="text" placeholder="Промокод">
-                <button class="promo-code__submit button" type="submit">Застосувати</button>
             </div>
         </div>
         <div class="basket__empty">
@@ -236,6 +225,16 @@
             </div>
         </div>
         <footer class="basket__footer">
+            <div class="promo-code">
+              <input type="checkbox" class="promo-code__checkbox" id="promo-trigger">
+              <label class="promo-code__trigger-label" for="promo-trigger">
+                + ДОДАТИ ПРОМОКОД
+              </label>
+              <form action="#" class="promo-code__form">
+                <input class="promo-code__input" type="text" placeholder="Промокод">
+                <button class="promo-code__submit button" type="submit">Застосувати</button>
+              </form>
+            </div>
             <div class="basket__total-panel">
                 <h4 class="basket__total-title">До сплати</h4>
                 <span class="basket__total-sum">1 456<span class="basket__total-sum-mark">₴</span></span>
