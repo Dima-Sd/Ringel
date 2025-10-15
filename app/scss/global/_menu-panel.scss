@@ -1,33 +1,7 @@
 .menu-panel {
-  position: fixed;
-  z-index: 999;
-  background-color: $light;
-  width: 100%;
-  height: calc(100vh - 79px);
-  left: 0;
-  top: 79px;
-  background-color: transparent;
-  overflow-y: auto;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  pointer-events: none;
-
-  &.active {
-    pointer-events: all;
-    background-color: rgba(0, 0, 0, 0.5);
-
-    .menu-panel__wrapper {
-      transform: translateY(0);
-    }
-  }
-
-  .product-summary {
-    padding: 20px;
-  }
-
-  &__wrapper {
-    background-color: #fff;
+    position: fixed;
+    z-index: 999;
+    background-color: $light;
     width: 100%;
     height: calc(100vh - 79px);
     left: 0;
@@ -51,7 +25,6 @@
     .product-summary {
         padding: 20px;
     }
-  }
 
     &__wrapper {
         background-color: #fff;
@@ -59,45 +32,95 @@
         transform: translateY(-120%);
     }
 
-  &__reviews {
-    max-width: 100%;
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-  }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        height: auto;
+        width: 100%;
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
 
-  &__reviews-item {
-    max-width: 240px;
-
-    .benefit-card {
-      aspect-ratio: 240 / 332;
-
-      .benefit-card__info {
-        padding: 5px;
-      }
-
-      .benefit-card__button {
+    &__to-menu {
         display: none;
-      }
-    }
-  }
-
-  &__categories-link {
-    display: block;
-    font-size: 18px;
-    line-height: 3;
-    color: $dark-700;
-    font-weight: 400;
-    transition: all 0.3s;
-
-    &:hover {
-      color: $accent;
     }
 
-    &:active {
-      opacity: .7;
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        gap: 60px;
+        max-width: 50%;
+        width: 100%;
+        margin-right: auto;
     }
-  }
+
+    &__info-offers-block {
+        width: 100%;
+        max-width: 351px;
+    }
+
+    &__info-categories-block {
+        margin-right: auto;
+    }
+
+    &__title {
+        @include Inter(700, 16px, 1.25);
+        color: $dark-700;
+        margin-bottom: 24px;
+    }
+
+    &__item {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        .product-summary {
+            position: relative;
+            align-items: flex-end;
+        }
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    &__reviews {
+        max-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    &__reviews-item {
+        max-width: 240px;
+
+        .benefit-card {
+            aspect-ratio: 240 / 332;
+
+            .benefit-card__info {
+                padding: 5px;
+            }
+
+            .benefit-card__button {
+                display: none;
+            }
+        }
+    }
+
+    &__categories-link {
+        display: block;
+        font-size: 18px;
+        line-height: 3;
+        color: $dark-700;
+        font-weight: 400;
+        transition: all 0.3s;
+
+        &:hover {
+            color: $accent;
+        }
+
+        &:active {
+            opacity: .7;
+        }
+    }
 }
 
 @media (max-width: 1200px) {
