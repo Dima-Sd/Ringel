@@ -53,17 +53,11 @@
     }
   }
 
-<<<<<<< HEAD
-  &__item:not(:last-child) {
-    margin-bottom: 10px;
-  }
-=======
     &__wrapper {
         background-color: #fff;
         width: 100%;
         transform: translateY(-120%);
     }
->>>>>>> 7b98667014ae5ca965eda65803ad7b350c03d6cf
 
   &__reviews {
     max-width: 100%;
@@ -107,111 +101,6 @@
 }
 
 @media (max-width: 1200px) {
-<<<<<<< HEAD
-  .menu-panel {
-    padding-top: 30px;
-
-    &.active {
-      background-color: $dark-700;
-    }
-
-    &__wrapper {
-      background-color: $dark-700;
-    }
-
-    &__inner {
-      display: block;
-      padding-top: 0;
-    }
-
-    &__reviews {
-      display: none;
-    }
-
-    &__to-menu {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      @include DINPcond(900, 20px, 3.65);
-      text-transform: uppercase;
-      color: $light;
-      transition: all .3s;
-
-      svg.icon {
-        transition: all .3s;
-        fill: $light;
-        transform: rotate(180deg);
-      }
-
-      &:hover {
-        color: $accent;
-
-        svg.icon {
-          fill: $accent;
-          transform: rotate(180deg) translateX(5px);
-        }
-      }
-
-      &:active {
-        opacity: .7;
-
-        svg.icon {
-          opacity: .7;
-        }
-      }
-    }
-
-    &__info {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 28px;
-      max-width: 100%;
-    }
-
-    &__item {
-      margin-bottom: 10px;
-
-      .product-summary {
-        align-items: center;
-
-        .badge-bestseller {
-          top: 10px;
-          left: 10px;
-        }
-      }
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-
-    &__info-categories-block {
-      margin: 0;
-    }
-
-    &__title {
-      &--offers {
-        display: none;
-      }
-    }
-
-    &__title,
-    &__categories-link {
-      color: $light;
-    }
-  }
-}
-
-@media(max-width: 576px) {
-  .menu-panel {
-    top: 54px;
-    height: calc(100vh - 53px);
-
-    .product-price__item {
-      font-size: 20px;
-    }
-  }
-=======
     .menu-panel {
         padding-top: 30px;
 
@@ -315,5 +204,4 @@
             font-size: 20px;
         }
     }
->>>>>>> 7b98667014ae5ca965eda65803ad7b350c03d6cf
 }
