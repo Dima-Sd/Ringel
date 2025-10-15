@@ -268,7 +268,7 @@ label {
   &--basket {
     justify-content: flex-end;
     align-items: stretch;
-
+    z-index: 1000;
   }
   &__dialog {
     max-width: 1360px;
