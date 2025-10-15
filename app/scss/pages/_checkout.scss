@@ -1,6 +1,6 @@
 .checkout {
   background-color: $light-900;
-
+  padding-top: 30px;
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -26,11 +26,15 @@
     .basket {
       height: auto;
       width: 100%;
+      padding-bottom: 30px;
 
       .basket__hrader {
         align-items: flex-end;
+        margin-bottom: 38px;
       }
-
+      .basket__list {
+        max-height: 330px;
+      }
       .basket__redag-link {
         display: inline-block;
       }
@@ -41,6 +45,13 @@
 
       .basket__footer {
         padding-bottom: 0;
+        .promo-code {
+          display: block;
+        }
+
+        .basket__cookie {
+          display: none;
+        }
       }
     }
   }
@@ -328,80 +339,6 @@
 
 
 
-
-.promo-code {
-  border-bottom: 1px solid rgba($dark-700, 0.2);
-  padding-bottom: 15px;
-  margin-bottom: 20px;
-
-  &__checkbox {
-    @include visually-hidden;
-
-    &:checked~.promo-code__form {
-      max-height: 500px;
-      height: fit-content;
-      border: 1px solid $dark-400;
-      transition: all .3s;
-    }
-  }
-
-  &__trigger {
-    padding-bottom: 15px;
-  }
-
-  &__label {
-    @include DINPcond(900, 18px, 1.2);
-    text-transform: uppercase;
-    color: $dark-700;
-  }
-
-  &__form {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s, border-color .3s;
-    padding: 0;
-    margin-bottom: 0;
-    border: 1px solid transparent;
-    display: flex;
-    align-items: center;
-    border-radius: 6px;
-    position: relative;
-  }
-
-  &__input {
-    padding: 15px 10px 15px 20px;
-    @include Inter(400, 18px, 1.2);
-    color: $dark-700;
-
-    &::placeholder {
-      @include Inter(400, 18px, 1.2);
-      color: $dark-400;
-    }
-  }
-
-  &__submit {
-    padding: 14px 20px;
-    position: absolute;
-    right: 0;
-
-    &:hover {
-      background-color: transparent;
-      color: $dark-700;
-      border-color: $dark-700;
-    }
-
-    &:focus {
-      outline: 1px solid $dark-700;
-    }
-
-    &:active {
-      background-color: $accent;
-      box-shadow: inset 4px 4px 4px rgba(0, 0, 0, .25);
-    }
-  }
-}
-
-
 @media (max-width: 1150px) {
   .checkout {
     &__order {
@@ -580,6 +517,15 @@
 
 }
 
+@media (max-width: 528px) {
+  .checkout {
+    .basket__item {
+      .product-card--checkout {
+        padding: 0;
+      }
+    }
+  }
+}
 @media (max-width: 440px) {
   .checkout {
     .recomend-slider {

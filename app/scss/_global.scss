@@ -13,7 +13,9 @@ body {
   flex-direction: column;
   cursor: url('../images/cursor.svg') 6 6, auto;
 }
-
+label {
+  cursor: pointer;
+}
 .main {
   flex-grow: 1;
 }
@@ -23,6 +25,7 @@ body {
   padding: 0 20px;
   margin: 0 auto;
 }
+
 
 .more-details-btn {
   @include Inter(700, 18px, 1.11);
@@ -180,10 +183,11 @@ body {
     @include DINPcond(900, 45px, 1);
     color: $dark-700;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
 
   &__info {
+    margin-top: 20px;
     padding: 88px 0 35px;
     background-image: url('../images/categories/bg.webp');
     background-position: center;
@@ -261,7 +265,10 @@ body {
     z-index: 50;
     overflow-y: auto;
   }
+  &--basket {
+    justify-content: flex-end;
 
+  }
   &__dialog {
     max-width: 1360px;
     width: 100%;

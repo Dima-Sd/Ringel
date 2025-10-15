@@ -194,9 +194,93 @@
           </div>
           <!-- Корзина -->
           <div class="checkout__basket">
-
-            @@include('../components/global/modals/basket-modal.html')
-
+            <div class="basket ">
+              <header class="basket__hrader">
+                <h2 class="basket__title title">
+                  <p class="basket__title-text">ВАШ КОШИК</p>
+                  <span class="basket__title-num-box">(<span class="basket__title-num">3</span>)</span>
+                </h2>
+                <a class="basket__redag-link" href="#">редагувати</a>
+                <button class="basket__close-btn" aria-label="Закрити">
+                  <svg class="icon" width="24" height="24">
+                    <use href="./images/sprite.svg#close"></use>
+                  </svg>
+                </button>
+              </header>
+              <div class="basket__body">
+                <div class="basket__list">
+                <div class="basket__item">
+                  @@include('../components/global/cards/card-product-checkout.html',
+                  {"folder":"goods",
+                  "img":"zitroneOlive",
+                  "alt":"Сковорода з антипригарним покриттям і скляною кришкою",
+                  "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)",
+                  "currentPrice": "1 456 ₴",
+                  "mod":"product-card--checkout"
+                  })
+                </div>
+                <div class="basket__item">
+                  @@include('../components/global/cards/card-product-checkout.html',
+                  {"folder":"goods",
+                  "img":"zitroneOlive",
+                  "alt":"Сковорода з антипригарним покриттям і скляною кришкою",
+                  "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)",
+                  "currentPrice": "1 456 ₴",
+                  "mod":"product-card--checkout"
+                  })
+                </div>
+                <div class="basket__item">
+                  @@include('../components/global/cards/card-product-checkout.html',
+                  {"folder":"goods",
+                  "img":"zitroneOlive",
+                  "alt":"Сковорода з антипригарним покриттям і скляною кришкою",
+                  "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)",
+                  "currentPrice": "1 456 ₴",
+                  "mod":"product-card--checkout"
+                  })
+                </div>
+                <div class="basket__item">
+                  @@include('../components/global/cards/card-product-checkout.html',
+                  {"folder":"goods",
+                  "img":"zitroneOlive",
+                  "alt":"Сковорода з антипригарним покриттям і скляною кришкою",
+                  "title":"Каструля Ringel Zitrone Olive 4.2 л 24 см (RG-2008-22)",
+                  "currentPrice": "1 456 ₴",
+                  "mod":"product-card--checkout"
+                  })
+                </div>
+              </div>
+            </div>
+            <footer class="basket__footer">
+              <div class="promo-code">
+                <input type="checkbox" class="promo-code__checkbox" id="promo-trigger" checked>
+                <label class="promo-code__trigger-label" for="promo-trigger">
+                  + ДОДАТИ ПРОМОКОД
+                </label>
+                <form class="promo-code__form" action="#">
+                  <input class="promo-code__input" type="text" placeholder="Промокод">
+                  <button class="promo-code__submit button" type="submit">Застосувати</button>
+                </form>
+              </div>
+              <div class="basket__total-panel">
+                <h4 class="basket__total-title">До сплати</h4>
+                <span class="basket__total-sum">1 456<span class="basket__total-sum-mark">₴</span></span>
+              </div>
+              <button class="basket__foote-order-sbmt button">
+                <p class="basket__foote-sbmt-text">Оформити замовлення</p>
+                <svg class="basket__order-sbmt-icon" width="18px" height="18px">
+                  <use href="./images/sprite.svg#arrowRight"></use>
+                </svg>
+              </button>
+              <div class="basket__cookie">
+                <p>
+                  Оформлюючи замовлення, ви погоджуєтеся з нашими та
+                  <a class="cookie-banner__rules cookie-banner__link" href="#">Умовами використання</a>
+                  та
+                  <a class="cookie-banner__privaci cookie-banner__link" href="#">Політикою конфіденційності</a>
+                </p>
+              </div>
+            </footer>
           </div>
         </div>
       </div>
