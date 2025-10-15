@@ -768,18 +768,20 @@
               <div class="feedback-form__upload-box">
                 <span class="feedback-form__ulpoad-title">Завантажити фото</span>
                 <span class="feedback-form__ulpoad-btn">
-                  <svg class="feedback-form__ulpoad-icon icon" width="18" height="13">
-                    <use href="./images/sprite.svg#arrowRight"></use>
+                  <svg class="feedback-form__ulpoad-icon icon" width="24" height="24">
+                    <use href="./images/sprite.svg#fileLoad"></use>
                   </svg>
                 </span>
               </div>
               <input class="feedback-form__ulpoad-file" type="file">
             </label>
-            <button class="feedback-form__submit button" type="button">
+            <button class="feedback-form__submit" type="button">
               <p class="feedback-form__submit-text">Відправити</p>
-              <svg class="icon" width="18" height="13">
-                <use href="./images/sprite.svg#arrowRight"></use>
-              </svg>
+              <span class="feedback-form__box">
+                <svg class="icon feedback-form__icon" width="18" height="13">
+                  <use href="./images/sprite.svg#arrowRight"></use>
+                </svg>
+              </span>
             </button>
           </form>
         </div>
@@ -789,6 +791,7 @@
 </main>
 @@include('../components/global/footer.html')
 @@include('../components/global/modals/basket-modal.html')
+
 <body>
   <script src="js/main.min.js"></script>
 </body>

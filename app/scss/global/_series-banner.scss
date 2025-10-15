@@ -2,8 +2,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1494px;
+    width: 100%;
     background-color: $dark-700;
     padding: 10px 30px;
+    border-radius: 6px;
+    margin: 0 auto;
 
     &__title {
         display: flex;

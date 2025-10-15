@@ -26,13 +26,14 @@
 @import "./global/cookie-banner";
 @import "./global/menu-panel";
 @import "./global/series-banner";
+@import "./global/section-advice";
 
 // --- СЕКЦІЇ ---
 @import "./global/section-product";
 @import "./global/section-about";
 @import "./global/section-similar-deal";
 @import "./pages/mission";
-@import "./global/section-advice";
+@import "./pages/series";
 
 // --- КАРТКИ ---
 @import "./global/cards/promo-card";
@@ -69,4 +70,3 @@
 @import "./pages/product-deal";
 @import "./pages/checkout";
 @import "./pages/contacts";
-
