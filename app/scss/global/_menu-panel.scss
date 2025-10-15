@@ -6,16 +6,20 @@
     height: calc(100vh - 79px);
     left: 0;
     top: 79px;
-    background: rgba(0, 0, 0, 0.5);
+    background: transparent;
     overflow-y: auto;
     display: flex;
     align-items: flex-start;
     justify-content: center;
 
-    &.active {
-        opacity: 1;
-        transform: translateX(0);
+  &.active {
+    pointer-events: all;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    .menu-panel__wrapper {
+      transform: translateY(0);
     }
+  }
 
     &__wrapper {
         background-color: #fff;
