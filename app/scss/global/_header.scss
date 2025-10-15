@@ -10,7 +10,7 @@
 
     &__logo {
         position: relative;
-        transform: translateY(8px);
+        transform: translateY(23px);
     }
 }
 
@@ -113,7 +113,7 @@
 @media (max-width: 1200px) {
     .menu {
         grid-template-columns: max-content 1fr max-content max-content;
-        grid-template-rows: 56px auto;
+        grid-template-rows: 78px auto;
         column-gap: 1px;
         align-items: center;
 
@@ -172,16 +172,17 @@
     }
 }
 
-@media (max-width: 768px) {
-    .logo {
-        width: 152px;
-        height: 78px;
-    }
-}
-
 @media (max-width: 576px) {
     .header {
         min-height: 47px;
+
+        &__logo {
+            transform: translateY(10px);
+        }
+    }
+
+    .menu {
+        grid-template-rows: 47px auto;
     }
 
     .logo {
