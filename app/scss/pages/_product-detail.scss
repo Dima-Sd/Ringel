@@ -476,38 +476,34 @@
 .feedback {
   background-color: $accent;
   position: relative;
-
-  &__picture-bg {
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    object-fit: cover;
-  }
-
-  &__img {
-    height: 100%;
-    width: 100%;
-  }
-
   &__inner {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding: 60px 0;
-
+    justify-content: flex-end;
+    &::before {
+      background-image: url('../../images/detalis/feedback-bg.webp');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 100% center;
+      position: absolute;
+      content: '';
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 50%;
+    }
   }
 
   &__content {
-    flex: 1 1 50%;
-    max-width: 760px;
+    padding: 60px 0 60px 30px;
+    max-width: 50%;
     width: 100%;
     padding-left: 30px;
   }
 
   &__title-block {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     justify-content: space-between;
     margin-bottom: 15px;
@@ -629,11 +625,11 @@
   }
 
   &__item-upload {
-    max-width: 50%;
+    max-width: 335px;
+    width: 100%;
     display: inline-flex;
     justify-content: space-between;
     background-color: rgba($dark-700, .1);
-    width: 100%;
     @include Inter(700, 18px, 1.1);
     color: $dark-700;
     padding: 15px 20px;
@@ -647,6 +643,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    gap: 10px;
   }
 
   &__ulpoad-icon {
@@ -1034,12 +1031,6 @@
   }
 }
 
-.popup {
-  &__dialog {
-
-
-  }
-}
 
 .success-block {
   &__icon {
@@ -1105,13 +1096,6 @@
 
     }
   }
-
-  .feedback {
-    &__content {
-      width: 670px;
-    }
-
-  }
 }
 
 @media (max-width: 1390px) {
@@ -1135,24 +1119,12 @@
       margin: 0 auto 20px;
     }
   }
-
-  .feedback {
-    &__picture-bg {
-      width: 45%;
-    }
-  }
 }
 
 @media (max-width: 1240px) {
   .feelings {
     &__title {
       font-size: 36px;
-    }
-  }
-
-  .feedback {
-    &__content {
-      width: 600px;
     }
   }
 }
@@ -1169,9 +1141,6 @@
       font-size: 32px;
     }
 
-    &__content {
-      width: 540px;
-    }
   }
 
   .feedback-form {
@@ -1209,11 +1178,6 @@
     }
   }
 
-  .feedback {
-    &__content {
-      width: 480px;
-    }
-  }
 }
 
 @media (max-width: 880px) {
@@ -1223,14 +1187,13 @@
     &__inner {
       display: block;
       padding: 0;
-    }
-
-    &__picture-bg {
-      display: none;
+      &::before {
+        display: none;
+      }
     }
 
     &__content {
-      width: 100%;
+      max-width: 100%;
       padding: 0;
       margin: 0 auto;
     }
