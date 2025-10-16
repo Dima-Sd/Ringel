@@ -4,8 +4,8 @@
   max-width: 416px;
   width: 100%;
   height: auto;
+  display: flex;
   flex-direction: column;
-  position: relative;
 
   &.basket--show {
     transform: translateX(0); // плавно выезжает
@@ -187,23 +187,23 @@
   &__body {
     position: relative;
     height: auto;
-
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
     &::after {
       position: absolute;
       content: '';
       width: 100%;
       background: linear-gradient(180.00deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 100%);
       height: 60px;
-      bottom: -3px;
+      bottom: 9px;
       left: 0;
     }
   }
 
   &__list {
-    padding: 0 30px;
-    max-height: 360px;
+    padding: 0 30px 30px 30px;
     overflow-y: auto;
-    margin-bottom: 15px;
     scrollbar-color: $dark-700 $light-900;
     scrollbar-width: thin;
 
@@ -222,11 +222,13 @@
 
   &__item {
     border-bottom: 1px solid rgba($dark-700, 0.2);
-  }
-
-  &__item:not(:last-child) {
     padding-bottom: 20px;
     margin-bottom: 20px;
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 30px;
+      margin-bottom: 0;
+    }
   }
 
   &__footer {
@@ -442,7 +444,7 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-
+    background-color: $light;
     .basket__body,
     .basket__slider,
     .basket__total-panel,

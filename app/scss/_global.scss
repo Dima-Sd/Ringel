@@ -268,6 +268,23 @@ label {
     justify-content: flex-end;
     align-items: stretch;
     z-index: 1000;
+    .basket {
+      height: 100vh;
+      overflow: hidden;
+      .basket__hrader {
+        flex-shrink: 0;
+      }
+      .basket__body {
+        flex: 1 1 auto;
+        overflow: hidden;
+        .basket__list {
+          flex: 1 1 auto;
+        }
+      }
+      .basket__footer {
+        flex-shrink: 0;
+      }
+    }
   }
 
   &__dialog {
