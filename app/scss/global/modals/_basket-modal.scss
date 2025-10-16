@@ -98,13 +98,13 @@
   }
 
   &__empty-link-btn {
-    justify-content: space-between;
     background-color: $light;
-    border-color: $dark-700;
+    border: 1px solid $dark-700;
+    transition: border-color 0.3s;
 
     &:hover {
       color: $dark-700;
-      background-color: $accent;
+      border-color: $accent;
     }
   }
 

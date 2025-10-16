@@ -476,11 +476,13 @@
 .feedback {
   background-color: $accent;
   position: relative;
+
   &__inner {
     display: flex;
     justify-content: flex-end;
+
     &::before {
-      background-image: url('../../images/detalis/feedback-bg.webp');
+      background-image: url('../images/detalis/feedback-bg.webp');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: 100% center;
@@ -650,37 +652,14 @@
     fill: $dark-700;
   }
 
-  &__submit {
+  &__cta {
     display: flex;
-    align-items: center;
-    padding: 15px 96px 15px 20px;
-    position: relative;
     background-color: $dark-700;
-    border: 1px solid $dark-700;
     color: $accent;
-    border-radius: 6px;
-    outline-offset: 3px;
-    transition: opacity 0.3s, outline 0.3s;
-
-    &:hover {
-      .feedback-form__box {
-        right: 10px;
-      }
-    }
 
     &:focus {
       outline: 1px solid $dark-700;
     }
-
-    &:active {
-      opacity: 0.7;
-    }
-  }
-
-  &__box {
-    position: absolute;
-    right: 20px;
-    transition: right 0.3s;
   }
 }
 
@@ -1177,17 +1156,19 @@
       padding: 20px;
     }
   }
+
   .feedback {
     padding: 30px 0;
-  
+
     &__inner {
       display: block;
       padding: 0;
+
       &::before {
         display: none;
       }
     }
-  
+
     &__content {
       max-width: 100%;
       padding: 0;

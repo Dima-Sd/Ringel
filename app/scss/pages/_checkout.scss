@@ -1,6 +1,7 @@
 .checkout {
   background-color: $light-900;
   padding-top: 30px;
+
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -36,19 +37,22 @@
         align-items: flex-end;
         margin-bottom: 38px;
       }
+
       .basket__list {
         max-height: 360px;
       }
+
       .basket__redag-link {
         display: inline-block;
       }
 
-      .basket__close-btn{
+      .basket__close-btn {
         display: none;
       }
 
       .basket__footer {
         padding-bottom: 0;
+
         .promo-code {
           display: block;
         }
@@ -478,6 +482,7 @@
 
     .basket {
       max-width: 100%;
+
       .product-card--checkout {
         .product-card__title {
           font-size: 22px;
@@ -531,6 +536,7 @@
     }
   }
 }
+
 @media (max-width: 440px) {
   .checkout {
     .recomend-slider {
@@ -543,12 +549,15 @@
       flex: 0 0 100%;
       max-width: 100%;
       padding: 0;
+
       .product-recommended__title {
         font-size: 18px;
       }
+
       .product-recommended__img {
         margin-top: 20px;
       }
+
       .product-card {
         &--recomend {
           max-width: 100%;
