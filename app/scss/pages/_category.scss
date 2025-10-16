@@ -50,19 +50,13 @@
 
 
 @media(max-width: 576px) {
-    .top {
-        &__info {
-            display: none;
-        }
 
-        &__title {
-            font-size: 25px;
-            margin: 8px 0 0 0;
-        }
+    .cookware {
+        padding-top: 0;
     }
 
-
     .category-list {
+
         &::before,
         &::after {
             height: 4px;

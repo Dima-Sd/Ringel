@@ -37,7 +37,7 @@
         margin-bottom: 38px;
       }
       .basket__list {
-        max-height: 330px;
+        max-height: 360px;
       }
       .basket__redag-link {
         display: inline-block;
@@ -477,6 +477,7 @@
     }
 
     .basket {
+      max-width: 100%;
       .product-card--checkout {
         .product-card__title {
           font-size: 22px;

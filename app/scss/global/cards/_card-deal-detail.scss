@@ -9,6 +9,14 @@
         width: 100%;
     }
 
+    &__info {
+        p {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+    }
+
     &__info>p:not(:last-child) {
         margin-bottom: 28px;
     }

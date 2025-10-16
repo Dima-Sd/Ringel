@@ -58,8 +58,9 @@
 .filter {
   &--popup {
     margin-top: 10px;
-   
+
   }
+
   &__wrapper {
     background-color: $light;
     padding: 0 20px;
@@ -68,6 +69,7 @@
       0px 0px 4px 0px #0000000A;
     height: fit-content;
   }
+
   &__item {
     padding: 20px 0;
     border-bottom: 1px solid rgba($dark-400, 0.2);
@@ -102,7 +104,7 @@
     gap: 20px;
     padding-top: 20px;
   }
-  
+
   &__control-btn {
     max-width: 50%;
     width: 100%;
@@ -310,6 +312,7 @@
         }
       }
     }
+
     &:last-child {
       display: none;
     }
@@ -490,6 +493,7 @@
 
     &--prev {
       left: 0;
+
       svg {
         transform: rotate(180deg);
       }
@@ -509,6 +513,7 @@
       flex-direction: column;
       justify-content: flex-end;
     }
+
     &--filters {
       z-index: 1000;
     }
@@ -520,6 +525,7 @@
       height: 100%;
       overflow-y: auto;
     }
+
     &--sort {
       padding: 20px;
       border-top-left-radius: 26px;
@@ -627,24 +633,28 @@
     padding: 0 3px;
   }
 }
+
 @media (max-width: 1380px) {
   .filter {
     &__title {
       font-size: 18px;
     }
   }
+
   .filter-checkboxes {
     &__checkbox-title {
-      font-size: 16px; 
+      font-size: 16px;
     }
   }
 }
+
 @media (max-width: 1150px) {
   .catalog {
     &__inner {
       gap: 20px;
     }
   }
+
   .catalog-content {
     &__inner {
       grid-template-columns: repeat(2, 1fr);
@@ -654,10 +664,12 @@
     &__banner {
       display: none;
     }
-    &__item{
+
+    &__item {
       width: 100%;
+
       .product-card {
-       max-width: 100%;
+        max-width: 100%;
       }
     }
   }
@@ -685,11 +697,13 @@
       display: none;
     }
   }
+
   .filter {
     &__title {
-     font-size: 25px;
+      font-size: 25px;
     }
   }
+
   .filter-checkboxes {
     &__checkbox-title {
       font-size: 18px;
@@ -773,6 +787,10 @@
 
 /* catalog-content__item добавляется одна карточка из-за карточки 5 которая на весь блок */
 @media (max-width: 576px) {
+  .catalog {
+    padding-top: 0;
+  }
+
   .catalog-controls {
     &__btn-filter {
       gap: 5px;
@@ -785,6 +803,7 @@
       padding: 15px 10px;
     }
   }
+
   .catalog-content {
     &__item {
       &:has(.promo-card) {
@@ -792,20 +811,25 @@
         max-height: 473px;
         height: 100vh;
       }
+
       .promo-card__content {
         padding: 20px;
       }
+
       .promo-card__logo {
         width: 92px;
       }
+
       .promo-card__title--sld-2,
       .promo-card__subtitle--sld-2 {
         font-size: 32px;
       }
+
       .more-details-btn {
         padding: 15px 20px;
         font-size: 18px;
       }
+
       &:last-child {
         display: block;
       }
