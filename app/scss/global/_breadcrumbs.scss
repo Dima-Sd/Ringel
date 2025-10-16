@@ -20,6 +20,8 @@
       right: 6px;
       color: $dark-400;
       @include Inter(400, 18px, 1.38);
+      top: 50%;
+      transform: translateY(-50%);
     }
 
     &:last-child {
