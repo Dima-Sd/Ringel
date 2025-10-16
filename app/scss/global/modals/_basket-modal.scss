@@ -232,101 +232,101 @@
 
   &__footer {
     padding: 20px 35px 10px 30px;
-   
+
     background-color: $light;
-.promo-code {
-    display: none;
-    border-bottom: 1px solid rgba($dark-700, 0.2);
-    padding-bottom: 15px;
-    margin-bottom: 20px;
-    position: relative;
 
-    &__checkbox {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      margin: -1px;
-      padding: 0;
-      overflow: hidden;
-      clip: rect(0 0 0 0);
-      border: 0;
-      white-space: nowrap;
-      clip-path: inset(100%);
+    .promo-code {
+      display: none;
+      border-bottom: 1px solid rgba($dark-700, 0.2);
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+      position: relative;
 
-      &:checked~.promo-code__form {
-        max-height: 500px;
-        height: fit-content;
-        border: 1px solid $dark-400;
-        transition: all .3s;
+      &__checkbox {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        border: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+
+        &:checked~.promo-code__form {
+          max-height: 500px;
+          height: fit-content;
+          border: 1px solid $dark-400;
+          transition: all .3s;
+
+          &:hover {
+            border-color: $accent;
+          }
+        }
+      }
+
+      &__trigger-label {
+        padding-bottom: 15px;
+        @include DINPcond(900, 18px, 1.2);
+        text-transform: uppercase;
+        color: $dark-700;
+        display: block;
+        cursor: pointer;
+        position: relative;
+      }
+
+      &__form {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s, border-color .3s;
+        padding: 0;
+        margin-bottom: 0;
+        border: 1px solid transparent;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        border-radius: 6px;
+        position: relative;
+      }
+
+      &__input {
+        flex: 1 1 58%;
+        display: block;
+        max-width: 58%;
+        width: 100%;
+        padding: 15px 10px 15px 20px;
+        @include Inter(400, 18px, 1.2);
+        color: $dark-700;
+
+        &::placeholder {
+          @include Inter(400, 18px, 1.2);
+          color: $dark-400;
+        }
+      }
+
+      &__submit {
+        flex: 1 1 42%;
+        padding: 14px 20px;
+        max-width: 42%;
+        justify-content: center;
 
         &:hover {
-          border-color: $accent;
+          background-color: transparent;
+          color: $dark-700;
+          border-color: $dark-700;
+        }
+
+        &:focus {
+          outline: 1px solid $dark-700;
+        }
+
+        &:active {
+          background-color: $accent;
+          box-shadow: inset 4px 4px 4px rgba(0, 0, 0, .25);
         }
       }
     }
-
-
-    &__trigger-label {
-      padding-bottom: 15px;
-      @include DINPcond(900, 18px, 1.2);
-      text-transform: uppercase;
-      color: $dark-700;
-      display: block;
-      cursor: pointer;
-      position: relative;
-    }
-
-    &__form {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s, border-color .3s;
-      padding: 0;
-      margin-bottom: 0;
-      border: 1px solid transparent;
-      display: flex;
-      align-items: stretch;
-      justify-content: space-between;
-      border-radius: 6px;
-      position: relative;
-    }
-
-    &__input {
-      flex: 1 1 58%;
-      display: block;
-      max-width: 58%;
-      width: 100%;
-      padding: 15px 10px 15px 20px;
-      @include Inter(400, 18px, 1.2);
-      color: $dark-700;
-
-      &::placeholder {
-        @include Inter(400, 18px, 1.2);
-        color: $dark-400;
-      }
-    }
-
-    &__submit {
-      flex: 1 1 42%;
-      padding: 14px 20px;
-      max-width: 42%;
-      justify-content: center;
-
-      &:hover {
-        background-color: transparent;
-        color: $dark-700;
-        border-color: $dark-700;
-      }
-
-      &:focus {
-        outline: 1px solid $dark-700;
-      }
-
-      &:active {
-        background-color: $accent;
-        box-shadow: inset 4px 4px 4px rgba(0, 0, 0, .25);
-      }
-    }
-  }
   }
 
   &__total-panel {
@@ -439,6 +439,7 @@
       flex: 0 0 calc((100% - -40px) / 1.2);
     }
   }
+
   &--empty {
     height: 100vh;
     display: flex;
@@ -458,7 +459,7 @@
       flex-direction: column;
       height: 100%;
     }
- 
+
   }
 
 }
