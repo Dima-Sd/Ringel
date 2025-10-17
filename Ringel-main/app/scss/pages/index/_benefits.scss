@@ -1,0 +1,28 @@
+.benefits {
+    background-color: $dark-850;
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 36px;
+    }
+
+    &__item {
+        max-width: 732px;
+        width: 100%;
+        background-color: $light;
+        display: flex;
+        flex-direction: column;
+        border-radius: 6px;
+    }
+}
+
+@media(max-width: 1540px) {
+    .benefits {
+        &__list {
+            justify-content: center;
+        }
+    }
+}
+

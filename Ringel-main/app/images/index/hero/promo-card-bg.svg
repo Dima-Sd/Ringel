@@ -1,0 +1,28 @@
+<svg viewBox="0 0 660.793 569.242" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="660.792969" height="569.241516" fill="none" customFrame="#000000">
+	<defs>
+		<g id="pixso_custom_effect_2">
+			<effect visibility="visible" effectType="gaussianBlur" stdDeviation="136.825012" />
+		</g>
+		<filter id="filter_2" width="621.436523" height="529.672363" x="0.000000" y="39.569153" filterUnits="userSpaceOnUse" customEffect="url(#pixso_custom_effect_2)" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix" />
+			<feBlend result="shape" in="SourceGraphic" in2="BackgroundImageFix" mode="normal" />
+			<feGaussianBlur stdDeviation="45.6083374" result="effect_layerBlur_1" />
+		</filter>
+		<g id="pixso_custom_effect_3">
+			<effect visibility="visible" effectType="gaussianBlur" stdDeviation="136.825012" />
+		</g>
+		<filter id="filter_3" width="632.066895" height="557.134399" x="28.726074" y="0.000000" filterUnits="userSpaceOnUse" customEffect="url(#pixso_custom_effect_3)" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix" />
+			<feBlend result="shape" in="SourceGraphic" in2="BackgroundImageFix" mode="normal" />
+			<feGaussianBlur stdDeviation="45.6083374" result="effect_layerBlur_1" />
+		</filter>
+	</defs>
+	<g id="Group 1966047540">
+		<g filter="url(#filter_2)">
+			<ellipse id="Ellipse 8768" rx="179.399994" ry="120.087494" cx="179.399994" cy="120.087494" fill="rgb(0,0,0)" fill-opacity="0.629999995" transform="matrix(0.943241,0.332108,-0.332108,0.943241,181.383,131.554)" />
+		</g>
+		<g filter="url(#filter_3)">
+			<ellipse id="Ellipse 8767" rx="183.849747" ry="135.575638" cx="183.849747" cy="135.575638" fill="rgb(0,0,0)" fill-opacity="0.439999998" transform="matrix(0.943241,0.332108,-0.332108,0.943241,216.371,89.6287)" />
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    Ringel — магазин посуду для твоєї кухні
+  </title>
+  @@include('../components/global/resources/favicon.html')
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="body">
+  @@include('../components/global/header.html')
+  <main class="main">
+    <h1 class="visually-hidden">
+      Надійний та стильний посуд Ringel
+    </h1>
+    <section class="hero">
+      <div class="container">
+        <div class="hero__inner">
+          <div class="hero__content">
+            <h2 class="hero__title">
+              <p class="hero__title-text">
+                досконалість
+              </p>
+              <p class="hero__title-text hero__title-text--bg">
+                у кожній деталі
+              </p>
+            </h2>
+            <p class="hero__subtitle">
+              Готуй із задоволенням! Високоякісний посуд Ringel - це поєднання стилю, надійності та інновацій для твоєї
+              кухні.
+            </p>
+            <button class="cta" type="submit">
+              Відправити
+              <span class="cta__box">
+                <svg class="icon" width="18" height="13">
+                  <use href="./images/sprite.svg#arrowRight"></use>
+                </svg>
+              </span>
+            </button>
+            @@include('../components/global/modals/discount-modal.html')
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="promo">
+      <div class="container">
+        <div class="slider slider-promo">
+          <div class="slider-promo-connection">
+            <div class="slider-promo__wrapper">
+              <div class="slider__slide slider-promo__slide">
+                <div class="promo-card">
+                  <picture>
+                    <source srcset="./images/index/advantages/vegetables.webp" type="image/webp">
+                    <img class="benefits__img" src="./images/index/advantages/vegetables.jpg"
+                      alt="Овочі тушковані на сковороді Ringel" width="478" height="439">
+                  </picture>
+                  <div class="promo-card__content">
+                    <img class="promo-card__logo" src="./images/logo.svg" alt="Ringel logo">
+                    <div class="promo-card__title-box">
+                      <h3 class="promo-card__title">ОВОЧІ</h3>
+                      <p class="promo-card__subtitle">ТУШКОВАНІ НА</p>
+                      <p class="promo-card__subtitle">СКОВОРОДІ</p>
+                    </div>
+                    <button class="cta" type="submit">
+                      Детальніше
+                      <span class="cta__box">
+                        <svg class="icon" width="18" height="13">
+                          <use href="./images/sprite.svg#arrowRight"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="slider__slide slider-promo__slide">
+                <div class="promo-card">
+                  <picture>
+                    <source srcset="./images/index/advantages/buyer.webp" type="image/webp">
+                    <img class="benefits__img" src="./images/index/advantages/buyer.jpg"
+                      alt="Жінка обирає сковорідку Ringel у магазині" width="478" height="439">
+                  </picture>
+                  <div class="promo-card__content">
+                    <img class="promo-card__logo" src="./images/logo.svg" alt="Ringel logo">
+                    <div class="promo-card__title-box promo-card__title-box--sld-2">
+                      <h3 class="promo-card__title promo-card__title--sld-2">достойна</h3>
+                      <p class="promo-card__subtitle promo-card__subtitle--sld-2">сковорідка за</p>
+                      <p class="promo-card__subtitle promo-card__subtitle--sld-2">адекватні гроші</p>
+                    </div>
+                    <button class="cta" type="submit">
+                      Детальніше
+                      <span class="cta__box">
+                        <svg class="icon" width="18" height="13">
+                          <use href="./images/sprite.svg#arrowRight"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="slider__slide slider-promo__slide">
+                <div class="promo-card">
+                  <picture>
+                    <source srcset="./images/index/advantages/fryingPan.webp" type="image/webp">
+                    <img class="benefits__img" src="./images/index/advantages/fryingPan.jpg"
+                      alt="Сковорода Ringel Curry з овочами" width="478" height="439">
+                  </picture>
+                  <div class="promo-card__decor-box">
+                    <p class="promo-card__decor-text">CURRY</p>
+                    <span class="promo-card__decor-line"></span>
+                  </div>
+                  <div class="promo-card__content">
+                    <img class="promo-card__logo" src="./images/logo.svg" alt="Ringel logo">
+                    <div class="promo-card__title-box">
+                      <h3 class="promo-card__title promo-card__title--sld-3">Сковорода</h3>
+                    </div>
+                    <button class="cta" type="submit">
+                      Детальніше
+                      <span class="cta__box">
+                        <svg class="icon" width="18" height="13">
+                          <use href="./images/sprite.svg#arrowRight"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider__control slider-promo__control">
+            <button class="slider__btn--promo slider__btn-next--promo">
+              <svg class="icon" width="18" height="13">
+                <use href="./images/sprite.svg#arrowRight"></use>
+              </svg>
+            </button>
+            <button class="slider__btn--promo slider__btn-prev--promo">
+              <svg class="icon" width="18" height="13">
+                <use href="./images/sprite.svg#arrowRight"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="slider-pagination slider-pagination--promo">
+            <span
+              class="slider-pagination__bullet slider-pagination__bullet-active slider-pagination__bullet-active--promo"></span>
+            <span class="slider-pagination__bullet slider-pagination__bullet--promo"></span>
+          </div>
+        </div>
+        <div class="promo__bottom-block">
+          <a class="promo__link" href="#">Всі акції</a>
+        </div>
+      </div>
+    </section>
+    @@include('../components/global/section-product.html')
+    @@include('../components/global/ticker.html')
+    <section class="reviews section">
+      <div class="container">
+        <div class="reviews__inner">
+          <div class="reviews__content">
+            <h2 class="reviews__pretitle-text">
+              Понад 80 000
+              <span class="reviews__pretitle-text-accent">5-зіркових</span>
+            </h2>
+            <h3 class="reviews__title">
+              відгуків на наші відзначені нагородами продукти
+            </h3>
+            <p class="reviews__promo-text">
+              Готуй із задоволенням! Високоякісний посуд Ringel - це поєднання стилю, надійності та інновацій для твоєї
+              кухні. Готуй
+              із задоволенням! Високоякісний посуд Ringel - це поєднання стилю, надійності та інновацій для твоєї кухні.
+            </p>
+            <div class="reviews__control">
+              <button class="slider-reviews__btn slider-reviews__btn--prev">
+                <svg class="icon" width="18px" height="13px">
+                  <use href="./images/sprite.svg#arrowRight"></use>
+                </svg>
+              </button>
+              <button class="slider-reviews__btn slider-reviews__btn--next">
+                <svg class="icon" width="18px" height="13px">
+                  <use href="./images/sprite.svg#arrowRight"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="reviews__slider-box">
+            <div class="slider-reviews">
+              <div class="slider-reviews__wrapper">
+                <div class="slider-reviews__track">
+                  <div class="slider-reviews__slide slider-reviews__slide--visible">
+                    <div class="slider-reviews__slide-inner">
+                      <article class="product-card product-card--reviews">
+                        <div class="product-badge">
+                          @@include('../components/global/lego/badges/type.html')
+                          @@include('../components/global/lego/badges/taste.html')
+                        </div>
+                        <picture class="product-card__picture">
+                          <source srcset="./images/goods/ringelMeyer.webp" type="image/webp">
+                          <img class="product-card__img" src="./images/goods/ringelMeyer.png" alt="Кастрюля Ringel"
+                            width="477" height="473">
+                        </picture>
+                        <h3 class="product-card__title">
+                          <p>Каструля Ringel Zitrone</p>
+                          <p>Olive 4.2 л 24 см (RG-2008-22)</p>
+                        </h3>
+                        <div class="product-card__decr">
+                          <p class="product-card__descr-text">
+                            «Я обрав цю сковорідку, бо вона красива, але водночас і незнищенна... Ваше авто зламається
+                            раніше,
+                            ніж ця річ.»
+                          </p>
+                        </div>
+                        <h4 class="product-card__recomend">
+                          Майк Багале, шеф із 3 зірками Мішлен
+                        </h4>
+                      </article>
+                      <div class="slider-reviews__slide-img-box">
+                        <picture class="slider-reviews__slide-picture">
+                          <source srcset="./images/index/reviews/сookingMan.webp" type="image/webp">
+                          <img class="slider-reviews__slide-picture-img" src="./images/index/reviews/сookingMan.jpg"
+                            alt="Кастрюля Ringel" width="258" height="181">
+                        </picture>
+                        <div class="slider-reviews__slide-rating">
+                          <div class="slider-reviews__slide-rating-icon">
+                            <svg class="icon" width="17" height="18">
+                              <use href="./images/sprite.svg#star"></use>
+                            </svg>
+                          </div>
+                          <span class="slider-reviews__rating-value">5.0</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slider-reviews__slide ">
+                    <div class="slider-reviews__slide-inner">
+                      <article class="product-card product-card--reviews">
+                        <div class="product-card__badges">
+                          @@include('../components/global/lego/badges/type.html')
+                          @@include('../components/global/lego/badges/taste.html')
+                        </div>
+                        <picture class="product-card__picture">
+                          <source srcset="./images/goods/ringelMeyer.webp" type="image/webp">
+                          <img class="product-card__img" src="./images/goods/ringelMeyer.png" alt="Кастрюля Ringel"
+                            width="477" height="473">
+                        </picture>
+                        <h3 class="product-card__title">
+                          <p>Каструля Ringel Zitrone</p>
+                          <p>Olive 4.2 л 24 см (RG-2008-22)</p>
+                        </h3>
+                        <div class="product-card__decr">
+                          <p class="product-card__descr-text">
+                            «Я обрав цю сковорідку, бо вона красива, але водночас і незнищенна... Ваше авто зламається
+                            раніше,
+                            ніж ця річ.»
+                          </p>
+                        </div>
+                        <h4 class="product-card__recomend">
+                          Майк Багале, шеф із 3 зірками Мішлен
+                        </h4>
+                      </article>
+                      <div class="slider-reviews__slide-img-box">
+                        <picture class="slider-reviews__slide-picture">
+                          <source srcset="./images/index/reviews/сookingMan.webp" type="image/webp">
+                          <img class="slider-reviews__slide-picture-img" src="./images/index/reviews/сookingMan.jpg"
+                            alt="Кастрюля Ringel" width="258" height="181">
+                        </picture>
+                        <div class="slider-reviews__slide-rating">
+                          <div class="slider-reviews__slide-rating-icon">
+                            <svg class="icon" width="17" height="18">
+                              <use href="./images/sprite.svg#star"></use>
+                            </svg>
+                          </div>
+                          <span class="slider-reviews__rating-value">5.0</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="slider-reviews-pagination">
+                <span class="slider-reviews-pagination__bullet slider-reviews-pagination__bullet--active"></span>
+                <span class="slider-reviews-pagination__bullet"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="benefits section">
+      <div class="container">
+        <h2 class="visually-hidden">
+          Відгуки та ключові переваги
+        </h2>
+        <ul class="benefits__list">
+          <li class="benefits__item">
+            @@include('../components/global/cards/card-benefit.html', {
+            "img": "ringelMeyer",
+            "alt": "Сковорідка Ringel Meyer з антипригарним покриттям на кухонній плиті",
+            "title": "Каструля Ringel Meyer з кришкою 4.2 л",
+            "review": "«Я обрав цю сковорідку, бо вона красива"
+            })
+          </li>
+          <li class="benefits__item">
+            @@include('../components/global/cards/card-benefit.html', {
+            "img": "potRingel",
+            "alt": "Каструля Ringel Meyer з кришкою",
+            "title": "Каструля Ringel Meyer з кришкою 4.2 л",
+            "review": "«Я обрав цю сковорідку, бо вона красива"
+            })
+          </li>
+        </ul>
+      </div>
+    </section>
+    @@include('../components/global/about.html')
+  </main>
+  @@include('../components/global/footer.html')
+  <script src="js/main.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+.recomend-slider {
+  position: relative;
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__btn {
+    background-color: $light;
+    width: 51px;
+    height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $light;
+    border-radius: 6px;
+    transition: background-color .3s, outline .3s, opacity .3s;
+    outline-offset: 3px;
+
+    &--prev {
+      svg.icon {
+        transform: rotate(180deg);
+      }
+    }
+
+    svg.icon {
+      fill: $dark-700;
+    }
+
+    &:hover {
+      background-color: $accent;
+      border-color: $accent;
+    }
+
+    &:focus {
+      outline: 1px solid $accent;
+    }
+
+    &:active {
+      box-shadow: inset 4px 4px 4px rgba(0, 0, 0, .25);
+    }
+
+  }
+
+  &__track {
+    display: flex;
+    gap: 30px;
+    overflow-x: hidden;
+  }
+
+  &__slide {
+    flex: 0 0 100%;
+    max-width: 351px;
+    width: 100%;
+
+    .product-card--recomend {
+      padding: 20px;
+      width: 351px;
+
+      .product-price__current {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+.recomend-slider-pagination {
+  display: none;
+}

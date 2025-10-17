@@ -1,0 +1,72 @@
+// --- БАЗА ---
+@import "reset";
+@import "vars";
+@import "fonts";
+@import "global";
+
+// --- LEGO (дрібні елементи) ---
+@import "./global/lego/date-info";
+@import "./global/lego/badges/bestseller";
+@import "./global/lego/badges/discount";
+@import "./global/lego/badges/status";
+@import "./global/lego/badges/taste";
+@import "./global/lego/badges/type";
+@import "./global/lego/badges/topsale";
+@import "./global/lego/rating";
+@import "./global/lego/options";
+@import "./global/lego/price";
+@import "./global/lego/counter";
+
+// --- ГЛОБАЛЬНІ БЛОКИ ---
+@import "./global/header";
+@import "./global/footer";
+@import "./global/breadcrumbs";
+@import "./global/search";
+@import "./global/ticker";
+@import "./global/cookie-banner";
+@import "./global/menu-panel";
+@import "./global/series-banner";
+@import "./global/section-advice";
+
+// --- СЕКЦІЇ ---
+@import "./global/section-product";
+@import "./global/section-about";
+@import "./global/section-similar-deal";
+@import "./pages/mission";
+@import "./pages/series";
+
+// --- КАРТКИ ---
+@import "./global/cards/promo-card";
+@import "./global/cards/card-category";
+@import "./global/cards/card-product";
+@import "./global/cards/card-product-summary";
+@import "./global/cards/card-product-basket";
+@import "./global/cards/card-product-recommended";
+@import "./global/cards/card-deal";
+@import "./global/cards/card-deal-detail";
+@import "./global/cards/card-benefit";
+@import "./global/cards/_card-product-checkout";
+
+// --- СЛАЙДЕРИ ---
+@import "./global/recomend-slider";
+
+// --- МОДАЛЬНІ ВІКНА ---
+@import "./global/modals/quick-order-modal";
+@import "./global/modals/success-order-modal";
+@import "./global/modals/basket-modal";
+@import "./global/modals/modal-advice";
+@import "./global/modals/dicsount-modal";
+
+// --- СТОРІНКИ ---
+@import "./pages/index/hero";
+@import "./pages/index/promo";
+@import "./pages/index/benefits";
+@import "./pages/index/reviews";
+
+@import "./pages/catalog";
+@import "./pages/category";
+@import "./pages/product-detail";
+@import "./pages/deals";
+@import "./pages/product-deal";
+@import "./pages/checkout";
+@import "./pages/contacts";

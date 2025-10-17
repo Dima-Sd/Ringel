@@ -1,0 +1,66 @@
+$dark: #1D1D1B;
+$dark-opacity: rgba(0, 0, 0, 0.25);
+$dark-950: rgba(0, 0, 0, 0.44);
+$dark-850: #D9D9D9;
+$dark-750: #393A46;
+$dark-700: #282934;
+$dark-700-opacity: rgba(40, 41, 52, 0.7);
+$dark-450: #7D7D7D;
+$dark-400: #848484;
+
+$light: #fff;
+$light-900: #F4F4F4;
+$light-700: #00AD42;
+$light-600: #A81815;
+
+
+$accent: #FFDE14;
+
+@mixin Inter($weight: 400, $size: 16px, $line: 1.56) {
+  font-family: 'Inter', sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line;
+}
+
+@mixin DINPcond($weight: 900, $size: 18px, $line: 1.38) {
+  font-family: 'DINPro-CondensedBlack', sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line;
+}
+
+/* @include DINPcond(900, 45px, 1); */
+@mixin DINPcondBold($weight: 700, $size: 18px, $line: 1.38) {
+  font-family: 'DINPro-CondensedBold', sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line;
+}
+
+@mixin DINPcondReg($weight: 400, $size: 18px, $line: 1.38) {
+  font-family: 'DINPro-CondensedRegular', sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line;
+}
+
+@mixin Manrope($weight: 900, $size: 18px, $line: 1.38) {
+  font-family: 'Manrope-VariableFont_wght', sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

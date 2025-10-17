@@ -1,0 +1,84 @@
+.series-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1494px;
+    width: 100%;
+    background-color: $dark-700;
+    padding: 10px 30px;
+    border-radius: 6px;
+    margin: 0 auto;
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 63px;
+        font-weight: 700;
+        font-family: 'Manrope-VariableFont_wght', sans-serif;
+        color: $light;
+        text-transform: uppercase;
+        line-height: 1;
+    }
+
+    &__subtile {
+        color: $dark-400;
+        font-size: 25px;
+    }
+
+    &__link {
+        font-size: 18px;
+        color: $accent;
+        text-decoration: underline;
+        border-radius: 3px;
+        outline-offset: 3px;
+        transition: opacity 0.3s, outline 0.3s;
+
+        &:hover {
+            opacity: 0.7;
+        }
+
+        &:focus {
+            outline: 1px solid $accent;
+        }
+
+        &:active {
+            opacity: 0.5;
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .series-banner {
+        &__img {
+            display: none;
+        }
+
+        &__title {
+            font-size: 50px;
+            align-items: flex-start;
+        }
+
+        &__subtile {
+            font-size: 18px;
+        }
+    }
+}
+
+@media(max-width: 576px) {
+    .series-banner {
+        padding: 10px 20px 10px 10px;
+
+        &__title {
+            font-size: 25px;
+        }
+
+        &__subtile {
+            font-size: 12px;
+        }
+
+        &__link {
+            font-size: 16px;
+        }
+    }
+}

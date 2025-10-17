@@ -1,0 +1,105 @@
+.quick-order {
+    &__content {
+        border: 1px solid $light-900;
+        border-radius: 6px;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 35px;
+        color: $dark-700;
+    }
+
+    &__subtitle {
+        max-width: 325px;
+        width: 100%;
+        @include Inter(400, 14px, 1.42);
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+
+.quick-form {
+    width: 100%;
+    text-align: center;
+
+    input {
+        margin-bottom: 10px;
+
+        &::placeholder {
+            @include Inter(400, 16px, 1.42);
+            color: $dark-400;
+        }
+    }
+
+    &__input {
+        display: block;
+        width: 100%;
+        border: 1px solid $dark-400;
+        border-radius: 6px;
+        @include Inter(400, 16px, 1.42);
+        color: $dark-700;
+        padding: 15px;
+        margin-bottom: 10px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    &__btn {
+        margin: 20px auto 0;
+    }
+}
+
+@media (max-width: 680px) {
+    .quick-order {
+        &__content {
+            .product-card {
+                &--quik {
+                    .product-price__current {
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:576px) {
+    .quick-order {
+        &__title {
+            font-size: 25px;
+        }
+
+        &__content {
+            .product-card {
+                &--quik {
+                    .product-card__content {
+                        max-width: 180px;
+                    }
+
+                    .product-card__title {
+                        font-size: 16px;
+                        line-height: 1.4;
+                    }
+
+                    .product-price__current {
+                        font-size: 20px;
+                    }
+
+                    .product-badge {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        &__btn {
+            width: 100%;
+            font-size: 16px;
+            justify-content: space-between;
+        }
+    }
+}
