@@ -309,7 +309,7 @@ label {
       .basket__body {
         flex: 1 1 auto;
         overflow: hidden;
-
+        min-height: 190px;
         .basket__list {
           flex: 1 1 auto;
         }
