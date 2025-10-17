@@ -6,6 +6,10 @@
   &__logo {
     align-self: flex-start;
     z-index: 10;
+
+    &:active {
+      transform: scale(0.97);
+    }
   }
 
   .go-top {
